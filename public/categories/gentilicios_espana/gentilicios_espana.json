@@ -1,0 +1,291 @@
+[
+  {
+    "id": 1,
+    "name": "Ceutí",
+    "aliases": [
+      "Ceutí"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_01.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Burgalés",
+    "aliases": [
+      "Burgalés"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_02.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Guarromanense",
+    "aliases": [
+      "Guarromanense",
+      "Guarromanés"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_03.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Gallego",
+    "aliases": [
+      "Gallego"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_04.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Oscense",
+    "aliases": [
+      "Oscense"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_05.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Chinchonete",
+    "aliases": [
+      "Chinchonete"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_06.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Valenciano",
+    "aliases": [
+      "Valenciano"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_07.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Onubense",
+    "aliases": [
+      "Onubense",
+      "Choquero"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_08.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Castellano-leonés",
+    "aliases": [
+      "Castellano-leonés"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_09.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Buitragueño",
+    "aliases": [
+      "Buitragueño"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_10.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Albaceteño",
+    "aliases": [
+      "Albaceteño"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_11.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Catalán",
+    "aliases": [
+      "Catalán"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_12.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Jienense",
+    "aliases": [
+      "Jienense",
+      "Jaenero"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_13.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Vallisoletano",
+    "aliases": [
+      "Vallisoletano",
+      "Pucelano",
+      "Pinciano"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_14.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Extremeño",
+    "aliases": [
+      "Extremeño"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_15.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Ilerdense",
+    "aliases": [
+      "Leridano",
+      "Ilerdense"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_16.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Arriacense",
+    "aliases": [
+      "Alcarreño",
+      "Guadalajareño",
+      "Arriacense",
+      "Caracense"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_17.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Gaditano",
+    "aliases": [
+      "Gaditano"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_18.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Turolense",
+    "aliases": [
+      "Turolense"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_19.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Madrileño",
+    "aliases": [
+      "Madrileño",
+      "Gato"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_20.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Conquense",
+    "aliases": [
+      "Conquense"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_21.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Cántabro",
+    "aliases": [
+      "Cántabro",
+      "Montañés"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_22.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Zamorano",
+    "aliases": [
+      "Zamorano"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_23.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Castellano-manchego",
+    "aliases": [
+      "Castellano-manchego"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_24.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Malagueño",
+    "aliases": [
+      "Malagueño",
+      "Boquerón"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_25.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Abulense",
+    "aliases": [
+      "Abulense",
+      "Avilés",
+      "Avenense"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_26.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Zaragozano",
+    "aliases": [
+      "Zaragozano",
+      "Cesaraugustano",
+      "Maño"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_27.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Ciudadrealeño",
+    "aliases": [
+      "Ciudadrealeño",
+      "Cluniense"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_28.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Almeriense",
+    "aliases": [
+      "Almeriense",
+      "Legañoso"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_29.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Sevillano",
+    "aliases": [
+      "Sevillano",
+      "Hispalense"
+    ],
+    "category": "gentilicios_espana",
+    "image": "gentilicios_espana_30.jpg"
+  }
+]

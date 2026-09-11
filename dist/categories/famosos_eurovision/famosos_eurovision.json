@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "name": "ABBA",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_01.jpg",
+    "aliases": ["ABBA"]
+  },
+  {
+    "id": 2,
+    "name": "Céline Dion",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_02.jpg",
+    "aliases": ["Céline Dion"]
+  },
+  {
+    "id": 3,
+    "name": "Måneskin",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_03.jpg",
+    "aliases": ["Måneskin"]
+  },
+  {
+    "id": 4,
+    "name": "Conchita Wurst",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_04.jpg",
+    "aliases": ["Conchita Wurst"]
+  },
+  {
+    "id": 5,
+    "name": "Lordi",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_05.jpg",
+    "aliases": ["Lordi"]
+  },
+  {
+    "id": 6,
+    "name": "Måns Zelmerlöw",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_06.jpg",
+    "aliases": ["Måns Zelmerlöw"]
+  },
+  {
+    "id": 7,
+    "name": "Lena",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_07.jpg",
+    "aliases": ["Lena"]
+  },
+  {
+    "id": 8,
+    "name": "Olivia Newton-John",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_08.jpg",
+    "aliases": ["Olivia Newton-John"]
+  },
+  {
+    "id": 9,
+    "name": "Nemo",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_09.jpg",
+    "aliases": ["Nemo"]
+  },
+  {
+    "id": 10,
+    "name": "Duncan Laurence",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_10.jpg",
+    "aliases": ["Duncan Laurence"]
+  },
+  {
+    "id": 11,
+    "name": "Loreen",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_11.jpg",
+    "aliases": ["Loreen"]
+  },
+  {
+    "id": 12,
+    "name": "Alexander Rybak",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_12.jpg",
+    "aliases": ["Alexander Rybak"]
+  },
+  {
+    "id": 13,
+    "name": "Salvador Sobral",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_13.jpg",
+    "aliases": ["Salvador Sobral"]
+  },
+  {
+    "id": 14,
+    "name": "Netta",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_14.jpg",
+    "aliases": ["Netta"]
+  },
+  {
+    "id": 15,
+    "name": "Dana International",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_15.jpg",
+    "aliases": ["Dana International"]
+  },
+  {
+    "id": 16,
+    "name": "Eleni Foureira",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_16.jpg",
+    "aliases": ["Eleni Foureira"]
+  },
+  {
+    "id": 17,
+    "name": "Kalush Orchestra",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_17.jpg",
+    "aliases": ["Kalush Orchestra"]
+  },
+  {
+    "id": 18,
+    "name": "Mahmood",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_18.jpg",
+    "aliases": ["Mahmood"]
+  },
+  {
+    "id": 19,
+    "name": "Käärijä",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_19.jpg",
+    "aliases": ["Käärijä"]
+  },
+  {
+    "id": 20,
+    "name": "Sam Ryder",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_20.jpg",
+    "aliases": ["Sam Ryder"]
+  },
+  {
+    "id": 21,
+    "name": "Baby Lasagna",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_21.jpg",
+    "aliases": ["Baby Lasagna"]
+  },
+  {
+    "id": 22,
+    "name": "Joost Klein",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_22.jpg",
+    "aliases": ["Joost Klein"]
+  },
+  {
+    "id": 23,
+    "name": "Massiel",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_23.jpg",
+    "aliases": ["Massiel"]
+  },
+  {
+    "id": 24,
+    "name": "Salomé",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_24.jpg",
+    "aliases": ["Salomé"]
+  },
+  {
+    "id": 25,
+    "name": "Rosa López",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_25.jpg",
+    "aliases": ["Rosa López"]
+  },
+  {
+    "id": 26,
+    "name": "Chanel",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_26.jpg",
+    "aliases": ["Chanel"]
+  },
+  {
+    "id": 27,
+    "name": "Rodolfo Chikilicuatre",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_27.jpg",
+    "aliases": ["Rodolfo Chikilicuatre"]
+  },
+  {
+    "id": 28,
+    "name": "Helena Paparizou",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_28.jpg",
+    "aliases": ["Helena Paparizou"]
+  },
+  {
+    "id": 29,
+    "name": "Dima Bilan",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_29.jpg",
+    "aliases": ["Dima Bilan"]
+  },
+  {
+    "id": 30,
+    "name": "Petra Mede",
+    "category": "famosos_eurovision",
+    "image": "famosos_eurovision_30.jpg",
+    "aliases": ["Petra Mede"]
+  }
+]

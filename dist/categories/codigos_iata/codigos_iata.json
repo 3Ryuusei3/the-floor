@@ -1,0 +1,338 @@
+[
+  {
+    "id": 1,
+    "name": "A Coruña",
+    "aliases": [
+      "A Coruña",
+      "La Coruña",
+      "Coruña"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_01.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Madrid",
+    "aliases": [
+      "Madrid",
+      "Barajas",
+      "Madrid-Barajas",
+      "Adolfo Suárez Madrid-Barajas",
+      "Adolfo Suárez"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_02.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Albacete",
+    "aliases": [
+      "Albacete",
+      "Los Llanos"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_03.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Algeciras",
+    "aliases": [
+      "Algeciras"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_04.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Alicante",
+    "aliases": [
+      "Alicante",
+      "Elche",
+      "Alicante-Elche",
+      "Alicante-Elche Miguel Hernández",
+      "Miguel Hernández",
+      "El Altet"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_05.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Asturias",
+    "aliases": [
+      "Asturias",
+      "Oviedo",
+      "Ranón",
+      "Avilés"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_06.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Badajoz",
+    "aliases": [
+      "Badajoz",
+      "Talavera la Real"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_07.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Barcelona",
+    "aliases": [
+      "Barcelona",
+      "El Prat",
+      "Barcelona-El Prat",
+      "Josep Tarradellas",
+      "Josep Tarradellas Barcelona-El Prat"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_08.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Bilbao",
+    "aliases": [
+      "Bilbao",
+      "Loiu"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_09.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Ciudad Real",
+    "aliases": [
+      "Ciudad Real",
+      "Don Quijote"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_10.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Fuerteventura",
+    "aliases": [
+      "Fuerteventura",
+      "Puerto del Rosario",
+      "El Matorral"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_11.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Gran Canaria",
+    "aliases": [
+      "Gran Canaria",
+      "Las Palmas",
+      "Las Palmas de Gran Canaria",
+      "Gando"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_12.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Granada",
+    "aliases": [
+      "Granada-Jaén",
+      "Granada",
+      "Jaén",
+      "Federico García Lorca",
+      "Chauchina"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_13.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Huesca",
+    "aliases": [
+      "Huesca",
+      "Huesca-Pirineos",
+      "Pirineos"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_14.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Ibiza",
+    "aliases": [
+      "Ibiza",
+      "Eivissa",
+      "Es Codolar"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_15.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Jerez",
+    "aliases": [
+      "Jerez",
+      "Jerez de la Frontera",
+      "La Parra"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_16.jpg"
+  },
+  {
+    "id": 17,
+    "name": "León",
+    "aliases": [
+      "León",
+      "Virgen del Camino"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_17.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Málaga",
+    "aliases": [
+      "Málaga",
+      "Málaga-Costa del Sol",
+      "Costa del Sol",
+      "Pablo Picasso"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_18.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Menorca",
+    "aliases": [
+      "Menorca",
+      "Mahón"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_19.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Murcia",
+    "aliases": [
+      "Murcia",
+      "Murcia-Región de Murcia",
+      "Región de Murcia",
+      "Corvera",
+      "San Javier"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_20.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Palma de Mallorca",
+    "aliases": [
+      "Palma de Mallorca",
+      "Mallorca",
+      "Palma",
+      "Son Sant Joan",
+      "Son San Juan",
+      "Sant Joan",
+      "San Juan"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_21.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Pamplona",
+    "aliases": [
+      "Pamplona",
+      "Noáin",
+      "Iruña"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_22.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Salamanca",
+    "aliases": [
+      "Salamanca",
+      "Matacán"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_23.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Santander",
+    "aliases": [
+      "Santander",
+      "Santander-Seve Ballesteros",
+      "Seve Ballesteros",
+      "Parayas"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_24.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Sevilla",
+    "aliases": [
+      "Sevilla",
+      "San Pablo"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_25.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Valencia",
+    "aliases": [
+      "Valencia",
+      "Manises"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_26.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Valladolid",
+    "aliases": [
+      "Valladolid",
+      "Villanubla"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_27.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Vigo",
+    "aliases": [
+      "Vigo",
+      "Peinador"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_28.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Vitoria",
+    "aliases": [
+      "Vitoria",
+      "Foronda",
+      "Vitoria-Gasteiz",
+      "Gasteiz"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_29.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Zaragoza",
+    "aliases": [
+      "Zaragoza",
+      "Garrapinillos"
+    ],
+    "category": "codigos_iata",
+    "image": "codigos_iata_30.jpg"
+  }
+]

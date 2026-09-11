@@ -1,0 +1,307 @@
+[
+  {
+    "id": 1,
+    "name": "Pimienta negra",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_01.jpg",
+    "aliases": [
+      "Pimienta negra",
+      "Pimienta negra en grano",
+      "Granos de pimienta negra",
+      "Pimienta negra molida"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Canela en rama",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_02.jpg",
+    "aliases": [
+      "Canela en rama",
+      "Canela",
+      "Rama de canela"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Orégano",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_03.jpg",
+    "aliases": [
+      "Orégano"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Pimentón",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_04.jpg",
+    "aliases": [
+      "Pimentón de la Vera",
+      "Pimentón",
+      "Paprika"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Curry",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_05.jpg",
+    "aliases": [
+      "Curry",
+      "Polvo de curry",
+      "Curry en polvo"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Comino",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_06.jpg",
+    "aliases": [
+      "Comino",
+      "Comino en grano",
+      "Comino molido"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Nuez moscada",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_07.jpg",
+    "aliases": [
+      "Nuez moscada",
+      "Nuez moscada en polvo"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Azafrán",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_08.jpg",
+    "aliases": [
+      "Azafrán",
+      "Hebras de azafrán"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Romero",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_09.jpg",
+    "aliases": [
+      "Romero",
+      "Hoja de romero"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Tomillo",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_10.jpg",
+    "aliases": [
+      "Tomillo",
+      "Hoja de tomillo"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Laurel",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_11.jpg",
+    "aliases": [
+      "Laurel",
+      "Hojas de laurel"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Albahaca",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_12.jpg",
+    "aliases": [
+      "Albahaca"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Perejil",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_13.jpg",
+    "aliases": [
+      "Perejil"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Jengibre",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_14.jpg",
+    "aliases": [
+      "Jengibre",
+      "Raíz de jengibre"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Cúrcuma",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_15.jpg",
+    "aliases": [
+      "Cúrcuma"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Clavo",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_16.jpg",
+    "aliases": [
+      "Clavos",
+      "Clavo"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Anís estrellado",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_17.jpg",
+    "aliases": [
+      "Anís estrellado"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Vainilla",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_18.jpg",
+    "aliases": [
+      "Vainilla",
+      "Vaina de vainilla",
+      "Rama de vainilla"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Cardamomo",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_19.jpg",
+    "aliases": [
+      "Cardamomo",
+      "Semillas de cardamomo"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Cayena",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_20.jpg",
+    "aliases": [
+      "Guindilla",
+      "Guindillas",
+      "Cayena",
+      "Cayenas",
+      "Chiles",
+      "Chile"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Ajo en polvo",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_21.jpg",
+    "aliases": [
+      "Ajo en polvo"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Cebolla en polvo",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_22.jpg",
+    "aliases": [
+      "Cebolla en polvo"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Pimienta blanca",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_23.jpg",
+    "aliases": [
+      "Pimienta blanca",
+      "Pimienta blanca en grano",
+      "Granos de pimienta blanca",
+      "Pimienta blanca molida"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Eneldo",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_24.jpg",
+    "aliases": [
+      "Eneldo"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Sal rosa del Himalaya",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_25.jpg",
+    "aliases": [
+      "Sal del Himalaya",
+      "Sal rosa del Himalaya",
+      "Sal rosa"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Hierbabuena",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_26.jpg",
+    "aliases": [
+      "Hierbabuena",
+      "Menta"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Sal común",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_27.jpg",
+    "aliases": [
+      "Sal",
+      "Sal fina"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Salvia",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_28.jpg",
+    "aliases": [
+      "Salvia"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Mostaza",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_29.jpg",
+    "aliases": [
+      "Mostaza",
+      "Granos de mostaza",
+      "Mostaza en grano"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Cilantro",
+    "category": "especias_sazonadores",
+    "image": "especias_sazonadores_30.jpg",
+    "aliases": [
+      "Cilantro"
+    ]
+  }
+]

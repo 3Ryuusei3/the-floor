@@ -1,0 +1,312 @@
+[
+  {
+    "id": 1,
+    "name": "Henry Cavill",
+    "aliases": [
+      "Henry Cavill",
+      "Superman"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_01.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Chris Hemsworth",
+    "aliases": [
+      "Chris Hemsworth",
+      "Thor"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_02.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Michael B. Jordan",
+    "aliases": [
+      "Michael B Jordan",
+      "Creed",
+      "Adonis Creed"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_03.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Ryan Reynolds",
+    "aliases": [
+      "Ryan Reynolds",
+      "Deadpool"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_04.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Brad Pitt",
+    "aliases": [
+      "Brad Pitt"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_05.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Chris Evans",
+    "aliases": [
+      "Chris Evans",
+      "Capitán América",
+      "Steve Rogers"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_06.jpg"
+  },
+  {
+    "id": 7,
+    "name": "David Beckham",
+    "aliases": [
+      "David Beckham",
+      "Beckham"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_07.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Zac Efron",
+    "aliases": [
+      "Zac Efron",
+      "Troy",
+      "Troy Bolton"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_08.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Ryan Gosling",
+    "aliases": [
+      "Ryan Gosling",
+      "Ken",
+      "Noah"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_09.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Regé-Jean Page",
+    "aliases": [
+      "Regé-Jean Page",
+      "El Duque",
+      "El Duque de Hastings"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_10.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Theo James",
+    "aliases": [
+      "Theo James",
+      "Cuatro",
+      "Tobias Eaton"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_11.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Jamie Dornan",
+    "aliases": [
+      "Jamie Dornan",
+      "Grey",
+      "Christian Grey"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_12.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Orlando Bloom",
+    "aliases": [
+      "Orlando Bloom",
+      "Legolas",
+      "Will Turner"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_13.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Leonardo DiCaprio",
+    "aliases": [
+      "Leonardo DiCaprio"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_14.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Antonio Banderas",
+    "aliases": [
+      "Antonio Banderas",
+      "El Zorro"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_15.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Hugh Jackman",
+    "aliases": [
+      "Hugh Jackman",
+      "Lobezno",
+      "Wolverine",
+      "Logan"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_16.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Pedro Pascal",
+    "aliases": [
+      "Pedro Pascal",
+      "The Mandalorian"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_17.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Jacob Elordi",
+    "aliases": [
+      "Jacob Elordi"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_18.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Tom Holland",
+    "aliases": [
+      "Tom Holland",
+      "Spiderman",
+      "Peter Parker"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_19.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Jesse Williams",
+    "aliases": [
+      "Jesse Williams",
+      "Jackson Avery",
+      "Avery"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_20.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Matt Bomer",
+    "aliases": [
+      "Matt Bomer",
+      "Neal Caffrey",
+      "El ladrón de guante blanco"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_21.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Miguel Ángel Silvestre",
+    "aliases": [
+      "Miguel Ángel Silvestre"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_22.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Mario Casas",
+    "aliases": [
+      "Mario Casas",
+      "Hache"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_23.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Álex González",
+    "aliases": [
+      "Álex González"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_24.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Maxi Iglesias",
+    "aliases": [
+      "Maxi Iglesias",
+      "Cabano"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_25.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Jaime Lorente",
+    "aliases": [
+      "Jaime Lorente",
+      "Denver"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_26.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Fernando Llorente",
+    "aliases": [
+      "Fernando Llorente",
+      "Llorente"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_27.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Cristiano Ronaldo",
+    "aliases": [
+      "Cristiano Ronaldo",
+      "Cristiano",
+      "CR7",
+      "El bicho"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_28.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Luis Fernández",
+    "aliases": [
+      "Luis Fernández",
+      "Culebra"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_29.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Pelayo Díaz",
+    "aliases": [
+      "Pelayo Díaz",
+      "Pelayo"
+    ],
+    "category": "hombres_atractivos",
+    "image": "hombres_atractivos_30.jpg"
+  }
+]

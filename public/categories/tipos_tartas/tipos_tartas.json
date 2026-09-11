@@ -1,0 +1,277 @@
+[
+  {
+    "id": 1,
+    "name": "Tarta de queso",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_01.jpg",
+    "aliases": [
+      "Tarta de queso",
+      "Cheesecake"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Tarta de manzana",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_02.jpg",
+    "aliases": [
+      "Tarta de manzana"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Tres leches",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_03.jpg",
+    "aliases": [
+      "Tres leches"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Tarta de zanahoria",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_04.jpg",
+    "aliases": [
+      "Tarta de zanahoria",
+      "Carrotcake"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Lemon pie",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_05.jpg",
+    "aliases": [
+      "Lemon pie",
+      "Tarta de limón"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Tarta de frutas",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_06.jpg",
+    "aliases": [
+      "Tarta de frutas"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Tarta de la abuela",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_07.jpg",
+    "aliases": [
+      "Tarta de la abuela"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Tarta de Santiago",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_08.jpg",
+    "aliases": [
+      "Tarta de Santiago"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Selva negra",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_09.jpg",
+    "aliases": [
+      "Selva negra"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Tarta Sacher",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_10.jpg",
+    "aliases": [
+      "Tarta Sacher"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Red velvet",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_11.jpg",
+    "aliases": [
+      "Red velvet"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "San Marcos",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_12.jpg",
+    "aliases": [
+      "San Marcos"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Tres chocolates",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_13.jpg",
+    "aliases": [
+      "Tarta Tres chocolates"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Tarta de chuches",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_14.jpg",
+    "aliases": [
+      "Tarta de chuches"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Tarta de calabaza",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_15.jpg",
+    "aliases": [
+      "Tarta de calabaza"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Tarta al whisky",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_16.jpg",
+    "aliases": [
+      "Tarta al whisky"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Comtessa",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_17.jpg",
+    "aliases": [
+      "Comtessa"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Banoffee",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_18.jpg",
+    "aliases": [
+      "Tarta Banoffee"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Tarta Ópera",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_19.jpg",
+    "aliases": [
+      "Tarta Ópera"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Tiramisú",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_20.jpg",
+    "aliases": [
+      "Tiramisú"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Tarta de Oreo",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_21.jpg",
+    "aliases": [
+      "Tarta de Oreo"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Pavlova",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_22.jpg",
+    "aliases": [
+      "Pavlova"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Tarta de cereza",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_23.jpg",
+    "aliases": [
+      "Tarta de cereza",
+      "Cherry pie"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Muerte por chocolate",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_24.jpg",
+    "aliases": [
+      "Muerte por chocolate"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Milhojas",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_25.jpg",
+    "aliases": [
+      "Tarta de milhojas"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Brazo de gitano",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_26.jpg",
+    "aliases": [
+      "Brazo de gitano"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Tarta de piña",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_27.jpg",
+    "aliases": [
+      "Tarta de piña"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Tarta de profiteroles",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_28.jpg",
+    "aliases": [
+      "Tarta de profiteroles"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Tarta de boda",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_29.jpg",
+    "aliases": [
+      "Tarta de boda",
+      "Tarta nupcial"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Tarta de chocolate blanco",
+    "category": "tipos_tartas",
+    "image": "tipos_tartas_30.jpg",
+    "aliases": [
+      "Tarta de chocolate blanco"
+    ]
+  }
+]

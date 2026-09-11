@@ -1,0 +1,287 @@
+[
+  {
+    "id": 1,
+    "name": "Aurora boreal",
+    "category": "meteorologia",
+    "image": "meteorologia_01.jpg",
+    "aliases": [
+      "Aurora boreal"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Granizo",
+    "category": "meteorologia",
+    "image": "meteorologia_02.jpg",
+    "aliases": [
+      "Granizo"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Anticiclón",
+    "category": "meteorologia",
+    "image": "meteorologia_03.jpg",
+    "aliases": [
+      "Anticiclón"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Borrasca",
+    "category": "meteorologia",
+    "image": "meteorologia_04.jpg",
+    "aliases": [
+      "Borrasca"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Rayo",
+    "category": "meteorologia",
+    "image": "meteorologia_05.jpg",
+    "aliases": [
+      "Rayo"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Calima",
+    "category": "meteorologia",
+    "image": "meteorologia_06.jpg",
+    "aliases": [
+      "Calima"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Tornado",
+    "category": "meteorologia",
+    "image": "meteorologia_07.jpg",
+    "aliases": [
+      "Tornado"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Arcoíris",
+    "category": "meteorologia",
+    "image": "meteorologia_08.jpg",
+    "aliases": [
+      "Arcoíris"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Lluvia",
+    "category": "meteorologia",
+    "image": "meteorologia_09.jpg",
+    "aliases": [
+      "Lluvia",
+      "Precipitación"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Relámpago",
+    "category": "meteorologia",
+    "image": "meteorologia_10.jpg",
+    "aliases": [
+      "Relámpago"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Nieve",
+    "category": "meteorologia",
+    "image": "meteorologia_11.jpg",
+    "aliases": [
+      "Nevada",
+      "Nieve",
+      "Ventisca"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Rocío",
+    "category": "meteorologia",
+    "image": "meteorologia_12.jpg",
+    "aliases": [
+      "Rocío"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Barómetro",
+    "category": "meteorologia",
+    "image": "meteorologia_13.jpg",
+    "aliases": [
+      "Barómetro"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Escarcha",
+    "category": "meteorologia",
+    "image": "meteorologia_14.jpg",
+    "aliases": [
+      "Escarcha",
+      "Helada"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Veleta",
+    "category": "meteorologia",
+    "image": "meteorologia_15.jpg",
+    "aliases": [
+      "Veleta"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Hombre del tiempo",
+    "category": "meteorologia",
+    "image": "meteorologia_16.jpg",
+    "aliases": [
+      "Hombre del tiempo",
+      "Meteorólogo",
+      "Mario Picazo"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Estación meteorológica",
+    "category": "meteorologia",
+    "image": "meteorologia_17.jpg",
+    "aliases": [
+      "Estación meteorológica",
+      "Estación del tiempo"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Nube",
+    "category": "meteorologia",
+    "image": "meteorologia_18.jpg",
+    "aliases": [
+      "Nube",
+      "Nublado"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Viento",
+    "category": "meteorologia",
+    "image": "meteorologia_19.jpg",
+    "aliases": [
+      "Viento",
+      "Aire"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Niebla",
+    "category": "meteorologia",
+    "image": "meteorologia_20.jpg",
+    "aliases": [
+      "Niebla",
+      "Neblina",
+      "Bruma"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Pluviómetro",
+    "category": "meteorologia",
+    "image": "meteorologia_21.jpg",
+    "aliases": [
+      "Pluviómetro"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Huracán",
+    "category": "meteorologia",
+    "image": "meteorologia_22.jpg",
+    "aliases": [
+      "Huracán",
+      "Tifón"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Termómetro",
+    "category": "meteorologia",
+    "image": "meteorologia_23.jpg",
+    "aliases": [
+      "Termómetro"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Isobara",
+    "category": "meteorologia",
+    "image": "meteorologia_24.jpg",
+    "aliases": [
+      "Isobara"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Globo meteorológico",
+    "category": "meteorologia",
+    "image": "meteorologia_25.jpg",
+    "aliases": [
+      "Globo meteorológico",
+      "Globo sonda"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Anemómetro",
+    "category": "meteorologia",
+    "image": "meteorologia_26.jpg",
+    "aliases": [
+      "Anemómetro"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Mapa de clima",
+    "category": "meteorologia",
+    "image": "meteorologia_27.jpg",
+    "aliases": [
+      "Mapa del tiempo",
+      "Mapa de clima"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Cumulonimbo",
+    "category": "meteorologia",
+    "image": "meteorologia_28.jpg",
+    "aliases": [
+      "Cumulonimbo"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Manga de viento",
+    "category": "meteorologia",
+    "image": "meteorologia_29.jpg",
+    "aliases": [
+      "Manga de viento",
+      "Anemoscopio"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Satélite meteorológico",
+    "category": "meteorologia",
+    "image": "meteorologia_30.jpg",
+    "aliases": [
+      "Satélite meteorológico"
+    ]
+  }
+]

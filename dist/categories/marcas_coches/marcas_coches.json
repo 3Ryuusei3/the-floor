@@ -1,0 +1,272 @@
+[
+  {
+    "id": 1,
+    "name": "Mercedes-Benz",
+    "category": "marcas_coches",
+    "image": "marcas_coches_01.jpg",
+    "aliases": [
+      "Mercedes-Benz"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Audi",
+    "category": "marcas_coches",
+    "image": "marcas_coches_02.jpg",
+    "aliases": [
+      "Audi"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "BMW",
+    "category": "marcas_coches",
+    "image": "marcas_coches_03.jpg",
+    "aliases": [
+      "BMW"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Volkswagen",
+    "category": "marcas_coches",
+    "image": "marcas_coches_04.jpg",
+    "aliases": [
+      "Volkswagen"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Toyota",
+    "category": "marcas_coches",
+    "image": "marcas_coches_05.jpg",
+    "aliases": [
+      "Toyota"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Renault",
+    "category": "marcas_coches",
+    "image": "marcas_coches_06.jpg",
+    "aliases": [
+      "Renault"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Peugeot",
+    "category": "marcas_coches",
+    "image": "marcas_coches_07.jpg",
+    "aliases": [
+      "Peugeot"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Citroën",
+    "category": "marcas_coches",
+    "image": "marcas_coches_08.jpg",
+    "aliases": [
+      "Citroën"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Mustang",
+    "category": "marcas_coches",
+    "image": "marcas_coches_09.jpg",
+    "aliases": [
+      "Mustang"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Fiat",
+    "category": "marcas_coches",
+    "image": "marcas_coches_10.jpg",
+    "aliases": [
+      "Fiat"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "SEAT",
+    "category": "marcas_coches",
+    "image": "marcas_coches_11.jpg",
+    "aliases": [
+      "SEAT"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Cupra",
+    "category": "marcas_coches",
+    "image": "marcas_coches_12.jpg",
+    "aliases": [
+      "Cupra"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Škoda",
+    "category": "marcas_coches",
+    "image": "marcas_coches_13.jpg",
+    "aliases": [
+      "Škoda"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Hyundai",
+    "category": "marcas_coches",
+    "image": "marcas_coches_14.jpg",
+    "aliases": [
+      "Hyundai"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Kia",
+    "category": "marcas_coches",
+    "image": "marcas_coches_15.jpg",
+    "aliases": [
+      "Kia"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Nissan",
+    "category": "marcas_coches",
+    "image": "marcas_coches_16.jpg",
+    "aliases": [
+      "Nissan"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Mazda",
+    "category": "marcas_coches",
+    "image": "marcas_coches_17.jpg",
+    "aliases": [
+      "Mazda"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Mitsubishi",
+    "category": "marcas_coches",
+    "image": "marcas_coches_18.jpg",
+    "aliases": [
+      "Mitsubishi"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Subaru",
+    "category": "marcas_coches",
+    "image": "marcas_coches_19.jpg",
+    "aliases": [
+      "Subaru"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Volvo",
+    "category": "marcas_coches",
+    "image": "marcas_coches_20.jpg",
+    "aliases": [
+      "Volvo"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Tesla",
+    "category": "marcas_coches",
+    "image": "marcas_coches_21.jpg",
+    "aliases": [
+      "Tesla"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Jeep",
+    "category": "marcas_coches",
+    "image": "marcas_coches_22.jpg",
+    "aliases": [
+      "Jeep"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Porsche",
+    "category": "marcas_coches",
+    "image": "marcas_coches_23.jpg",
+    "aliases": [
+      "Porsche"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Ferrari",
+    "category": "marcas_coches",
+    "image": "marcas_coches_24.jpg",
+    "aliases": [
+      "Ferrari"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Lamborghini",
+    "category": "marcas_coches",
+    "image": "marcas_coches_25.jpg",
+    "aliases": [
+      "Lamborghini"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Maserati",
+    "category": "marcas_coches",
+    "image": "marcas_coches_26.jpg",
+    "aliases": [
+      "Maserati"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Alfa Romeo",
+    "category": "marcas_coches",
+    "image": "marcas_coches_27.jpg",
+    "aliases": [
+      "Alfa Romeo"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "MINI",
+    "category": "marcas_coches",
+    "image": "marcas_coches_28.jpg",
+    "aliases": [
+      "MINI"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Land Rover",
+    "category": "marcas_coches",
+    "image": "marcas_coches_29.jpg",
+    "aliases": [
+      "Land Rover"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Rolls-Royce",
+    "category": "marcas_coches",
+    "image": "marcas_coches_30.jpg",
+    "aliases": [
+      "Rolls-Royce"
+    ]
+  }
+]

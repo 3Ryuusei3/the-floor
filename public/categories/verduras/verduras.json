@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "name": "Lechuga",
+    "category": "verduras",
+    "image": "verduras_01.jpg",
+    "aliases": ["Lechuga"]
+  },
+  {
+    "id": 2,
+    "name": "Okra",
+    "category": "verduras",
+    "image": "verduras_02.jpg",
+    "aliases": ["Okra", "Quimbombó"]
+  },
+  {
+    "id": 3,
+    "name": "Cebolla",
+    "category": "verduras",
+    "image": "verduras_03.jpg",
+    "aliases": ["Cebolla"]
+  },
+  {
+    "id": 4,
+    "name": "Zanahoria",
+    "category": "verduras",
+    "image": "verduras_04.jpg",
+    "aliases": ["Zanahoria"]
+  },
+  {
+    "id": 5,
+    "name": "Patata",
+    "category": "verduras",
+    "image": "verduras_05.jpg",
+    "aliases": ["Patata", "Papa"]
+  },
+  {
+    "id": 6,
+    "name": "Ajo",
+    "category": "verduras",
+    "image": "verduras_06.jpg",
+    "aliases": ["Ajo"]
+  },
+  {
+    "id": 7,
+    "name": "Pimiento",
+    "category": "verduras",
+    "image": "verduras_07.jpg",
+    "aliases": ["Pimiento"]
+  },
+  {
+    "id": 8,
+    "name": "Brócoli",
+    "category": "verduras",
+    "image": "verduras_08.jpg",
+    "aliases": ["Brócoli"]
+  },
+  {
+    "id": 9,
+    "name": "Coliflor",
+    "category": "verduras",
+    "image": "verduras_09.jpg",
+    "aliases": ["Coliflor"]
+  },
+  {
+    "id": 10,
+    "name": "Espinaca",
+    "category": "verduras",
+    "image": "verduras_10.jpg",
+    "aliases": ["Espinaca"]
+  },
+  {
+    "id": 11,
+    "name": "Calabacín",
+    "category": "verduras",
+    "image": "verduras_11.jpg",
+    "aliases": ["Calabacín", "Zucchini"]
+  },
+  {
+    "id": 12,
+    "name": "Berenjena",
+    "category": "verduras",
+    "image": "verduras_12.jpg",
+    "aliases": ["Berenjena"]
+  },
+  {
+    "id": 13,
+    "name": "Pepino",
+    "category": "verduras",
+    "image": "verduras_13.jpg",
+    "aliases": ["Pepino"]
+  },
+  {
+    "id": 14,
+    "name": "Calabaza",
+    "category": "verduras",
+    "image": "verduras_14.jpg",
+    "aliases": ["Calabaza"]
+  },
+  {
+    "id": 15,
+    "name": "Apio",
+    "category": "verduras",
+    "image": "verduras_15.jpg",
+    "aliases": ["Apio"]
+  },
+  {
+    "id": 16,
+    "name": "Puerro",
+    "category": "verduras",
+    "image": "verduras_16.jpg",
+    "aliases": ["Puerro"]
+  },
+  {
+    "id": 17,
+    "name": "Alcachofa",
+    "category": "verduras",
+    "image": "verduras_17.jpg",
+    "aliases": ["Alcachofa"]
+  },
+  {
+    "id": 18,
+    "name": "Espárrago",
+    "category": "verduras",
+    "image": "verduras_18.jpg",
+    "aliases": ["Espárrago"]
+  },
+  {
+    "id": 19,
+    "name": "Repollo",
+    "category": "verduras",
+    "image": "verduras_19.jpg",
+    "aliases": ["Repollo", "Col"]
+  },
+  {
+    "id": 20,
+    "name": "Acelga",
+    "category": "verduras",
+    "image": "verduras_20.jpg",
+    "aliases": ["Acelga"]
+  },
+  {
+    "id": 21,
+    "name": "Rábano",
+    "category": "verduras",
+    "image": "verduras_21.jpg",
+    "aliases": ["Rábano"]
+  },
+  {
+    "id": 22,
+    "name": "Guisante",
+    "category": "verduras",
+    "image": "verduras_22.jpg",
+    "aliases": ["Guisante"]
+  },
+  {
+    "id": 23,
+    "name": "Remolacha",
+    "category": "verduras",
+    "image": "verduras_23.jpg",
+    "aliases": ["Remolacha"]
+  },
+  {
+    "id": 24,
+    "name": "Boniato",
+    "category": "verduras",
+    "image": "verduras_24.jpg",
+    "aliases": ["Boniato", "Batata"]
+  },
+  {
+    "id": 25,
+    "name": "Lombarda",
+    "category": "verduras",
+    "image": "verduras_25.jpg",
+    "aliases": ["Lombarda", "Repollo morado"]
+  },
+  {
+    "id": 26,
+    "name": "Kale",
+    "category": "verduras",
+    "image": "verduras_26.jpg",
+    "aliases": ["Kale", "Col rizada"]
+  },
+  {
+    "id": 27,
+    "name": "Nabo",
+    "category": "verduras",
+    "image": "verduras_27.jpg",
+    "aliases": ["Nabo"]
+  },
+  {
+    "id": 28,
+    "name": "Endivia",
+    "category": "verduras",
+    "image": "verduras_28.jpg",
+    "aliases": ["Endivia"]
+  },
+  {
+    "id": 29,
+    "name": "Rúcula",
+    "category": "verduras",
+    "image": "verduras_29.jpg",
+    "aliases": ["Rúcula"]
+  },
+  {
+    "id": 30,
+    "name": "Haba",
+    "category": "verduras",
+    "image": "verduras_30.jpg",
+    "aliases": ["Haba"]
+  }
+]

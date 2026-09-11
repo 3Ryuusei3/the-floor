@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "name": "Lays",
+    "category": "snacks",
+    "image": "snacks_01.jpg",
+    "aliases": ["Lays"]
+  },
+  {
+    "id": 2,
+    "name": "Ruffles Jamón",
+    "category": "snacks",
+    "image": "snacks_02.jpg",
+    "aliases": ["Ruffles Jamón"]
+  },
+  {
+    "id": 3,
+    "name": "Doritos",
+    "category": "snacks",
+    "image": "snacks_03.jpg",
+    "aliases": ["Doritos"]
+  },
+  {
+    "id": 4,
+    "name": "Cheetos Pandilla",
+    "category": "snacks",
+    "image": "snacks_04.jpg",
+    "aliases": ["Cheetos Pandilla"]
+  },
+  {
+    "id": 5,
+    "name": "Pringles",
+    "category": "snacks",
+    "image": "snacks_05.jpg",
+    "aliases": ["Pringles"]
+  },
+  {
+    "id": 6,
+    "name": "TUC",
+    "category": "snacks",
+    "image": "snacks_06.jpg",
+    "aliases": ["TUC"]
+  },
+  {
+    "id": 7,
+    "name": "Risketos",
+    "category": "snacks",
+    "image": "snacks_07.jpg",
+    "aliases": ["Risketos"]
+  },
+  {
+    "id": 8,
+    "name": "Gusanitos",
+    "category": "snacks",
+    "image": "snacks_08.jpg",
+    "aliases": ["Gusanitos"]
+  },
+  {
+    "id": 9,
+    "name": "Jumpers",
+    "category": "snacks",
+    "image": "snacks_09.jpg",
+    "aliases": ["Jumpers"]
+  },
+  {
+    "id": 10,
+    "name": "Pelotazos",
+    "category": "snacks",
+    "image": "snacks_10.jpg",
+    "aliases": ["Pelotazos"]
+  },
+  {
+    "id": 11,
+    "name": "Twix",
+    "category": "snacks",
+    "image": "snacks_11.jpg",
+    "aliases": ["Twix"]
+  },
+  {
+    "id": 12,
+    "name": "Fritos",
+    "category": "snacks",
+    "image": "snacks_12.jpg",
+    "aliases": ["Fritos"]
+  },
+  {
+    "id": 13,
+    "name": "Bocabits",
+    "category": "snacks",
+    "image": "snacks_13.jpg",
+    "aliases": ["Bocabits"]
+  },
+  {
+    "id": 14,
+    "name": "Triskys",
+    "category": "snacks",
+    "image": "snacks_14.jpg",
+    "aliases": ["Triskys"]
+  },
+  {
+    "id": 15,
+    "name": "Popitas",
+    "category": "snacks",
+    "image": "snacks_15.jpg",
+    "aliases": ["Popitas"]
+  },
+  {
+    "id": 16,
+    "name": "Pipas Grefusa",
+    "category": "snacks",
+    "image": "snacks_16.jpg",
+    "aliases": ["Pipas Grefusa"]
+  },
+  {
+    "id": 17,
+    "name": "MisterCorn",
+    "category": "snacks",
+    "image": "snacks_17.jpg",
+    "aliases": ["MisterCorn"]
+  },
+  {
+    "id": 18,
+    "name": "Aspitos",
+    "category": "snacks",
+    "image": "snacks_18.jpg",
+    "aliases": ["Aspitos"]
+  },
+  {
+    "id": 19,
+    "name": "Galletas Príncipe",
+    "category": "snacks",
+    "image": "snacks_19.jpg",
+    "aliases": ["Galletas Príncipe"]
+  },
+  {
+    "id": 20,
+    "name": "Monchitos",
+    "category": "snacks",
+    "image": "snacks_20.jpg",
+    "aliases": ["Monchitos"]
+  },
+  {
+    "id": 21,
+    "name": "KitKat",
+    "category": "snacks",
+    "image": "snacks_21.jpg",
+    "aliases": ["KitKat"]
+  },
+  {
+    "id": 22,
+    "name": "Kinder Bueno",
+    "category": "snacks",
+    "image": "snacks_22.jpg",
+    "aliases": ["Kinder Bueno"]
+  },
+  {
+    "id": 23,
+    "name": "Oreo",
+    "category": "snacks",
+    "image": "snacks_23.jpg",
+    "aliases": ["Oreo"]
+  },
+  {
+    "id": 24,
+    "name": "Chips Ahoy!",
+    "category": "snacks",
+    "image": "snacks_24.jpg",
+    "aliases": ["Chips Ahoy!"]
+  },
+  {
+    "id": 25,
+    "name": "Huesitos",
+    "category": "snacks",
+    "image": "snacks_25.jpg",
+    "aliases": ["Huesitos"]
+  },
+  {
+    "id": 26,
+    "name": "Conguitos",
+    "category": "snacks",
+    "image": "snacks_26.jpg",
+    "aliases": ["Conguitos"]
+  },
+  {
+    "id": 27,
+    "name": "M&M's",
+    "category": "snacks",
+    "image": "snacks_27.jpg",
+    "aliases": ["M&M's"]
+  },
+  {
+    "id": 28,
+    "name": "Snickers",
+    "category": "snacks",
+    "image": "snacks_28.jpg",
+    "aliases": ["Snickers"]
+  },
+  {
+    "id": 29,
+    "name": "Filipinos",
+    "category": "snacks",
+    "image": "snacks_29.jpg",
+    "aliases": ["Filipinos"]
+  },
+  {
+    "id": 30,
+    "name": "Mikado",
+    "category": "snacks",
+    "image": "snacks_30.jpg",
+    "aliases": ["Mikado"]
+  }
+]

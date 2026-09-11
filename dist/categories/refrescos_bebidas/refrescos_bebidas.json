@@ -1,0 +1,274 @@
+[
+  {
+    "id": 1,
+    "name": "Coca-Cola",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_01.jpg",
+    "aliases": [
+      "Coca-Cola"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Pepsi",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_02.jpg",
+    "aliases": [
+      "Pepsi"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Fanta de naranja",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_03.jpg",
+    "aliases": [
+      "Fanta de naranja"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Sprite",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_04.jpg",
+    "aliases": [
+      "Sprite"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "7UP",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_05.jpg",
+    "aliases": [
+      "7UP"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Dr Pepper",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_06.jpg",
+    "aliases": [
+      "Dr Pepper"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Coca-Cola Zero",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_07.jpg",
+    "aliases": [
+      "Coca-Cola Zero"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Red Bull",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_08.jpg",
+    "aliases": [
+      "Red Bull"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Monster",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_09.jpg",
+    "aliases": [
+      "Monster"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Agua",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_10.jpg",
+    "aliases": [
+      "Agua"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Powerade",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_11.jpg",
+    "aliases": [
+      "Powerade"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Aquarius",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_12.jpg",
+    "aliases": [
+      "Aquarius"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Lipton",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_13.jpg",
+    "aliases": [
+      "Lipton"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Nestea",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_14.jpg",
+    "aliases": [
+      "Nestea"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Schweppes",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_15.jpg",
+    "aliases": [
+      "Schweppes"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Appletiser",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_16.jpg",
+    "aliases": [
+      "Appletiser"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Mahou",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_17.jpg",
+    "aliases": [
+      "Mahou",
+      "Mahou Cinco Estrellas"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Cruzcampo",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_18.jpg",
+    "aliases": [
+      "Cruzcampo"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Solán de Cabras",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_19.jpg",
+    "aliases": [
+      "Solán de Cabras"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Alhambra",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_20.jpg",
+    "aliases": [
+      "Alhambra"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "SunnyD",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_21.jpg",
+    "aliases": [
+      "SunnyD",
+      "Sunny Delight"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Don Simón",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_22.jpg",
+    "aliases": [
+      "Don Simón"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Limón & Nada",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_23.jpg",
+    "aliases": [
+      "Limón & Nada"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Granini",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_24.jpg",
+    "aliases": [
+      "Granini"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Budweiser",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_25.jpg",
+    "aliases": [
+      "Budweiser"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Heineken",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_26.jpg",
+    "aliases": [
+      "Heineken"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Guinness",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_27.jpg",
+    "aliases": [
+      "Guinness"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Estrella Galicia",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_28.jpg",
+    "aliases": [
+      "Estrella Galicia"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "La Casera",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_29.jpg",
+    "aliases": [
+      "La Casera"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Cacaolat",
+    "category": "refrescos_bebidas",
+    "image": "refrescos_bebidas_30.jpg",
+    "aliases": [
+      "Cacaolat"
+    ]
+  }
+]

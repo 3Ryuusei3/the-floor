@@ -1,0 +1,272 @@
+[
+  {
+    "id": 1,
+    "name": "1",
+    "aliases": [
+      "1"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_01.jpg"
+  },
+  {
+    "id": 2,
+    "name": "2",
+    "aliases": [
+      "2"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_02.jpg"
+  },
+  {
+    "id": 3,
+    "name": "3",
+    "aliases": [
+      "3"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_03.jpg"
+  },
+  {
+    "id": 4,
+    "name": "4",
+    "aliases": [
+      "4"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_04.jpg"
+  },
+  {
+    "id": 5,
+    "name": "5",
+    "aliases": [
+      "5"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_05.jpg"
+  },
+  {
+    "id": 6,
+    "name": "6",
+    "aliases": [
+      "6"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_06.jpg"
+  },
+  {
+    "id": 7,
+    "name": "8",
+    "aliases": [
+      "8"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_07.jpg"
+  },
+  {
+    "id": 8,
+    "name": "9",
+    "aliases": [
+      "9"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_08.jpg"
+  },
+  {
+    "id": 9,
+    "name": "10",
+    "aliases": [
+      "10"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_09.jpg"
+  },
+  {
+    "id": 10,
+    "name": "14",
+    "aliases": [
+      "14"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_10.jpg"
+  },
+  {
+    "id": 11,
+    "name": "20",
+    "aliases": [
+      "20"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_11.jpg"
+  },
+  {
+    "id": 12,
+    "name": "30",
+    "aliases": [
+      "30"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_12.jpg"
+  },
+  {
+    "id": 13,
+    "name": "40",
+    "aliases": [
+      "40"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_13.jpg"
+  },
+  {
+    "id": 14,
+    "name": "50",
+    "aliases": [
+      "50"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_14.jpg"
+  },
+  {
+    "id": 15,
+    "name": "60",
+    "aliases": [
+      "60"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_15.jpg"
+  },
+  {
+    "id": 16,
+    "name": "90",
+    "aliases": [
+      "90"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_16.jpg"
+  },
+  {
+    "id": 17,
+    "name": "100",
+    "aliases": [
+      "100"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_17.jpg"
+  },
+  {
+    "id": 18,
+    "name": "110",
+    "aliases": [
+      "110"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_18.jpg"
+  },
+  {
+    "id": 19,
+    "name": "400",
+    "aliases": [
+      "400"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_19.jpg"
+  },
+  {
+    "id": 20,
+    "name": "490",
+    "aliases": [
+      "490"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_20.jpg"
+  },
+  {
+    "id": 21,
+    "name": "500",
+    "aliases": [
+      "500"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_21.jpg"
+  },
+  {
+    "id": 22,
+    "name": "776",
+    "aliases": [
+      "776"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_22.jpg"
+  },
+  {
+    "id": 23,
+    "name": "900",
+    "aliases": [
+      "900"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_23.jpg"
+  },
+  {
+    "id": 24,
+    "name": "999",
+    "aliases": [
+      "999"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_24.jpg"
+  },
+  {
+    "id": 25,
+    "name": "1000",
+    "aliases": [
+      "1000"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_25.jpg"
+  },
+  {
+    "id": 26,
+    "name": "1009",
+    "aliases": [
+      "1009"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_26.jpg"
+  },
+  {
+    "id": 27,
+    "name": "1997",
+    "aliases": [
+      "1997"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_27.jpg"
+  },
+  {
+    "id": 28,
+    "name": "2026",
+    "aliases": [
+      "2026"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_28.jpg"
+  },
+  {
+    "id": 29,
+    "name": "2500",
+    "aliases": [
+      "2500"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_29.jpg"
+  },
+  {
+    "id": 30,
+    "name": "3999",
+    "aliases": [
+      "3999"
+    ],
+    "category": "numeros_romanos",
+    "image": "numeros_romanos_30.jpg"
+  }
+]

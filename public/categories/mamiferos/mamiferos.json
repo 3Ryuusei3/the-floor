@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "name": "Perro",
+    "aliases": ["Perro", "Can", "Canino"],
+    "category": "mamiferos",
+    "image": "mamiferos_01.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Elefante",
+    "aliases": ["Elefante"],
+    "category": "mamiferos",
+    "image": "mamiferos_02.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Gato",
+    "aliases": ["Gato", "Felino", "Minino"],
+    "category": "mamiferos",
+    "image": "mamiferos_03.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Gorila",
+    "aliases": ["Gorila"],
+    "category": "mamiferos",
+    "image": "mamiferos_04.jpg"
+  },
+  {
+    "id": 5,
+    "name": "León",
+    "aliases": ["León"],
+    "category": "mamiferos",
+    "image": "mamiferos_05.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Caballo",
+    "aliases": ["Caballo", "Yegua"],
+    "category": "mamiferos",
+    "image": "mamiferos_06.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Delfín",
+    "aliases": ["Delfín"],
+    "category": "mamiferos",
+    "image": "mamiferos_07.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Oso",
+    "aliases": ["Oso"],
+    "category": "mamiferos",
+    "image": "mamiferos_08.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Jirafa",
+    "aliases": ["Jirafa"],
+    "category": "mamiferos",
+    "image": "mamiferos_09.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Cerdo",
+    "aliases": ["Cerdo"],
+    "category": "mamiferos",
+    "image": "mamiferos_10.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Tigre",
+    "aliases": ["Tigre"],
+    "category": "mamiferos",
+    "image": "mamiferos_11.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Conejo",
+    "aliases": ["Conejo"],
+    "category": "mamiferos",
+    "image": "mamiferos_12.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Ballena",
+    "aliases": ["Ballena"],
+    "category": "mamiferos",
+    "image": "mamiferos_13.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Vaca",
+    "aliases": ["Vaca"],
+    "category": "mamiferos",
+    "image": "mamiferos_14.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Chimpancé",
+    "aliases": ["Chimpancé"],
+    "category": "mamiferos",
+    "image": "mamiferos_15.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Rinoceronte",
+    "aliases": ["Rinoceronte"],
+    "category": "mamiferos",
+    "image": "mamiferos_16.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Zorro",
+    "aliases": ["Zorro"],
+    "category": "mamiferos",
+    "image": "mamiferos_17.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Canguro",
+    "aliases": ["Canguro"],
+    "category": "mamiferos",
+    "image": "mamiferos_18.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Lobo",
+    "aliases": ["Lobo"],
+    "category": "mamiferos",
+    "image": "mamiferos_19.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Hipopótamo",
+    "aliases": ["Hipopótamo"],
+    "category": "mamiferos",
+    "image": "mamiferos_20.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Panda",
+    "aliases": ["Oso panda"],
+    "category": "mamiferos",
+    "image": "mamiferos_21.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Ciervo",
+    "aliases": ["Ciervo"],
+    "category": "mamiferos",
+    "image": "mamiferos_22.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Koala",
+    "aliases": ["Koala"],
+    "category": "mamiferos",
+    "image": "mamiferos_23.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Camello",
+    "aliases": ["Camello"],
+    "category": "mamiferos",
+    "image": "mamiferos_24.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Ardilla",
+    "aliases": ["Ardilla"],
+    "category": "mamiferos",
+    "image": "mamiferos_25.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Foca",
+    "aliases": ["Foca"],
+    "category": "mamiferos",
+    "image": "mamiferos_26.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Murciélago",
+    "aliases": ["Murciélago"],
+    "category": "mamiferos",
+    "image": "mamiferos_27.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Nutria",
+    "aliases": ["Nutria"],
+    "category": "mamiferos",
+    "image": "mamiferos_28.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Cebra",
+    "aliases": ["Cebra"],
+    "category": "mamiferos",
+    "image": "mamiferos_29.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Mono",
+    "aliases": ["Mono"],
+    "category": "mamiferos",
+    "image": "mamiferos_30.jpg"
+  }
+]

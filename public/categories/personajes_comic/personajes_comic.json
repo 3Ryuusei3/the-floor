@@ -1,0 +1,287 @@
+[
+  {
+    "id": 1,
+    "name": "Tintín",
+    "aliases": [
+      "Tintín"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_01.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Milú",
+    "aliases": [
+      "Milú"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_02.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Astérix",
+    "aliases": [
+      "Astérix"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_03.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Obélix",
+    "aliases": [
+      "Obélix"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_04.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Panorámix",
+    "aliases": [
+      "Panorámix"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_05.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Mortadelo",
+    "aliases": [
+      "Mortadelo"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_06.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Filemón",
+    "aliases": [
+      "Filemón"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_07.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Mafalda",
+    "aliases": [
+      "Mafalda"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_08.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Snoopy",
+    "aliases": [
+      "Snoopy"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_09.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Garfield",
+    "aliases": [
+      "Garfield"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_10.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Popeye",
+    "aliases": [
+      "Popeye",
+      "Popeye el marino"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_11.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Olivia",
+    "aliases": [
+      "Olivia"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_12.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Lucky Luke",
+    "aliases": [
+      "Lucky Luke"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_13.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Pitufo",
+    "aliases": [
+      "Pitufo",
+      "Smurf"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_14.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Pitufina",
+    "aliases": [
+      "Pitufina",
+      "Smurfette"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_15.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Gargamel",
+    "aliases": [
+      "Gargamel"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_16.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Zipi",
+    "aliases": [
+      "Zipi"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_17.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Zape",
+    "aliases": [
+      "Zape"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_18.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Capitán Trueno",
+    "aliases": [
+      "Capitán Trueno"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_19.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Goku",
+    "aliases": [
+      "Goku",
+      "Son Goku"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_20.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Batman",
+    "aliases": [
+      "Batman",
+      "El caballero oscuro"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_21.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Superman",
+    "aliases": [
+      "Superman",
+      "El hombre de acero"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_22.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Spiderman",
+    "aliases": [
+      "Spiderman",
+      "Hombre Araña"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_23.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Iron Man",
+    "aliases": [
+      "Iron Man",
+      "Hombre de Hierro"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_24.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Wonder Woman",
+    "aliases": [
+      "Wonder Woman",
+      "Mujer Maravilla"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_25.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Hulk",
+    "aliases": [
+      "Hulk",
+      "El increíble Hulk",
+      "La Masa",
+      "La Cosa"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_26.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Deadpool",
+    "aliases": [
+      "Deadpool",
+      "Masacre"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_27.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Lobezno",
+    "aliases": [
+      "Lobezno",
+      "Wolverine"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_28.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Hellboy",
+    "aliases": [
+      "Hellboy"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_29.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Daredevil",
+    "aliases": [
+      "Daredevil",
+      "El hombre sin miedo"
+    ],
+    "category": "personajes_comic",
+    "image": "personajes_comic_30.jpg"
+  }
+]

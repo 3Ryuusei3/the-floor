@@ -1,0 +1,277 @@
+[
+  {
+    "id": 1,
+    "name": "Bandera LGTB",
+    "category": "tematica_gay",
+    "image": "tematica_gay_01.jpg",
+    "aliases": [
+      "Bandera LGTB",
+      "Bandera Arcoiris"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Orgullo",
+    "category": "tematica_gay",
+    "image": "tematica_gay_02.jpg",
+    "aliases": [
+      "Orgullo",
+      "Pride"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Drag Queen",
+    "category": "tematica_gay",
+    "image": "tematica_gay_03.jpg",
+    "aliases": [
+      "Drag Queen"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Chueca",
+    "category": "tematica_gay",
+    "image": "tematica_gay_04.jpg",
+    "aliases": [
+      "Chueca"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Freddie Mercury",
+    "category": "tematica_gay",
+    "image": "tematica_gay_05.jpg",
+    "aliases": [
+      "Freddie Mercury"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Elton John",
+    "category": "tematica_gay",
+    "image": "tematica_gay_06.jpg",
+    "aliases": [
+      "Elton John"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Ricky Martin",
+    "category": "tematica_gay",
+    "image": "tematica_gay_07.jpg",
+    "aliases": [
+      "Ricky Martin"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "RuPaul",
+    "category": "tematica_gay",
+    "image": "tematica_gay_08.jpg",
+    "aliases": [
+      "RuPaul"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "George Michael",
+    "category": "tematica_gay",
+    "image": "tematica_gay_09.jpg",
+    "aliases": [
+      "George Michael"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Oscar Wilde",
+    "category": "tematica_gay",
+    "image": "tematica_gay_10.jpg",
+    "aliases": [
+      "Oscar Wilde"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Federico García Lorca",
+    "category": "tematica_gay",
+    "image": "tematica_gay_11.jpg",
+    "aliases": [
+      "Federico García Lorca"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Heated Rivalry",
+    "category": "tematica_gay",
+    "image": "tematica_gay_12.jpg",
+    "aliases": [
+      "Heated Rivalry",
+      "Más que rivales"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Pedro Almodóvar",
+    "category": "tematica_gay",
+    "image": "tematica_gay_13.jpg",
+    "aliases": [
+      "Pedro Almodóvar"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Alan Turing",
+    "category": "tematica_gay",
+    "image": "tematica_gay_14.jpg",
+    "aliases": [
+      "Alan Turing"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Boris Izaguirre",
+    "category": "tematica_gay",
+    "image": "tematica_gay_15.jpg",
+    "aliases": [
+      "Boris Izaguirre"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Jesús Vázquez",
+    "category": "tematica_gay",
+    "image": "tematica_gay_16.jpg",
+    "aliases": [
+      "Jesús Vázquez"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Village People/YMCA",
+    "category": "tematica_gay",
+    "image": "tematica_gay_17.jpg",
+    "aliases": [
+      "Village People - YMCA22"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "The Boyfriend",
+    "category": "tematica_gay",
+    "image": "tematica_gay_18.jpg",
+    "aliases": [
+      "The Boyfriend"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Mitch & Cam",
+    "category": "tematica_gay",
+    "image": "tematica_gay_19.jpg",
+    "aliases": [
+      "Mitch & Cam"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Salir del armario",
+    "category": "tematica_gay",
+    "image": "tematica_gay_20.jpg",
+    "aliases": [
+      "Salir del armario"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Eurovision",
+    "category": "tematica_gay",
+    "image": "tematica_gay_21.jpg",
+    "aliases": [
+      "Eurovision"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Jonathan Bailey",
+    "category": "tematica_gay",
+    "image": "tematica_gay_22.jpg",
+    "aliases": [
+      "Jonathan Bailey"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Heartstopper",
+    "category": "tematica_gay",
+    "image": "tematica_gay_23.jpg",
+    "aliases": [
+      "Heartstopper"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Pluma",
+    "category": "tematica_gay",
+    "image": "tematica_gay_24.jpg",
+    "aliases": [
+      "Pluma"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Grindr",
+    "category": "tematica_gay",
+    "image": "tematica_gay_25.jpg",
+    "aliases": [
+      "Grindr"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Los Javis",
+    "category": "tematica_gay",
+    "image": "tematica_gay_26.jpg",
+    "aliases": [
+      "Los Javis",
+      "Javier Calvo y Javier Ambrossi"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Brokeback Mountain",
+    "category": "tematica_gay",
+    "image": "tematica_gay_27.jpg",
+    "aliases": [
+      "Brokeback Mountain"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Call Me by Your Name",
+    "category": "tematica_gay",
+    "image": "tematica_gay_28.jpg",
+    "aliases": [
+      "Call Me by Your Name"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "San Francisco",
+    "category": "tematica_gay",
+    "image": "tematica_gay_29.jpg",
+    "aliases": [
+      "San Francisco"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Gloria Gaynor/I Will Survive",
+    "category": "tematica_gay",
+    "image": "tematica_gay_30.jpg",
+    "aliases": [
+      "Gloria Gaynor",
+      "I Will Survive"
+    ]
+  }
+]

@@ -1,0 +1,301 @@
+[
+  {
+    "id": 1,
+    "name": "Tortilla de patata",
+    "aliases": [
+      "Tortilla de patata",
+      "Tortilla española",
+      "Pincho de tortilla"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_01.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Croquetas",
+    "aliases": [
+      "Croquetas",
+      "Croquetas caseras"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_02.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Patatas bravas",
+    "aliases": [
+      "Patatas bravas",
+      "Bravas"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_03.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Gambas al ajillo",
+    "aliases": [
+      "Gambas al ajillo"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_04.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Calamares",
+    "aliases": [
+      "Calamares",
+      "Calamares a la romana",
+      "Calamares rebozados"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_05.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Pulpo a la gallega",
+    "aliases": [
+      "Pulpo a la gallega",
+      "Pulpo a féira"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_06.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Albóndigas",
+    "aliases": [
+      "Albóndigas",
+      "Albóndigas en salsa"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_07.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Ensaladilla rusa",
+    "aliases": [
+      "Ensaladilla rusa",
+      "Ensaladilla"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_08.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Boquerones en vinagre",
+    "aliases": [
+      "Boquerones en vinagre"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_09.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Chorizo a la sidra",
+    "aliases": [
+      "Chorizo a la sidra"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_10.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Oreja",
+    "aliases": [
+      "Oreja",
+      "Oreja de cerdo"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_11.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Gilda",
+    "aliases": [
+      "Gilda"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_12.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Huevos rotos",
+    "aliases": [
+      "Huevos rotos",
+      "Huevos estrellados",
+      "Huevos rotos con jamón",
+      "Huevos estrellados con jamon"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_13.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Banderillas",
+    "aliases": [
+      "Banderillas"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_14.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Tigres",
+    "aliases": [
+      "Tigres",
+      "Mejillones rellenos"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_15.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Torreznos",
+    "aliases": [
+      "Torreznos"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_16.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Boquerones fritos",
+    "aliases": [
+      "Boquerones fritos",
+      "Pescaíto frito"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_17.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Pisto manchego",
+    "aliases": [
+      "Pisto",
+      "Pisto manchego"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_18.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Pimientos del piquillo",
+    "aliases": [
+      "Pimientos del piquillo rellenos",
+      "Piquillos rellenos"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_19.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Patatas alioli",
+    "aliases": [
+      "Patatas alioli"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_20.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Pincho de chistorra",
+    "aliases": [
+      "Chistorra",
+      "Pincho de chistorra"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_21.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Pincho de morcilla",
+    "aliases": [
+      "Morcilla",
+      "Tosta de morcilla",
+      "Pincho de morcilla",
+      "Morcilla de Burgos"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_22.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Jamón",
+    "aliases": [
+      "Jamón",
+      "Jamón serrano",
+      "Jamón ibérico"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_23.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Queso",
+    "aliases": [
+      "Queso",
+      "Queso curado"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_24.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Mejillones al vapor",
+    "aliases": [
+      "Mejillones al vapor",
+      "Mejillones"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_25.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Navajas",
+    "aliases": [
+      "Navajas",
+      "Navajas a la plancha"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_26.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Migas",
+    "aliases": [
+      "Migas",
+      "Migas del pastor"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_27.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Pan tumaca",
+    "aliases": [
+      "Pan con tomate",
+      "Pan tumaca"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_28.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Pimientos del Padrón",
+    "aliases": [
+      "Pimientos del Padrón"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_29.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Coquinas",
+    "aliases": [
+      "Coquinas",
+      "Tellinas"
+    ],
+    "category": "tapas_espanolas",
+    "image": "tapas_espanolas_30.jpg"
+  }
+]

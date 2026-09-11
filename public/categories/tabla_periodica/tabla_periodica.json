@@ -1,0 +1,272 @@
+[
+  {
+    "id": 1,
+    "name": "Hidrógeno",
+    "aliases": [
+      "Hidrógeno"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_01.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Helio",
+    "aliases": [
+      "Helio"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_02.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Indio",
+    "aliases": [
+      "Indio"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_03.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Carbono",
+    "aliases": [
+      "Carbono"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_04.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Nitrógeno",
+    "aliases": [
+      "Nitrógeno"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_05.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Oxígeno",
+    "aliases": [
+      "Oxígeno"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_06.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Flúor",
+    "aliases": [
+      "Flúor"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_07.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Neón",
+    "aliases": [
+      "Neón"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_08.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Sodio",
+    "aliases": [
+      "Sodio"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_09.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Magnesio",
+    "aliases": [
+      "Magnesio"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_10.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Aluminio",
+    "aliases": [
+      "Aluminio"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_11.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Titanio",
+    "aliases": [
+      "Titanio"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_12.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Fósforo",
+    "aliases": [
+      "Fósforo"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_13.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Azufre",
+    "aliases": [
+      "Azufre"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_14.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Cloro",
+    "aliases": [
+      "Cloro"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_15.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Argón",
+    "aliases": [
+      "Argón"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_16.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Potasio",
+    "aliases": [
+      "Potasio"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_17.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Calcio",
+    "aliases": [
+      "Calcio"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_18.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Hierro",
+    "aliases": [
+      "Hierro"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_19.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Cobre",
+    "aliases": [
+      "Cobre"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_20.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Zinc",
+    "aliases": [
+      "Zinc"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_21.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Plata",
+    "aliases": [
+      "Plata"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_22.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Oro",
+    "aliases": [
+      "Oro"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_23.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Mercurio",
+    "aliases": [
+      "Mercurio"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_24.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Plomo",
+    "aliases": [
+      "Plomo"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_25.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Uranio",
+    "aliases": [
+      "Uranio"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_26.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Yodo",
+    "aliases": [
+      "Yodo"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_27.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Bromo",
+    "aliases": [
+      "Bromo"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_28.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Platino",
+    "aliases": [
+      "Platino"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_29.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Radio",
+    "aliases": [
+      "Radio"
+    ],
+    "category": "tabla_periodica",
+    "image": "tabla_periodica_30.jpg"
+  }
+]

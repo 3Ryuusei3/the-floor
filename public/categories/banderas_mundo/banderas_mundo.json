@@ -1,0 +1,279 @@
+[
+  {
+    "id": 1,
+    "name": "Japón",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_01.jpg",
+    "aliases": [
+      "Japón"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Portugal",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_02.jpg",
+    "aliases": [
+      "Portugal"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Dinamarca",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_03.jpg",
+    "aliases": [
+      "Dinamarca"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Estados Unidos",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_04.jpg",
+    "aliases": [
+      "Estados Unidos",
+      "EEUU",
+      "USA"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Marruecos",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_05.jpg",
+    "aliases": [
+      "Marruecos"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Francia",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_06.jpg",
+    "aliases": [
+      "Francia"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Sudáfrica",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_07.jpg",
+    "aliases": [
+      "Sudáfrica",
+      "República Sudafricana"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Argentina",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_08.jpg",
+    "aliases": [
+      "Argentina"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Países Bajos",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_09.jpg",
+    "aliases": [
+      "Países Bajos",
+      "Holanda"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "España",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_10.jpg",
+    "aliases": [
+      "España"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Ucrania",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_11.jpg",
+    "aliases": [
+      "Ucrania"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Canadá",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_12.jpg",
+    "aliases": [
+      "Canadá"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "India",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_13.jpg",
+    "aliases": [
+      "India"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Corea del Sur",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_14.jpg",
+    "aliases": [
+      "Corea del Sur"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Reino Unido",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_15.jpg",
+    "aliases": [
+      "Reino Unido",
+      "Gran Bretaña",
+      "UK"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Grecia",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_16.jpg",
+    "aliases": [
+      "Grecia"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Noruega",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_17.jpg",
+    "aliases": [
+      "Noruega"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "China",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_18.jpg",
+    "aliases": [
+      "China",
+      "República Popular China"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Bélgica",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_19.jpg",
+    "aliases": [
+      "Bélgica"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "México",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_20.jpg",
+    "aliases": [
+      "México"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Suiza",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_21.jpg",
+    "aliases": [
+      "Suiza"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Turquía",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_22.jpg",
+    "aliases": [
+      "Turquía"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Alemania",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_23.jpg",
+    "aliases": [
+      "Alemania"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Egipto",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_24.jpg",
+    "aliases": [
+      "Egipto"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Brasil",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_25.jpg",
+    "aliases": [
+      "Brasil"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Suecia",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_26.jpg",
+    "aliases": [
+      "Suecia"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Italia",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_27.jpg",
+    "aliases": [
+      "Italia"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Rusia",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_28.jpg",
+    "aliases": [
+      "Rusia"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Irlanda",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_29.jpg",
+    "aliases": [
+      "Irlanda"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Australia",
+    "category": "banderas_mundo",
+    "image": "banderas_mundo_30.jpg",
+    "aliases": [
+      "Australia"
+    ]
+  }
+]

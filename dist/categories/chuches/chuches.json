@@ -1,0 +1,299 @@
+[
+  {
+    "id": 1,
+    "name": "Hueso",
+    "category": "chuches",
+    "image": "chuches_01.jpg",
+    "aliases": [
+      "Hueso",
+      "Huesito"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Sandía",
+    "category": "chuches",
+    "image": "chuches_02.jpg",
+    "aliases": [
+      "Sandía"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Lacasitos",
+    "category": "chuches",
+    "image": "chuches_03.jpg",
+    "aliases": [
+      "Lacasitos"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Dedo",
+    "category": "chuches",
+    "image": "chuches_04.jpg",
+    "aliases": [
+      "Dedo"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Osito",
+    "category": "chuches",
+    "image": "chuches_05.jpg",
+    "aliases": [
+      "Osito",
+      "Osito Haribo",
+      "Gummy bear"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Chicle",
+    "category": "chuches",
+    "image": "chuches_06.jpg",
+    "aliases": [
+      "Chicle"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Ladrillo",
+    "category": "chuches",
+    "image": "chuches_07.jpg",
+    "aliases": [
+      "Ladrillo",
+      "Ladrillo pica pica",
+      "Ladrillito"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Lengua",
+    "category": "chuches",
+    "image": "chuches_08.jpg",
+    "aliases": [
+      "Lengua"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Tiburón",
+    "category": "chuches",
+    "image": "chuches_09.jpg",
+    "aliases": [
+      "Tiburón"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Moneda de chocolate",
+    "category": "chuches",
+    "image": "chuches_10.jpg",
+    "aliases": [
+      "Moneda de chocolate"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Fresa",
+    "category": "chuches",
+    "image": "chuches_11.jpg",
+    "aliases": [
+      "Fresa"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Coca cola",
+    "category": "chuches",
+    "image": "chuches_12.jpg",
+    "aliases": [
+      "Coca cola",
+      "Botella de Coca cola",
+      "Botellita de Coca cola"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Regaliz rojo",
+    "category": "chuches",
+    "image": "chuches_13.jpg",
+    "aliases": [
+      "Regaliz",
+      "Regaliz rojo",
+      "Discos de regaliz rojo",
+      "Ruedas de regaliz rojo"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Reloj de caramelo",
+    "category": "chuches",
+    "image": "chuches_14.jpg",
+    "aliases": [
+      "Reloj de caramelo",
+      "Pulsera de caramelo"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Huevo frito",
+    "category": "chuches",
+    "image": "chuches_15.jpg",
+    "aliases": [
+      "Huevo frito",
+      "Huevo"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Mini frutas",
+    "category": "chuches",
+    "image": "chuches_16.jpg",
+    "aliases": [
+      "Mini frutas",
+      "Frutas",
+      "Frutas de caramelo",
+      "Frutas duras"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Bolas de anís",
+    "category": "chuches",
+    "image": "chuches_17.jpg",
+    "aliases": [
+      "Bolas de anís",
+      "Bolitas de anís",
+      "Anisillos"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Labio",
+    "category": "chuches",
+    "image": "chuches_18.jpg",
+    "aliases": [
+      "Labio"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Pulpo",
+    "category": "chuches",
+    "image": "chuches_19.jpg",
+    "aliases": [
+      "Pulpo",
+      "Araña"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Cereza",
+    "category": "chuches",
+    "image": "chuches_20.jpg",
+    "aliases": [
+      "Cereza"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Chupa Chups",
+    "category": "chuches",
+    "image": "chuches_21.jpg",
+    "aliases": [
+      "Chupa Chups"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Melón",
+    "category": "chuches",
+    "image": "chuches_22.jpg",
+    "aliases": [
+      "Melón",
+      "Chicle de melón"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Plátano",
+    "category": "chuches",
+    "image": "chuches_23.jpg",
+    "aliases": [
+      "Plátano",
+      "Banana"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Dentadura",
+    "category": "chuches",
+    "image": "chuches_24.jpg",
+    "aliases": [
+      "Dentadura"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Corazón",
+    "category": "chuches",
+    "image": "chuches_25.jpg",
+    "aliases": [
+      "Corazón",
+      "Corazón pica pica"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Nube",
+    "category": "chuches",
+    "image": "chuches_26.jpg",
+    "aliases": [
+      "Nube",
+      "Marshmallow"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Besito",
+    "category": "chuches",
+    "image": "chuches_27.jpg",
+    "aliases": [
+      "Besito",
+      "Beso"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Gusano",
+    "category": "chuches",
+    "image": "chuches_28.jpg",
+    "aliases": [
+      "Gusano",
+      "Lombriz",
+      "Culebra"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Regaliz Negro",
+    "category": "chuches",
+    "image": "chuches_29.jpg",
+    "aliases": [
+      "Regaliz negro",
+      "Discos de regaliz negro",
+      "Ruedas de regaliz negro"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Moras",
+    "category": "chuches",
+    "image": "chuches_30.jpg",
+    "aliases": [
+      "Moras"
+    ]
+  }
+]

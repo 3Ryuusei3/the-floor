@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "name": "Manchego",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_01.jpg",
+    "aliases": ["Manchego"]
+  },
+  {
+    "id": 2,
+    "name": "Cheddar",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_02.jpg",
+    "aliases": ["Cheddar"]
+  },
+  {
+    "id": 3,
+    "name": "Brie",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_03.jpg",
+    "aliases": ["Brie"]
+  },
+  {
+    "id": 4,
+    "name": "Camembert",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_04.jpg",
+    "aliases": ["Camembert"]
+  },
+  {
+    "id": 5,
+    "name": "Gouda",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_05.jpg",
+    "aliases": ["Gouda"]
+  },
+  {
+    "id": 6,
+    "name": "Mozzarella",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_06.jpg",
+    "aliases": ["Mozzarella"]
+  },
+  {
+    "id": 7,
+    "name": "Parmesano",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_07.jpg",
+    "aliases": ["Parmesano"]
+  },
+  {
+    "id": 8,
+    "name": "Roquefort",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_08.jpg",
+    "aliases": ["Roquefort", "Queso azul"]
+  },
+  {
+    "id": 9,
+    "name": "Feta",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_09.jpg",
+    "aliases": ["Feta"]
+  },
+  {
+    "id": 10,
+    "name": "Edam",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_10.jpg",
+    "aliases": ["Edam", "Queso de Bola"]
+  },
+  {
+    "id": 11,
+    "name": "Emmental",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_11.jpg",
+    "aliases": ["Emmental"]
+  },
+  {
+    "id": 12,
+    "name": "Gorgonzola",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_12.jpg",
+    "aliases": ["Gorgonzola"]
+  },
+  {
+    "id": 13,
+    "name": "Cabrales",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_13.jpg",
+    "aliases": ["Cabrales"]
+  },
+  {
+    "id": 14,
+    "name": "Idiazábal",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_14.jpg",
+    "aliases": ["Idiazábal"]
+  },
+  {
+    "id": 15,
+    "name": "Mahón",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_15.jpg",
+    "aliases": ["Mahón"]
+  },
+  {
+    "id": 16,
+    "name": "Provolone",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_16.jpg",
+    "aliases": ["Provolone"]
+  },
+  {
+    "id": 17,
+    "name": "Ricotta",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_17.jpg",
+    "aliases": ["Ricotta", "Requesón"]
+  },
+  {
+    "id": 18,
+    "name": "Mascarpone",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_18.jpg",
+    "aliases": ["Mascarpone"]
+  },
+  {
+    "id": 19,
+    "name": "Gruyère",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_19.jpg",
+    "aliases": ["Gruyère"]
+  },
+  {
+    "id": 20,
+    "name": "Havarti",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_20.jpg",
+    "aliases": ["Havarti"]
+  },
+  {
+    "id": 21,
+    "name": "Philadelphia",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_21.jpg",
+    "aliases": ["Philadelphia", "Queso de untar"]
+  },
+  {
+    "id": 22,
+    "name": "Queso de Burgos",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_22.jpg",
+    "aliases": ["Queso de Burgos"]
+  },
+  {
+    "id": 23,
+    "name": "Quesito",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_23.jpg",
+    "aliases": ["La Vaca que Ríe", "Quesito"]
+  },
+  {
+    "id": 24,
+    "name": "Babybel",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_24.jpg",
+    "aliases": ["Babybel"]
+  },
+  {
+    "id": 25,
+    "name": "Burrata",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_25.jpg",
+    "aliases": ["Burrata"]
+  },
+  {
+    "id": 26,
+    "name": "Cottage",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_26.jpg",
+    "aliases": ["Cottage"]
+  },
+  {
+    "id": 27,
+    "name": "Raclette",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_27.jpg",
+    "aliases": ["Raclette"]
+  },
+  {
+    "id": 28,
+    "name": "Queso de tetilla",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_28.jpg",
+    "aliases": ["Queso de tetilla"]
+  },
+  {
+    "id": 29,
+    "name": "Queso de cabra",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_29.jpg",
+    "aliases": ["Queso de cabra", "Rulo de cabra"]
+  },
+  {
+    "id": 30,
+    "name": "Torta del Casar",
+    "category": "quesos_del_mundo",
+    "image": "quesos_del_mundo_30.jpg",
+    "aliases": ["Torta del Casar"]
+  }
+]

@@ -1,0 +1,278 @@
+[
+  {
+    "id": 1,
+    "name": "El Principito",
+    "category": "libros_famosos",
+    "image": "libros_famosos_01.jpg",
+    "aliases": [
+      "El Principito"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Harry Potter",
+    "category": "libros_famosos",
+    "image": "libros_famosos_02.jpg",
+    "aliases": [
+      "Harry Potter"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "El Señor de los Anillos",
+    "category": "libros_famosos",
+    "image": "libros_famosos_03.jpg",
+    "aliases": [
+      "El Señor de los Anillos"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "El Hobbit",
+    "category": "libros_famosos",
+    "image": "libros_famosos_04.jpg",
+    "aliases": [
+      "El Hobbit"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Don Quijote de la Mancha",
+    "category": "libros_famosos",
+    "image": "libros_famosos_05.jpg",
+    "aliases": [
+      "Don Quijote de la Mancha",
+      "Don Quijote"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Alicia en el país de las maravillas",
+    "category": "libros_famosos",
+    "image": "libros_famosos_06.jpg",
+    "aliases": [
+      "Alicia en el país de las maravillas"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Charlie y la fábrica de chocolate",
+    "category": "libros_famosos",
+    "image": "libros_famosos_07.jpg",
+    "aliases": [
+      "Charlie y la fábrica de chocolate"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Peter Pan",
+    "category": "libros_famosos",
+    "image": "libros_famosos_08.jpg",
+    "aliases": [
+      "Peter Pan"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Las crónicas de Narnia",
+    "category": "libros_famosos",
+    "image": "libros_famosos_09.jpg",
+    "aliases": [
+      "Las crónicas de Narnia"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Los juegos del hambre",
+    "category": "libros_famosos",
+    "image": "libros_famosos_10.jpg",
+    "aliases": [
+      "Los juegos del hambre"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Crepúsculo",
+    "category": "libros_famosos",
+    "image": "libros_famosos_11.jpg",
+    "aliases": [
+      "Crepúsculo",
+      "Luna Nueva",
+      "Eclipse",
+      "Amanecer"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Dune",
+    "category": "libros_famosos",
+    "image": "libros_famosos_12.jpg",
+    "aliases": [
+      "Dune"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Parque Jurásico",
+    "category": "libros_famosos",
+    "image": "libros_famosos_13.jpg",
+    "aliases": [
+      "Jurassic Park",
+      "Parque Jurásico"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "It",
+    "category": "libros_famosos",
+    "image": "libros_famosos_14.jpg",
+    "aliases": [
+      "It"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "El resplandor",
+    "category": "libros_famosos",
+    "image": "libros_famosos_15.jpg",
+    "aliases": [
+      "El resplandor"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Drácula",
+    "category": "libros_famosos",
+    "image": "libros_famosos_16.jpg",
+    "aliases": [
+      "Drácula"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Los Miserables",
+    "category": "libros_famosos",
+    "image": "libros_famosos_17.jpg",
+    "aliases": [
+      "Los Miserables"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Moby Dick",
+    "category": "libros_famosos",
+    "image": "libros_famosos_18.jpg",
+    "aliases": [
+      "Moby Dick"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "La vuelta al mundo en 80 días",
+    "category": "libros_famosos",
+    "image": "libros_famosos_19.jpg",
+    "aliases": [
+      "La vuelta al mundo en 80 días"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Robinson Crusoe",
+    "category": "libros_famosos",
+    "image": "libros_famosos_20.jpg",
+    "aliases": [
+      "Robinson Crusoe"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Los tres mosqueteros",
+    "category": "libros_famosos",
+    "image": "libros_famosos_21.jpg",
+    "aliases": [
+      "Los tres mosqueteros"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "1984",
+    "category": "libros_famosos",
+    "image": "libros_famosos_22.jpg",
+    "aliases": [
+      "1984"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Orgullo y prejuicio",
+    "category": "libros_famosos",
+    "image": "libros_famosos_23.jpg",
+    "aliases": [
+      "Orgullo y prejuicio"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "El código Da Vinci",
+    "category": "libros_famosos",
+    "image": "libros_famosos_24.jpg",
+    "aliases": [
+      "El código Da Vinci"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "El nombre de la rosa",
+    "category": "libros_famosos",
+    "image": "libros_famosos_25.jpg",
+    "aliases": [
+      "El nombre de la rosa"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "El gran Gatsby",
+    "category": "libros_famosos",
+    "image": "libros_famosos_26.jpg",
+    "aliases": [
+      "El gran Gatsby"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Bajo la misma estrella",
+    "category": "libros_famosos",
+    "image": "libros_famosos_27.jpg",
+    "aliases": [
+      "Bajo la misma estrella"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "El mago de Oz",
+    "category": "libros_famosos",
+    "image": "libros_famosos_28.jpg",
+    "aliases": [
+      "El mago de Oz",
+      "El maravilloso mago de Oz"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Los pilares de la Tierra",
+    "category": "libros_famosos",
+    "image": "libros_famosos_29.jpg",
+    "aliases": [
+      "Los pilares de la Tierra"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Heated Rivalry",
+    "category": "libros_famosos",
+    "image": "libros_famosos_30.jpg",
+    "aliases": [
+      "Heated Rivalry"
+    ]
+  }
+]

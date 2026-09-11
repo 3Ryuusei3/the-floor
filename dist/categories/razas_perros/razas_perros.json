@@ -1,0 +1,279 @@
+[
+  {
+    "id": 1,
+    "name": "Labrador",
+    "category": "razas_perros",
+    "image": "razas_perros_01.jpg",
+    "aliases": [
+      "Labrador"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Golden retriever",
+    "category": "razas_perros",
+    "image": "razas_perros_02.jpg",
+    "aliases": [
+      "Golden retriever"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Husky Siberiano",
+    "category": "razas_perros",
+    "image": "razas_perros_03.jpg",
+    "aliases": [
+      "Husky Siberiano"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Mastín del Pirineo",
+    "category": "razas_perros",
+    "image": "razas_perros_04.jpg",
+    "aliases": [
+      "Mastín del Pirineo"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Pastor alemán",
+    "category": "razas_perros",
+    "image": "razas_perros_05.jpg",
+    "aliases": [
+      "Pastor alemán"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Bulldog francés",
+    "category": "razas_perros",
+    "image": "razas_perros_06.jpg",
+    "aliases": [
+      "Bulldog francés"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Chihuahua",
+    "category": "razas_perros",
+    "image": "razas_perros_07.jpg",
+    "aliases": [
+      "Chihuahua"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Caniche",
+    "category": "razas_perros",
+    "image": "razas_perros_08.jpg",
+    "aliases": [
+      "Caniche"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Rottweiler",
+    "category": "razas_perros",
+    "image": "razas_perros_09.jpg",
+    "aliases": [
+      "Rottweiler"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Beagle",
+    "category": "razas_perros",
+    "image": "razas_perros_10.jpg",
+    "aliases": [
+      "Beagle"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Bóxer",
+    "category": "razas_perros",
+    "image": "razas_perros_11.jpg",
+    "aliases": [
+      "Bóxer"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Dálmata",
+    "category": "razas_perros",
+    "image": "razas_perros_12.jpg",
+    "aliases": [
+      "Dálmata"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Cocker",
+    "category": "razas_perros",
+    "image": "razas_perros_13.jpg",
+    "aliases": [
+      "Cocker"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Border Collie",
+    "category": "razas_perros",
+    "image": "razas_perros_14.jpg",
+    "aliases": [
+      "Border Collie"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Pomerania",
+    "category": "razas_perros",
+    "image": "razas_perros_15.jpg",
+    "aliases": [
+      "Pomerania"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Shiba inu",
+    "category": "razas_perros",
+    "image": "razas_perros_16.jpg",
+    "aliases": [
+      "Shiba inu"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Dóberman",
+    "category": "razas_perros",
+    "image": "razas_perros_17.jpg",
+    "aliases": [
+      "Dóberman"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Gran Danés",
+    "category": "razas_perros",
+    "image": "razas_perros_18.jpg",
+    "aliases": [
+      "Gran Danés"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Mastín",
+    "category": "razas_perros",
+    "image": "razas_perros_19.jpg",
+    "aliases": [
+      "Mastín"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Carlino",
+    "category": "razas_perros",
+    "image": "razas_perros_20.jpg",
+    "aliases": [
+      "Carlino",
+      "Pug"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Terrier Escocés",
+    "category": "razas_perros",
+    "image": "razas_perros_21.jpg",
+    "aliases": [
+      "Terrier",
+      "Scottish"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "San Bernardo",
+    "category": "razas_perros",
+    "image": "razas_perros_22.jpg",
+    "aliases": [
+      "San Bernardo"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Chow chow",
+    "category": "razas_perros",
+    "image": "razas_perros_23.jpg",
+    "aliases": [
+      "Chow chow"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Perro lobo",
+    "category": "razas_perros",
+    "image": "razas_perros_24.jpg",
+    "aliases": [
+      "Perro lobo",
+      "Lobo"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Galgo",
+    "category": "razas_perros",
+    "image": "razas_perros_25.jpg",
+    "aliases": [
+      "Galgo"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Perro de agua",
+    "category": "razas_perros",
+    "image": "razas_perros_26.jpg",
+    "aliases": [
+      "Perro de agua",
+      "Perro de lana"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Shar-Pei",
+    "category": "razas_perros",
+    "image": "razas_perros_27.jpg",
+    "aliases": [
+      "Shar-Pei"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Cavalier king Charles",
+    "category": "razas_perros",
+    "image": "razas_perros_28.jpg",
+    "aliases": [
+      "Cavalier King Charles"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Teckel",
+    "category": "razas_perros",
+    "image": "razas_perros_29.jpg",
+    "aliases": [
+      "Perro salchicha",
+      "Teckel",
+      "Dachshund"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Pastor australiano",
+    "category": "razas_perros",
+    "image": "razas_perros_30.jpg",
+    "aliases": [
+      "Pastor Australiano",
+      "Aussie"
+    ]
+  }
+]

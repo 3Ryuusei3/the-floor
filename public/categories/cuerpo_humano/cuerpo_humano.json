@@ -1,0 +1,293 @@
+[
+  {
+    "id": 1,
+    "name": "Cerebro",
+    "aliases": [
+      "Cerebro"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_01.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Fémur",
+    "aliases": [
+      "Fémur"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_02.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Corazón",
+    "aliases": [
+      "Corazón"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_03.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Iris",
+    "aliases": [
+      "Iris"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_04.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Tibia",
+    "aliases": [
+      "Tibia"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_05.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Estómago",
+    "aliases": [
+      "Estómago"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_06.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Coxis",
+    "aliases": [
+      "Coxis"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_07.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Clavícula",
+    "aliases": [
+      "Clavícula"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_08.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Pulmones",
+    "aliases": [
+      "Pulmones"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_09.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Rótula",
+    "aliases": [
+      "Rótula"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_10.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Hipófisis",
+    "aliases": [
+      "Hipófisis",
+      "Glándula pituitaria",
+      "Pituitaria"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_11.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Tráquea",
+    "aliases": [
+      "Tráquea"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_12.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Duodeno",
+    "aliases": [
+      "Duodeno"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_13.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Yeyuno",
+    "aliases": [
+      "Yeyuno"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_14.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Apéndice",
+    "aliases": [
+      "Apéndice"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_15.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Vesícula biliar",
+    "aliases": [
+      "Vesícula biliar",
+      "Vesícula"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_16.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Diafragma",
+    "aliases": [
+      "Diafragma"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_17.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Esternón",
+    "aliases": [
+      "Esternón"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_18.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Escápula",
+    "aliases": [
+      "Escápula",
+      "Omóplato",
+      "Paletilla"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_19.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Cúbito/Radio",
+    "aliases": [
+      "Radio",
+      "Cúbito",
+      "Cúbito y radio"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_20.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Amígdalas",
+    "aliases": [
+      "Amígdalas",
+      "Tonsilas",
+      "Anginas"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_21.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Gemelos",
+    "aliases": [
+      "Gemelos"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_22.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Aorta",
+    "aliases": [
+      "Aorta",
+      "Arteria aorta"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_23.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Alvéolos",
+    "aliases": [
+      "Alvéolos",
+      "Alvéolos pulmonares"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_24.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Riñones",
+    "aliases": [
+      "Riñones"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_25.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Uretra",
+    "aliases": [
+      "Uretra",
+      "Conducto urinario"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_26.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Carótida",
+    "aliases": [
+      "Carótida",
+      "Arteria carótida"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_27.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Recto abdominal",
+    "aliases": [
+      "Recto abdominal",
+      "Abdominales",
+      "Abdomen"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_28.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Atlas",
+    "aliases": [
+      "Atlas",
+      "Vértebra atlas",
+      "Primera vértebra cervical",
+      "C1"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_29.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Pectoral",
+    "aliases": [
+      "Pectoral",
+      "Pectorales",
+      "Músculo pectoral",
+      "Pectoral mayor"
+    ],
+    "category": "cuerpo_humano",
+    "image": "cuerpo_humano_30.jpg"
+  }
+]

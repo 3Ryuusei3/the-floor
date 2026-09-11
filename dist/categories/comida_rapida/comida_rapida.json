@@ -1,0 +1,293 @@
+[
+  {
+    "id": 1,
+    "name": "Hamburguesa",
+    "category": "comida_rapida",
+    "image": "comida_rapida_01.jpg",
+    "aliases": [
+      "Hamburguesa"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Ramen",
+    "category": "comida_rapida",
+    "image": "comida_rapida_02.jpg",
+    "aliases": [
+      "Ramen"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Tacos",
+    "category": "comida_rapida",
+    "image": "comida_rapida_03.jpg",
+    "aliases": [
+      "Tacos"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Donuts",
+    "category": "comida_rapida",
+    "image": "comida_rapida_04.jpg",
+    "aliases": [
+      "Donuts",
+      "Donas"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Kebab",
+    "category": "comida_rapida",
+    "image": "comida_rapida_05.jpg",
+    "aliases": [
+      "Kebab"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Patatas bravas",
+    "category": "comida_rapida",
+    "image": "comida_rapida_06.jpg",
+    "aliases": [
+      "Patatas bravas",
+      "Bravas"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Sushi",
+    "category": "comida_rapida",
+    "image": "comida_rapida_07.jpg",
+    "aliases": [
+      "Sushi"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Nuggets de pollo",
+    "category": "comida_rapida",
+    "image": "comida_rapida_08.jpg",
+    "aliases": [
+      "Nuggets",
+      "Nuggets de pollo"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Crepe",
+    "category": "comida_rapida",
+    "image": "comida_rapida_09.jpg",
+    "aliases": [
+      "Crepe",
+      "Crepe con fresas"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Bocadillo de calamares",
+    "category": "comida_rapida",
+    "image": "comida_rapida_10.jpg",
+    "aliases": [
+      "Bocadillo de calamares",
+      "Bocata de calamares"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Burrito",
+    "category": "comida_rapida",
+    "image": "comida_rapida_11.jpg",
+    "aliases": [
+      "Burrito",
+      "Burrito mexicano"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Churros",
+    "category": "comida_rapida",
+    "image": "comida_rapida_12.jpg",
+    "aliases": [
+      "Churros"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Alitas de pollo",
+    "category": "comida_rapida",
+    "image": "comida_rapida_13.jpg",
+    "aliases": [
+      "Alitas de pollo",
+      "Alitas"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Arepa",
+    "category": "comida_rapida",
+    "image": "comida_rapida_14.jpg",
+    "aliases": [
+      "Arepa"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Pizza",
+    "category": "comida_rapida",
+    "image": "comida_rapida_15.jpg",
+    "aliases": [
+      "Pizza"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Croquetas de jamón",
+    "category": "comida_rapida",
+    "image": "comida_rapida_16.jpg",
+    "aliases": [
+      "Croquetas",
+      "Croquetas de jamón"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Poke",
+    "category": "comida_rapida",
+    "image": "comida_rapida_17.jpg",
+    "aliases": [
+      "Poke",
+      "Poke bowl"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Perrito caliente",
+    "category": "comida_rapida",
+    "image": "comida_rapida_18.jpg",
+    "aliases": [
+      "Perrito caliente",
+      "Perrito",
+      "Hot dog"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Tortitas",
+    "category": "comida_rapida",
+    "image": "comida_rapida_19.jpg",
+    "aliases": [
+      "Tortitas",
+      "Pancakes",
+      "Panqueques"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Falafel",
+    "category": "comida_rapida",
+    "image": "comida_rapida_20.jpg",
+    "aliases": [
+      "Falafel"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Pollo frito",
+    "category": "comida_rapida",
+    "image": "comida_rapida_21.jpg",
+    "aliases": [
+      "Pollo frito",
+      "Pollo crujiente"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Empanada",
+    "category": "comida_rapida",
+    "image": "comida_rapida_22.jpg",
+    "aliases": [
+      "Empanada"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Gofre",
+    "category": "comida_rapida",
+    "image": "comida_rapida_23.jpg",
+    "aliases": [
+      "Gofre",
+      "Waffle"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Quesadilla",
+    "category": "comida_rapida",
+    "image": "comida_rapida_24.jpg",
+    "aliases": [
+      "Quesadilla"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Patata asada",
+    "category": "comida_rapida",
+    "image": "comida_rapida_25.jpg",
+    "aliases": [
+      "Patata asada",
+      "Patata rellena"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Sándwich mixto",
+    "category": "comida_rapida",
+    "image": "comida_rapida_26.jpg",
+    "aliases": [
+      "Sándwich",
+      "Bikini",
+      "Sándwich mixto",
+      "Sándwich de jamón y queso"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Salchipapas",
+    "category": "comida_rapida",
+    "image": "comida_rapida_27.jpg",
+    "aliases": [
+      "Salchipapas"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Nachos",
+    "category": "comida_rapida",
+    "image": "comida_rapida_28.jpg",
+    "aliases": [
+      "Nachos",
+      "Totopos"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Patatas fritas",
+    "category": "comida_rapida",
+    "image": "comida_rapida_29.jpg",
+    "aliases": [
+      "Patatas fritas",
+      "French fries"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Aros de cebolla",
+    "category": "comida_rapida",
+    "image": "comida_rapida_30.jpg",
+    "aliases": [
+      "Aros de cebolla"
+    ]
+  }
+]

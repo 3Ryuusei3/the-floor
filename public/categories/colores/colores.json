@@ -1,0 +1,322 @@
+[
+  {
+    "id": 1,
+    "name": "Amarillo",
+    "aliases": [
+      "Amarillo"
+    ],
+    "category": "colores",
+    "image": "colores_01.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Mostaza",
+    "aliases": [
+      "Mostaza",
+      "Amarillo mostaza"
+    ],
+    "category": "colores",
+    "image": "colores_02.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Naranja",
+    "aliases": [
+      "Naranja",
+      "Anaranjado"
+    ],
+    "category": "colores",
+    "image": "colores_03.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Salmón",
+    "aliases": [
+      "Salmón",
+      "Melocotón"
+    ],
+    "category": "colores",
+    "image": "colores_04.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Coral",
+    "aliases": [
+      "Coral",
+      "Rojo coral"
+    ],
+    "category": "colores",
+    "image": "colores_05.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Rojo",
+    "aliases": [
+      "Rojo",
+      "Colorado"
+    ],
+    "category": "colores",
+    "image": "colores_06.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Granate",
+    "aliases": [
+      "Granate",
+      "Bermellón",
+      "Burdeos",
+      "Vino"
+    ],
+    "category": "colores",
+    "image": "colores_07.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Magenta",
+    "aliases": [
+      "Magenta",
+      "Rosa fresa"
+    ],
+    "category": "colores",
+    "image": "colores_08.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Rosa bebé",
+    "aliases": [
+      "Rosa bebé",
+      "Rosa claro",
+      "Rosa pastel",
+      "Carne"
+    ],
+    "category": "colores",
+    "image": "colores_09.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Rosa",
+    "aliases": [
+      "Rosa",
+      "Rosado"
+    ],
+    "category": "colores",
+    "image": "colores_10.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Fucsia",
+    "aliases": [
+      "Fucsia",
+      "Rosa fucsia",
+      "Rosa chillón"
+    ],
+    "category": "colores",
+    "image": "colores_11.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Morado",
+    "aliases": [
+      "Morado",
+      "Berenjena",
+      "Púrpura"
+    ],
+    "category": "colores",
+    "image": "colores_12.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Lila",
+    "aliases": [
+      "Lila",
+      "Lavanda",
+      "Violeta"
+    ],
+    "category": "colores",
+    "image": "colores_13.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Azul celeste",
+    "aliases": [
+      "Celeste",
+      "Azul celeste",
+      "Azul claro",
+      "Azul bebé",
+      "Azul cielo"
+    ],
+    "category": "colores",
+    "image": "colores_14.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Azul cerúleo",
+    "aliases": [
+      "Azul",
+      "Azul cerúleo"
+    ],
+    "category": "colores",
+    "image": "colores_15.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Añil",
+    "aliases": [
+      "Añil",
+      "Azul oscuro",
+      "Índigo",
+      "Azul marino"
+    ],
+    "category": "colores",
+    "image": "colores_16.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Menta",
+    "aliases": [
+      "Menta",
+      "Salvia",
+      "Verde menta",
+      "Verde pastel"
+    ],
+    "category": "colores",
+    "image": "colores_17.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Turquesa",
+    "aliases": [
+      "Turquesa",
+      "Verde agua",
+      "Aguamarina"
+    ],
+    "category": "colores",
+    "image": "colores_18.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Verde lima",
+    "aliases": [
+      "Lima",
+      "Verde lima"
+    ],
+    "category": "colores",
+    "image": "colores_19.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Verde",
+    "aliases": [
+      "Verde"
+    ],
+    "category": "colores",
+    "image": "colores_20.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Verde esmeralda",
+    "aliases": [
+      "Esmeralda",
+      "Verde esmeralda",
+      "Verde oscuro",
+      "Verde botella"
+    ],
+    "category": "colores",
+    "image": "colores_21.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Caqui",
+    "aliases": [
+      "Verde oliva",
+      "Oliva",
+      "Caqui",
+      "Verde militar"
+    ],
+    "category": "colores",
+    "image": "colores_22.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Marrón",
+    "aliases": [
+      "Marrón",
+      "Café",
+      "Caca",
+      "Chocolate",
+      "Pardo"
+    ],
+    "category": "colores",
+    "image": "colores_23.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Beige",
+    "aliases": [
+      "Beige",
+      "Arena"
+    ],
+    "category": "colores",
+    "image": "colores_24.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Negro",
+    "aliases": [
+      "Negro"
+    ],
+    "category": "colores",
+    "image": "colores_25.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Antracita",
+    "aliases": [
+      "Antracita",
+      "Gris oscuro",
+      "Carbón",
+      "Gris antracita"
+    ],
+    "category": "colores",
+    "image": "colores_26.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Gris",
+    "aliases": [
+      "Gris",
+      "Gris claro"
+    ],
+    "category": "colores",
+    "image": "colores_27.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Blanco",
+    "aliases": [
+      "Blanco"
+    ],
+    "category": "colores",
+    "image": "colores_28.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Plateado",
+    "aliases": [
+      "Plateado",
+      "Plata"
+    ],
+    "category": "colores",
+    "image": "colores_29.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Dorado",
+    "aliases": [
+      "Dorado",
+      "Oro"
+    ],
+    "category": "colores",
+    "image": "colores_30.jpg"
+  }
+]

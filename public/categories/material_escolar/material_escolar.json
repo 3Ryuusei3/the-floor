@@ -1,0 +1,286 @@
+[
+  {
+    "id": 1,
+    "name": "Cuaderno",
+    "aliases": [
+      "Cuaderno"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_01.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Lápiz",
+    "aliases": [
+      "Lápiz",
+      "Lapicero",
+      "Grafito"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_02.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Mochila",
+    "aliases": [
+      "Mochila"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_03.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Rotuladores",
+    "aliases": [
+      "Rotuladores",
+      "Marcadores",
+      "Plumones"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_04.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Regla",
+    "aliases": [
+      "Regla"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_05.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Bolígrafo",
+    "aliases": [
+      "Bolígrafo",
+      "Boli"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_06.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Estuche",
+    "aliases": [
+      "Estuche"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_07.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Goma",
+    "aliases": [
+      "Goma"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_08.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Tijeras",
+    "aliases": [
+      "Tijeras"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_09.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Pegamento",
+    "aliases": [
+      "Pegamento",
+      "Cola"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_10.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Folios",
+    "aliases": [
+      "Folios",
+      "Hojas"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_11.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Subrayador",
+    "aliases": [
+      "Subrayador",
+      "Fosforito",
+      "Fluorescente"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_12.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Sacapuntas",
+    "aliases": [
+      "Sacapuntas",
+      "Afilalápices"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_13.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Carpeta",
+    "aliases": [
+      "Carpeta",
+      "Portafolios"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_14.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Lápices de colores",
+    "aliases": [
+      "Lápices de colores",
+      "Pinturas"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_15.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Típex",
+    "aliases": [
+      "Típex",
+      "Cinta correctora"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_16.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Compás",
+    "aliases": [
+      "Compás"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_17.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Cartulinas",
+    "aliases": [
+      "Cartulinas"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_18.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Ceras",
+    "aliases": [
+      "Ceras"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_19.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Calculadora",
+    "aliases": [
+      "Calculadora"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_20.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Pincel",
+    "aliases": [
+      "Pincel"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_21.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Archivador",
+    "aliases": [
+      "Archivador"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_22.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Clips",
+    "aliases": [
+      "Clips"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_23.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Acuarelas",
+    "aliases": [
+      "Acuarelas"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_24.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Agenda",
+    "aliases": [
+      "Agenda"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_25.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Transportador de ángulos",
+    "aliases": [
+      "Transportador de ángulos"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_26.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Grapadora",
+    "aliases": [
+      "Grapadora"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_27.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Tiza",
+    "aliases": [
+      "Tiza"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_28.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Pizarra",
+    "aliases": [
+      "Pizarra"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_29.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Notas adhesivas",
+    "aliases": [
+      "Notas adhesivas",
+      "Posits"
+    ],
+    "category": "material_escolar",
+    "image": "material_escolar_30.jpg"
+  }
+]

@@ -1,0 +1,289 @@
+[
+  {
+    "id": 1,
+    "name": "Ceda el paso",
+    "aliases": [
+      "Ceda el paso"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_01.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Stop",
+    "aliases": [
+      "Stop"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_02.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Prohibido el paso",
+    "aliases": [
+      "Prohibido el paso"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_03.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Paso de peatones",
+    "aliases": [
+      "Paso de peatones",
+      "Paso de cebra"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_04.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Límite de velocidad",
+    "aliases": [
+      "Límite de velocidad",
+      "50 km/h"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_05.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Dirección obligatoria",
+    "aliases": [
+      "Dirección obligatoria",
+      "Sentido obligatorio"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_06.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Prohibido estacionar",
+    "aliases": [
+      "Prohibido estacionar",
+      "No aparcar"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_07.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Glorieta",
+    "aliases": [
+      "Glorieta",
+      "Rotonda"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_08.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Prohibido adelantar",
+    "aliases": [
+      "Prohibido adelantar",
+      "No adelantar"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_09.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Obras",
+    "aliases": [
+      "Zona de obras"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_10.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Curva peligrosa",
+    "aliases": [
+      "Curva peligrosa"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_11.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Paso de animales en libertad",
+    "aliases": [
+      "Paso de animales en libertad"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_12.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Zona de niños",
+    "aliases": [
+      "Zona escolar",
+      "Zona de niños"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_13.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Estrechamiento de calzada",
+    "aliases": [
+      "Estrechamiento de calzada"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_14.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Pavimento deslizante",
+    "aliases": [
+      "Calzada deslizante"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_15.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Paso a nivel con barreras",
+    "aliases": [
+      "Paso a nivel con barreras"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_16.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Ciclistas",
+    "aliases": [
+      "Ciclistas",
+      "Vía ciclista"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_17.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Calzada con prioridad",
+    "aliases": [
+      "Calzada con prioridad",
+      "Vía prioritaria"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_18.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Prohibido el cambio de sentido",
+    "aliases": [
+      "Prohibido el cambio de sentido",
+      "Media vuelta prohibida"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_19.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Parada de taxis",
+    "aliases": [
+      "Parada de taxis"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_20.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Autopista",
+    "aliases": [
+      "Autopista",
+      "Autovía"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_21.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Semáforo",
+    "aliases": [
+      "Semáforo"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_22.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Gasolinera",
+    "aliases": [
+      "Gasolinera",
+      "Estación de servicio"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_23.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Puesto de socorro",
+    "aliases": [
+      "Puesto de socorro",
+      "SOS"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_24.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Estacionamiento",
+    "aliases": [
+      "Estacionamiento",
+      "Aparcamiento",
+      "Parking"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_25.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Fin de prohibiciones",
+    "aliases": [
+      "Fin de prohibiciones"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_26.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Túnel",
+    "aliases": [
+      "Túnel"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_27.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Viento transversal",
+    "aliases": [
+      "Viento transversal"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_28.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Desprendimientos",
+    "aliases": [
+      "Desprendimientos"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_29.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Perfil irregular",
+    "aliases": [
+      "Perfil irregular",
+      "Resalto",
+      "Badén"
+    ],
+    "category": "senales_trafico",
+    "image": "senales_trafico_30.jpg"
+  }
+]

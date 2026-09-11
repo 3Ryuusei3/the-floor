@@ -1,0 +1,273 @@
+[
+  {
+    "id": 1,
+    "name": "Goya",
+    "category": "metro_madrid",
+    "image": "metro_madrid_01.jpg",
+    "aliases": [
+      "Goya"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Callao",
+    "category": "metro_madrid",
+    "image": "metro_madrid_02.jpg",
+    "aliases": [
+      "Callao"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Lago/Laguna",
+    "category": "metro_madrid",
+    "image": "metro_madrid_03.jpg",
+    "aliases": [
+      "Lago",
+      "Laguna"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Chueca",
+    "category": "metro_madrid",
+    "image": "metro_madrid_04.jpg",
+    "aliases": [
+      "Chueca"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Embajadores",
+    "category": "metro_madrid",
+    "image": "metro_madrid_05.jpg",
+    "aliases": [
+      "Embajadores"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Delicias",
+    "category": "metro_madrid",
+    "image": "metro_madrid_06.jpg",
+    "aliases": [
+      "Delicias"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Quevedo",
+    "category": "metro_madrid",
+    "image": "metro_madrid_07.jpg",
+    "aliases": [
+      "Quevedo"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Bambú",
+    "category": "metro_madrid",
+    "image": "metro_madrid_08.jpg",
+    "aliases": [
+      "Bambú"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Pirámides",
+    "category": "metro_madrid",
+    "image": "metro_madrid_09.jpg",
+    "aliases": [
+      "Pirámides"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "La Peseta",
+    "category": "metro_madrid",
+    "image": "metro_madrid_10.jpg",
+    "aliases": [
+      "La Peseta"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Estrella",
+    "category": "metro_madrid",
+    "image": "metro_madrid_11.jpg",
+    "aliases": [
+      "Estrella"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Vicálvaro",
+    "category": "metro_madrid",
+    "image": "metro_madrid_12.jpg",
+    "aliases": [
+      "Vicálvaro"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Barajas",
+    "category": "metro_madrid",
+    "image": "metro_madrid_13.jpg",
+    "aliases": [
+      "Barajas"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "La Granja",
+    "category": "metro_madrid",
+    "image": "metro_madrid_14.jpg",
+    "aliases": [
+      "La Granja"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Tres Olivos",
+    "category": "metro_madrid",
+    "image": "metro_madrid_15.jpg",
+    "aliases": [
+      "Tres Olivos"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Iglesia",
+    "category": "metro_madrid",
+    "image": "metro_madrid_16.jpg",
+    "aliases": [
+      "Iglesia"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Colón",
+    "category": "metro_madrid",
+    "image": "metro_madrid_17.jpg",
+    "aliases": [
+      "Colón"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "La Latina",
+    "category": "metro_madrid",
+    "image": "metro_madrid_18.jpg",
+    "aliases": [
+      "La Latina"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Sevilla",
+    "category": "metro_madrid",
+    "image": "metro_madrid_19.jpg",
+    "aliases": [
+      "Sevilla"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Serrano",
+    "category": "metro_madrid",
+    "image": "metro_madrid_20.jpg",
+    "aliases": [
+      "Serrano"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Bilbao",
+    "category": "metro_madrid",
+    "image": "metro_madrid_21.jpg",
+    "aliases": [
+      "Bilbao"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Banco de España",
+    "category": "metro_madrid",
+    "image": "metro_madrid_22.jpg",
+    "aliases": [
+      "Banco de España"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Tribunal",
+    "category": "metro_madrid",
+    "image": "metro_madrid_23.jpg",
+    "aliases": [
+      "Tribunal"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Sol",
+    "category": "metro_madrid",
+    "image": "metro_madrid_24.jpg",
+    "aliases": [
+      "Sol"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "San Francisco",
+    "category": "metro_madrid",
+    "image": "metro_madrid_25.jpg",
+    "aliases": [
+      "San Francisco"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Oporto",
+    "category": "metro_madrid",
+    "image": "metro_madrid_26.jpg",
+    "aliases": [
+      "Oporto"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Ventas",
+    "category": "metro_madrid",
+    "image": "metro_madrid_27.jpg",
+    "aliases": [
+      "Ventas"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Las Musas",
+    "category": "metro_madrid",
+    "image": "metro_madrid_28.jpg",
+    "aliases": [
+      "Las Musas"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Gran Vía",
+    "category": "metro_madrid",
+    "image": "metro_madrid_29.jpg",
+    "aliases": [
+      "Gran Vía"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "12 de Octubre",
+    "category": "metro_madrid",
+    "image": "metro_madrid_30.jpg",
+    "aliases": [
+      "12 de Octubre"
+    ]
+  }
+]

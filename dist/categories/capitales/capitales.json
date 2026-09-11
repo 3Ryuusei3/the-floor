@@ -1,0 +1,280 @@
+[
+  {
+    "id": 1,
+    "name": "Madrid",
+    "aliases": [
+      "Madrid"
+    ],
+    "category": "capitales",
+    "image": "capitales_01.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Tokio",
+    "aliases": [
+      "Tokio"
+    ],
+    "category": "capitales",
+    "image": "capitales_02.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Canberra",
+    "aliases": [
+      "Canberra"
+    ],
+    "category": "capitales",
+    "image": "capitales_03.jpg"
+  },
+  {
+    "id": 4,
+    "name": "París",
+    "aliases": [
+      "París"
+    ],
+    "category": "capitales",
+    "image": "capitales_04.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Nairobi",
+    "aliases": [
+      "Nairobi"
+    ],
+    "category": "capitales",
+    "image": "capitales_05.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Buenos Aires",
+    "aliases": [
+      "Buenos Aires",
+      "Baires"
+    ],
+    "category": "capitales",
+    "image": "capitales_06.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Ulán Bator",
+    "aliases": [
+      "Ulán Bator",
+      "Ulanbator"
+    ],
+    "category": "capitales",
+    "image": "capitales_07.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Roma",
+    "aliases": [
+      "Roma"
+    ],
+    "category": "capitales",
+    "image": "capitales_08.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Ottawa",
+    "aliases": [
+      "Ottawa"
+    ],
+    "category": "capitales",
+    "image": "capitales_09.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Bangkok",
+    "aliases": [
+      "Bangkok"
+    ],
+    "category": "capitales",
+    "image": "capitales_10.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Lisboa",
+    "aliases": [
+      "Lisboa"
+    ],
+    "category": "capitales",
+    "image": "capitales_11.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Adís Abeba",
+    "aliases": [
+      "Adís Abeba",
+      "Adisabeba"
+    ],
+    "category": "capitales",
+    "image": "capitales_12.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Atenas",
+    "aliases": [
+      "Atenas"
+    ],
+    "category": "capitales",
+    "image": "capitales_13.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Helsinki",
+    "aliases": [
+      "Helsinki"
+    ],
+    "category": "capitales",
+    "image": "capitales_14.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Bogotá",
+    "aliases": [
+      "Bogotá",
+      "Santa Fe de Bogotá"
+    ],
+    "category": "capitales",
+    "image": "capitales_15.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Tiflis",
+    "aliases": [
+      "Tiflis"
+    ],
+    "category": "capitales",
+    "image": "capitales_16.jpg"
+  },
+  {
+    "id": 17,
+    "name": "El Cairo",
+    "aliases": [
+      "El Cairo",
+      "Cairo"
+    ],
+    "category": "capitales",
+    "image": "capitales_17.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Seúl",
+    "aliases": [
+      "Seúl"
+    ],
+    "category": "capitales",
+    "image": "capitales_18.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Reijkiavik",
+    "aliases": [
+      "Reikiavik",
+      "Reijkiavik"
+    ],
+    "category": "capitales",
+    "image": "capitales_19.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Brasilia",
+    "aliases": [
+      "Brasilia"
+    ],
+    "category": "capitales",
+    "image": "capitales_20.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Viena",
+    "aliases": [
+      "Viena"
+    ],
+    "category": "capitales",
+    "image": "capitales_21.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Katmandú",
+    "aliases": [
+      "Katmandú"
+    ],
+    "category": "capitales",
+    "image": "capitales_22.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Estocolmo",
+    "aliases": [
+      "Estocolmo"
+    ],
+    "category": "capitales",
+    "image": "capitales_23.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Rabat",
+    "aliases": [
+      "Rabat"
+    ],
+    "category": "capitales",
+    "image": "capitales_24.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Abu Dabi",
+    "aliases": [
+      "Abu Dabi",
+      "Abudabi"
+    ],
+    "category": "capitales",
+    "image": "capitales_25.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Praga",
+    "aliases": [
+      "Praga"
+    ],
+    "category": "capitales",
+    "image": "capitales_26.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Windhoek",
+    "aliases": [
+      "Windhoek",
+      "Windhuk"
+    ],
+    "category": "capitales",
+    "image": "capitales_27.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Dublín",
+    "aliases": [
+      "Dublín"
+    ],
+    "category": "capitales",
+    "image": "capitales_28.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Liubliana",
+    "aliases": [
+      "Liubliana"
+    ],
+    "category": "capitales",
+    "image": "capitales_29.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Yakarta",
+    "aliases": [
+      "Yakarta"
+    ],
+    "category": "capitales",
+    "image": "capitales_30.jpg"
+  }
+]

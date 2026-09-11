@@ -1,0 +1,275 @@
+[
+  {
+    "id": 1,
+    "name": "Manzana",
+    "category": "frutas",
+    "image": "frutas_01.jpg",
+    "aliases": [
+      "Manzana"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Plátano",
+    "category": "frutas",
+    "image": "frutas_02.jpg",
+    "aliases": [
+      "Plátano"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Naranja",
+    "category": "frutas",
+    "image": "frutas_03.jpg",
+    "aliases": [
+      "Naranja"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Pera",
+    "category": "frutas",
+    "image": "frutas_04.jpg",
+    "aliases": [
+      "Pera"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Fresa",
+    "category": "frutas",
+    "image": "frutas_05.jpg",
+    "aliases": [
+      "Fresa"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Uva",
+    "category": "frutas",
+    "image": "frutas_06.jpg",
+    "aliases": [
+      "Uva"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Sandía",
+    "category": "frutas",
+    "image": "frutas_07.jpg",
+    "aliases": [
+      "Sandía"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Melón",
+    "category": "frutas",
+    "image": "frutas_08.jpg",
+    "aliases": [
+      "Melón"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Limón/Lima",
+    "category": "frutas",
+    "image": "frutas_09.jpg",
+    "aliases": [
+      "Limón",
+      "Lima"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Cereza",
+    "category": "frutas",
+    "image": "frutas_10.jpg",
+    "aliases": [
+      "Cereza"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Melocotón",
+    "category": "frutas",
+    "image": "frutas_11.jpg",
+    "aliases": [
+      "Melocotón"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Piña",
+    "category": "frutas",
+    "image": "frutas_12.jpg",
+    "aliases": [
+      "Piña"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Kiwi",
+    "category": "frutas",
+    "image": "frutas_13.jpg",
+    "aliases": [
+      "Kiwi"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Mandarina",
+    "category": "frutas",
+    "image": "frutas_14.jpg",
+    "aliases": [
+      "Mandarina"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Mango",
+    "category": "frutas",
+    "image": "frutas_15.jpg",
+    "aliases": [
+      "Mango"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Ciruela",
+    "category": "frutas",
+    "image": "frutas_16.jpg",
+    "aliases": [
+      "Ciruela"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Coco",
+    "category": "frutas",
+    "image": "frutas_17.jpg",
+    "aliases": [
+      "Coco"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Frambuesa",
+    "category": "frutas",
+    "image": "frutas_18.jpg",
+    "aliases": [
+      "Frambuesa"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Arándano",
+    "category": "frutas",
+    "image": "frutas_19.jpg",
+    "aliases": [
+      "Arándano"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Mora",
+    "category": "frutas",
+    "image": "frutas_20.jpg",
+    "aliases": [
+      "Mora"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Granada",
+    "category": "frutas",
+    "image": "frutas_21.jpg",
+    "aliases": [
+      "Granada"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Higo",
+    "category": "frutas",
+    "image": "frutas_22.jpg",
+    "aliases": [
+      "Higo"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Durián",
+    "category": "frutas",
+    "image": "frutas_23.jpg",
+    "aliases": [
+      "Durián"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Pomelo",
+    "category": "frutas",
+    "image": "frutas_24.jpg",
+    "aliases": [
+      "Pomelo"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Papaya",
+    "category": "frutas",
+    "image": "frutas_25.jpg",
+    "aliases": [
+      "Papaya"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Nectarina",
+    "category": "frutas",
+    "image": "frutas_26.jpg",
+    "aliases": [
+      "Nectarina",
+      "Fresquilla"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Caqui",
+    "category": "frutas",
+    "image": "frutas_27.jpg",
+    "aliases": [
+      "Caqui"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Chirimoya",
+    "category": "frutas",
+    "image": "frutas_28.jpg",
+    "aliases": [
+      "Chirimoya"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Maracuyá",
+    "category": "frutas",
+    "image": "frutas_29.jpg",
+    "aliases": [
+      "Maracuyá"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Pitaya/Fruta del dragón",
+    "category": "frutas",
+    "image": "frutas_30.jpg",
+    "aliases": [
+      "Pitaya",
+      "Fruta del dragón"
+    ]
+  }
+]
