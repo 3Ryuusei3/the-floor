@@ -21,7 +21,7 @@ export const GameSetup: React.FC = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8 space-y-8 animate-fadeIn">
+    <div className="w-full max-w-[1200px] mx-auto px-4 py-8 space-y-8 animate-fadeIn">
       {/* Header Estilo Concurso de Televisión */}
       <div className="text-center space-y-3">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-floor-surface border border-floor-cyan/40 text-floor-cyan text-xs font-bold uppercase tracking-widest shadow-[0_0_15px_rgba(0,240,255,0.2)]">

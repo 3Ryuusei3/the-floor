@@ -142,7 +142,7 @@ export const BoardGrid: React.FC = () => {
   }, [activeChallengerId, boardStep, tiles, attackableTileIndices, openChallengerRoulette, confirmRouletteWinner]);
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-6 space-y-6 animate-fadeIn">
+    <div className="w-full max-w-[1200px] mx-auto px-4 py-6 space-y-6 animate-fadeIn">
       {/* Cabecera del Tablero */}
       <BoardHeader onOpenRoulette={handleStartChallengerSelection} />
 
@@ -186,7 +186,7 @@ export const BoardGrid: React.FC = () => {
         className="grid gap-2.5 mx-auto w-full transition-all"
         style={{
           gridTemplateColumns: `repeat(${settings.gridCols}, minmax(0, 1fr))`,
-          maxWidth: settings.gridCols <= 2 ? '26rem' : settings.gridCols <= 5 ? '56rem' : '68rem',
+          maxWidth: settings.gridCols <= 2 ? '26rem' : '1168px',
         }}
       >
         {tiles.map((tile) => {

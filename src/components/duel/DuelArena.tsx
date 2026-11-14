@@ -45,7 +45,7 @@ export const DuelArena: React.FC = () => {
     currentDuel.status === 'intro' || currentDuel.status === 'countdown';
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-2 sm:px-4 py-2 space-y-2 animate-fadeIn flex flex-col min-h-[94vh] justify-between">
+    <div className="w-full max-w-[1200px] mx-auto px-2 sm:px-4 py-2 space-y-2 animate-fadeIn flex flex-col min-h-[94vh] justify-between">
       {/* Pantalla de Resumen / Cuenta Atrás Pre-Duelo */}
       {isIntroOrCountdown && (
         <DuelIntroCountdown
