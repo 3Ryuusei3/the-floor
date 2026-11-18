@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { usePeerJudge } from '../../hooks/usePeerConnection';
 import {
   CheckCircle2,
@@ -26,7 +26,7 @@ interface JudgeViewProps {
 }
 
 export const JudgeView: React.FC<JudgeViewProps> = ({ roomId }) => {
-  const { isConnected, connectionType, syncState, sendAction } = usePeerJudge(roomId);
+  const { isConnected, connectionType, syncState, syncReceivedAt, sendAction } = usePeerJudge(roomId);
 
   const currentDuel = syncState?.currentDuel;
   const challenger = syncState?.challenger;
@@ -86,11 +86,36 @@ export const JudgeView: React.FC<JudgeViewProps> = ({ roomId }) => {
   const isFinished = currentDuel?.status === 'finished';
   const isFrozen = currentDuel?.isFrozen;
 
-  const currentItem = currentDuel?.items[currentDuel.currentIndex];
+  const currentItem = currentDuel?.currentItem || null;
+  const nextItemImage = currentDuel?.nextItem?.image;
 
-  const challengerTime = currentDuel?.challengerTime || 45;
-  const defenderTime = currentDuel?.defenderTime || 45;
+  // Precargar la imagen del siguiente ítem para que aparezca al instante
+  useEffect(() => {
+    if (!nextItemImage) return;
+    const img = new Image();
+    img.src = nextItemImage;
+  }, [nextItemImage]);
+
+  // Reloj interpolado localmente: la pantalla solo re-sincroniza cada segundo
+  const isClockRunning = isRunning && !isFrozen;
+  const [clockNow, setClockNow] = useState(() => performance.now());
+  useEffect(() => {
+    if (!isClockRunning) return;
+    let frame = 0;
+    const loop = () => {
+      setClockNow(performance.now());
+      frame = window.setTimeout(loop, 100);
+    };
+    loop();
+    return () => clearTimeout(frame);
+  }, [isClockRunning]);
+
   const isChallengerActive = currentDuel?.activePlayerId === currentDuel?.challengerId;
+  const elapsedSinceSync = isClockRunning ? Math.max(0, (clockNow - syncReceivedAt) / 1000) : 0;
+  const rawChallengerTime = currentDuel?.challengerTime ?? 45;
+  const rawDefenderTime = currentDuel?.defenderTime ?? 45;
+  const challengerTime = Math.max(0, rawChallengerTime - (isChallengerActive ? elapsedSinceSync : 0));
+  const defenderTime = Math.max(0, rawDefenderTime - (!isChallengerActive ? elapsedSinceSync : 0));
 
   const phaseLabel =
     phase === 'setup'
@@ -910,7 +935,7 @@ export const JudgeView: React.FC<JudgeViewProps> = ({ roomId }) => {
                   <span className="text-white font-bold truncate">{currentDuel.category.name}</span>
                 </span>
                 <span className="font-mono text-slate-400 text-[10px] px-1.5 py-0.5 rounded bg-floor-card border border-floor-border flex-shrink-0 ml-1">
-                  #{currentDuel.currentIndex + 1} / {currentDuel.items.length}
+                  #{currentDuel.currentIndex + 1} / {currentDuel.itemsCount}
                 </span>
               </div>
 

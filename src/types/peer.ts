@@ -1,4 +1,12 @@
 import { GamePhase, DuelSession, Player, BoardTile, BoardStep } from './game';
+import { CategoryItem } from './category';
+
+// Duelo aligerado para el mando: sin la lista completa de ítems ni el historial
+export type JudgeDuelSync = Omit<DuelSession, 'items' | 'history'> & {
+  itemsCount: number;
+  currentItem: CategoryItem | null;
+  nextItem: CategoryItem | null;
+};
 
 export interface ActiveRouletteSync {
   isOpen: boolean;
@@ -34,7 +42,7 @@ export interface PendingGrandFinalTopicSync {
 
 export interface HostSyncPayload {
   phase: GamePhase;
-  currentDuel: DuelSession | null;
+  currentDuel: JudgeDuelSync | null;
   challenger: Player | null;
   defender: Player | null;
   isJudgeConnected: boolean;

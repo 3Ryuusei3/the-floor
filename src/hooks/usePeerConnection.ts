@@ -1,19 +1,35 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import Peer, { DataConnection } from 'peerjs';
 import { useGameStore } from './useGameStore';
-import { HostMessage, JudgeActionMessage, HostSyncPayload } from '../types/peer';
+import { HostMessage, JudgeActionMessage, HostSyncPayload, JudgeDuelSync } from '../types/peer';
+import { DuelSession } from '../types/game';
 import { getAdjacentAttackableTileIndices } from '../utils/boardLogic';
+import { getIceServers } from '../utils/iceServers';
 
 const PEER_PREFIX = 'floor-game-room-';
 
-const PEER_CONFIG = {
-  config: {
-    iceServers: [
-      { urls: 'stun:stun.l.google.com:19302' },
-      { urls: 'stun:stun1.l.google.com:19302' },
-    ],
-  },
-};
+// El relay SSE/HTTP (/api/judge-*) solo existe en el servidor de desarrollo de Vite
+const USE_DEV_RELAY = import.meta.env.DEV;
+
+// Mientras el reloj corre, el mando interpola localmente: basta con re-sincronizar cada segundo
+const CLOCK_RESYNC_MS = 1000;
+
+async function getPeerOptions() {
+  const iceServers = await getIceServers();
+  return { config: { iceServers } };
+}
+
+// Quitar del duelo lo que el mando no necesita (lista de ítems e historial)
+function toJudgeDuel(duel: DuelSession | null): JudgeDuelSync | null {
+  if (!duel) return null;
+  const { items, history: _history, ...rest } = duel;
+  return {
+    ...rest,
+    itemsCount: items.length,
+    currentItem: items[duel.currentIndex] || null,
+    nextItem: items[duel.currentIndex + 1] || null,
+  };
+}
 
 export function usePeerHost(roomId: string) {
   const [peerId, setPeerId] = useState<string>('');
@@ -78,7 +94,7 @@ export function usePeerHost(roomId: string) {
   // Mantener referencia al estado actual para evitar recrear la conexión en cada cambio
   const stateRef = useRef<HostSyncPayload>({
     phase,
-    currentDuel,
+    currentDuel: toJudgeDuel(currentDuel),
     challenger,
     defender,
     isJudgeConnected: isConnected,
@@ -100,7 +116,7 @@ export function usePeerHost(roomId: string) {
 
   stateRef.current = {
     phase,
-    currentDuel,
+    currentDuel: toJudgeDuel(currentDuel),
     challenger,
     defender,
     isJudgeConnected: isConnected,
@@ -188,8 +204,8 @@ export function usePeerHost(roomId: string) {
       }
     }
 
-    // 3. Local / LAN Relay (Vite)
-    try {
+    // 3. Local / LAN Relay (Vite, solo en desarrollo)
+    if (USE_DEV_RELAY) try {
       fetch('/api/judge-state', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -351,20 +367,34 @@ export function usePeerHost(roomId: string) {
     // 2. PeerJS para conexión entre orígenes distintos (móvil, red WiFi, etc.)
     const fullPeerId = `${PEER_PREFIX}${roomId}`;
 
-    const initPeer = () => {
+    const initPeer = async () => {
+      if (!isSubscribed) return;
+      const peerOptions = await getPeerOptions();
       if (!isSubscribed) return;
       try {
         if (peerInstance && !peerInstance.destroyed) {
           peerInstance.destroy();
         }
 
-        const peer = new Peer(fullPeerId, PEER_CONFIG);
+        const peer = new Peer(fullPeerId, peerOptions);
         peerInstance = peer;
         peerRef.current = peer;
 
         peer.on('open', (id) => {
           if (!isSubscribed) return;
           setPeerId(id);
+        });
+
+        // El servidor de emparejamiento de PeerJS puede cortar la conexión: reconectar
+        peer.on('disconnected', () => {
+          if (!isSubscribed || peer.destroyed) return;
+          setTimeout(() => {
+            if (isSubscribed && !peer.destroyed && peer.disconnected) {
+              try {
+                peer.reconnect();
+              } catch {}
+            }
+          }, 1000);
         });
 
         peer.on('connection', (conn) => {
@@ -432,7 +462,7 @@ export function usePeerHost(roomId: string) {
 
     // 3. Local / LAN SSE Relay (Vite) para comunicación entre dominios y red WiFi
     let eventSourceInstance: EventSource | null = null;
-    try {
+    if (USE_DEV_RELAY) try {
       const es = new EventSource(`/api/judge-stream?role=host&room=${roomId}`);
       eventSourceInstance = es;
       es.onmessage = (event) => {
@@ -480,21 +510,51 @@ export function usePeerHost(roomId: string) {
     };
   }, [roomId, handleJudgeMessage, sendSync, refreshLocalPresence, setIsJudgeConnected]);
 
-  // Sincronizar con throttle para el reloj del duelo (máximo cada 80ms)
+  // Sincronizar al instante ante cualquier evento; los ticks del reloj solo cada segundo
+  // (el mando interpola el reloj localmente entre sincronizaciones)
   const lastSyncTimeRef = useRef(0);
+  const lastSentTimesRef = useRef<{ ch: number; def: number } | null>(null);
+  const lastEventKeyRef = useRef('');
   useEffect(() => {
     const now = performance.now();
     const isDuelRunning = currentDuel?.status === 'in_progress';
+    const prevTimes = lastSentTimesRef.current;
+    const chTime = currentDuel?.challengerTime ?? 0;
+    const defTime = currentDuel?.defenderTime ?? 0;
+    // Un tiempo que sube = ajuste manual del juez -> sincronizar ya
+    const timeWasAdjusted =
+      !!prevTimes && (chTime > prevTimes.ch + 0.05 || defTime > prevTimes.def + 0.05);
 
-    if (isDuelRunning) {
-      if (now - lastSyncTimeRef.current > 80) {
-        lastSyncTimeRef.current = now;
-        sendSync();
-      }
-    } else {
+    const send = () => {
       lastSyncTimeRef.current = now;
+      lastSentTimesRef.current = { ch: chTime, def: defTime };
       sendSync();
+    };
+
+    const eventKey = [
+      phase,
+      boardStep,
+      activeChallengerId,
+      selectedTileIndex,
+      currentDuel?.status,
+      currentDuel?.currentIndex,
+      currentDuel?.activePlayerId,
+      currentDuel?.isFrozen,
+      currentDuel?.isPassLocked,
+    ].join('|');
+    const isNewEvent = eventKey !== lastEventKeyRef.current;
+    lastEventKeyRef.current = eventKey;
+
+    if (
+      isDuelRunning &&
+      !isNewEvent &&
+      !timeWasAdjusted &&
+      now - lastSyncTimeRef.current < CLOCK_RESYNC_MS
+    ) {
+      // Solo ha avanzado el reloj: lo cubre la interpolación del mando
+      return;
     }
+    send();
   }, [
     phase,
     boardStep,
@@ -522,7 +582,13 @@ export function usePeerHost(roomId: string) {
 export function usePeerJudge(roomId: string) {
   const [isConnected, setIsConnected] = useState(false);
   const [connectionType, setConnectionType] = useState<'local' | 'webrtc' | null>(null);
-  const [syncState, setSyncState] = useState<HostSyncPayload | null>(null);
+  const [syncState, setSyncStateRaw] = useState<HostSyncPayload | null>(null);
+  // Momento local (performance.now) en que llegó el último estado, para interpolar el reloj
+  const [syncReceivedAt, setSyncReceivedAt] = useState(0);
+  const setSyncState = useCallback((payload: HostSyncPayload) => {
+    setSyncStateRaw(payload);
+    setSyncReceivedAt(performance.now());
+  }, []);
   const connRef = useRef<DataConnection | null>(null);
   const broadcastRef = useRef<BroadcastChannel | null>(null);
   const peerRef = useRef<Peer | null>(null);
@@ -554,8 +620,8 @@ export function usePeerJudge(roomId: string) {
       }
     }
 
-    // 3. Local / LAN Relay (Vite)
-    try {
+    // 3. Local / LAN Relay (Vite, solo en desarrollo)
+    if (USE_DEV_RELAY) try {
       fetch('/api/judge-action', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -601,7 +667,7 @@ export function usePeerJudge(roomId: string) {
     }
 
     // 2. Local / LAN SSE Relay (Vite) para conexión entre pestañas y WiFi
-    try {
+    if (USE_DEV_RELAY) try {
       const es = new EventSource(`/api/judge-stream?role=judge&room=${roomId}`);
       eventSourceInstance = es;
       es.onmessage = (event) => {
@@ -624,14 +690,16 @@ export function usePeerJudge(roomId: string) {
     // 3. Conectar por PeerJS (para móviles o diferentes dominios)
     const hostPeerId = `${PEER_PREFIX}${roomId}`;
 
-    const connectPeer = () => {
+    const connectPeer = async () => {
+      if (!isSubscribed) return;
+      const peerOptions = await getPeerOptions();
       if (!isSubscribed) return;
       try {
         if (peerInstance && !peerInstance.destroyed) {
           peerInstance.destroy();
         }
 
-        const peer = new Peer(PEER_CONFIG);
+        const peer = new Peer(peerOptions);
         peerInstance = peer;
         peerRef.current = peer;
 
@@ -688,6 +756,25 @@ export function usePeerJudge(roomId: string) {
 
     connectPeer();
 
+    // Al volver a la app (pantalla bloqueada, cambio de app...) reconectar y pedir estado
+    const handleVisibility = () => {
+      if (!isSubscribed || document.visibilityState !== 'visible') return;
+      if (connRef.current && connRef.current.open) {
+        try {
+          connRef.current.send({ type: 'REQUEST_SYNC' });
+        } catch {}
+      } else {
+        if (webrtcReconnectTimeout) clearTimeout(webrtcReconnectTimeout);
+        connectPeer();
+      }
+      if (broadcastRef.current) {
+        try {
+          broadcastRef.current.postMessage({ type: 'REQUEST_SYNC' });
+        } catch {}
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibility);
+
     // Heartbeat bidireccional cada 2 segundos
     const pingInterval = setInterval(() => {
       if (!isSubscribed) return;
@@ -722,6 +809,7 @@ export function usePeerJudge(roomId: string) {
 
     return () => {
       isSubscribed = false;
+      document.removeEventListener('visibilitychange', handleVisibility);
       if (webrtcReconnectTimeout) {
         clearTimeout(webrtcReconnectTimeout);
       }
@@ -745,6 +833,7 @@ export function usePeerJudge(roomId: string) {
     isConnected,
     connectionType,
     syncState,
+    syncReceivedAt,
     sendAction,
   };
 }

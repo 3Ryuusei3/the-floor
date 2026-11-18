@@ -40,7 +40,7 @@ export const App: React.FC = () => {
       }
     })();
     if (stored) return stored;
-    const generated = Math.random().toString(36).substring(2, 6).toUpperCase();
+    const generated = Math.random().toString(36).substring(2, 8).toUpperCase();
     try {
       localStorage.setItem('the_floor_room_id', generated);
       sessionStorage.setItem('the_floor_room_id', generated);
