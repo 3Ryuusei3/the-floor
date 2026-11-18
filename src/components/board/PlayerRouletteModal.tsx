@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import confetti from 'canvas-confetti';
 import { Sparkles, Swords, User, Flame, Crown } from 'lucide-react';
 import { Player } from '../../types/game';
@@ -13,6 +13,8 @@ interface PlayerRouletteModalProps {
   badgeText: string;
   candidates: Player[];
   isTensionRoulette?: boolean;
+  /** Ganador fijado en el store (p. ej. elegido manualmente por el juez o restaurado al deshacer) */
+  forcedWinner?: Player | null;
   onWinnerDetermined?: (player: Player) => void;
   onPlayerChosen: (player: Player) => void;
 }
@@ -24,6 +26,7 @@ export const PlayerRouletteModal: React.FC<PlayerRouletteModalProps> = ({
   badgeText,
   candidates,
   isTensionRoulette = false,
+  forcedWinner = null,
   onWinnerDetermined,
   onPlayerChosen,
 }) => {
@@ -31,12 +34,31 @@ export const PlayerRouletteModal: React.FC<PlayerRouletteModalProps> = ({
   const [highlightedIndex, setHighlightedIndex] = useState(0);
   const [winner, setWinner] = useState<Player | null>(null);
   const [isNearEnd, setIsNearEnd] = useState(false);
+  const forcedWinnerRef = useRef<Player | null>(forcedWinner);
+  forcedWinnerRef.current = forcedWinner;
+  const cancelSpinRef = useRef<() => void>(() => {});
 
   useEffect(() => {
     if (!isOpen || candidates.length === 0) return;
 
-    setWinner(null);
     setIsNearEnd(false);
+
+    // Si ya hay un ganador decidido (restaurado al deshacer), mostrarlo sin volver a girar
+    const preset = forcedWinnerRef.current;
+    if (preset) {
+      setWinner(preset);
+      const idx = candidates.findIndex((p) => p.id === preset.id);
+      setHighlightedIndex(idx >= 0 ? idx : 0);
+      return;
+    }
+
+    setWinner(null);
+    let cancelled = false;
+    let timer: ReturnType<typeof setTimeout> | null = null;
+    cancelSpinRef.current = () => {
+      cancelled = true;
+      if (timer) clearTimeout(timer);
+    };
 
     // Seleccionar de forma ponderada al ganador (dando 3x probabilidad a los concursantes sin casillas)
     const targetWinner = pickWeightedRouletteWinner(candidates);
@@ -91,6 +113,7 @@ export const PlayerRouletteModal: React.FC<PlayerRouletteModalProps> = ({
     };
 
     const spin = () => {
+      if (cancelled) return;
       currentIndex = (currentIndex + 1) % N;
       setHighlightedIndex(currentIndex);
       count++;
@@ -107,7 +130,7 @@ export const PlayerRouletteModal: React.FC<PlayerRouletteModalProps> = ({
 
       if (count < maxSpins) {
         const nextDelay = getNextDelay(count, maxSpins);
-        setTimeout(spin, nextDelay);
+        timer = setTimeout(spin, nextDelay);
       } else {
         const chosen = candidates[currentIndex];
         setWinner(chosen);
@@ -128,9 +151,23 @@ export const PlayerRouletteModal: React.FC<PlayerRouletteModalProps> = ({
     };
 
     const initialDelay = isTensionRoulette ? 40 : 50;
-    const timer = setTimeout(spin, initialDelay);
-    return () => clearTimeout(timer);
+    timer = setTimeout(spin, initialDelay);
+    return () => {
+      cancelled = true;
+      if (timer) clearTimeout(timer);
+    };
   }, [isOpen, candidates, isDevMode, isTensionRoulette, onWinnerDetermined]);
+
+  // El juez ha cambiado manualmente el resultado de la ruleta
+  useEffect(() => {
+    if (!isOpen || !forcedWinner) return;
+    if (winner && winner.id === forcedWinner.id) return;
+    cancelSpinRef.current();
+    setIsNearEnd(false);
+    setWinner(forcedWinner);
+    const idx = candidates.findIndex((p) => p.id === forcedWinner.id);
+    if (idx >= 0) setHighlightedIndex(idx);
+  }, [isOpen, forcedWinner, winner, candidates]);
 
   if (!isOpen || candidates.length === 0) return null;
 

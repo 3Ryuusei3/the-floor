@@ -38,6 +38,13 @@ export const BoardGrid: React.FC = () => {
     }
   }, [pendingGrandFinalTopicChoice]);
 
+  // La animación de conquista se muestra una sola vez y después se limpia
+  React.useEffect(() => {
+    if (conqueringTiles.length === 0) return;
+    const timer = setTimeout(() => useGameStore.setState({ conqueringTiles: [] }), 900);
+    return () => clearTimeout(timer);
+  }, [conqueringTiles]);
+
   // Guardia de seguridad: Si todo el tablero pertenece al mismo jugador, proclamar Campeón de inmediato
   React.useEffect(() => {
     if (tiles.length === 0) return;
@@ -228,6 +235,7 @@ export const BoardGrid: React.FC = () => {
         title="SORTEO DE RETADOR"
         subtitle="Seleccionando qué concursante comenzará a conquistar en The Floor"
         candidates={activeRoulette?.type === 'challenger' ? activeRoulette.candidates : []}
+        forcedWinner={activeRoulette?.winner ?? null}
         onWinnerDetermined={setRouletteWinner}
         onPlayerChosen={confirmRouletteWinner}
       />
@@ -239,6 +247,7 @@ export const BoardGrid: React.FC = () => {
         title="SORTEO DE DEFENSOR"
         subtitle="Seleccionando quién defenderá este tema frente al retador"
         candidates={activeRoulette?.type === 'defender' ? activeRoulette.candidates : []}
+        forcedWinner={activeRoulette?.winner ?? null}
         onWinnerDetermined={setRouletteWinner}
         onPlayerChosen={confirmRouletteWinner}
       />
@@ -251,6 +260,7 @@ export const BoardGrid: React.FC = () => {
         subtitle="¿Quién retará al líder en la Gran Final por el 100% de The Floor?"
         candidates={activeRoulette?.type === 'grand_final_opponent' ? activeRoulette.candidates : []}
         isTensionRoulette={true}
+        forcedWinner={activeRoulette?.winner ?? null}
         onWinnerDetermined={setRouletteWinner}
         onPlayerChosen={confirmRouletteWinner}
       />

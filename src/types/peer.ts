@@ -53,6 +53,9 @@ export interface HostSyncPayload {
   activeRoulette?: ActiveRouletteSync | null;
   pendingMergedTopicSelection?: PendingMergedTopicSync | null;
   pendingGrandFinalTopicChoice?: PendingGrandFinalTopicSync | null;
+  // Deshacer decisiones del tablero (elección de tema, ruleta, fusión...)
+  canUndoBoard?: boolean;
+  undoBoardLabel?: string | null;
 }
 
 export type JudgeActionType =
@@ -71,6 +74,9 @@ export type JudgeActionType =
   | 'ACTION_APPLY_MERGED_TOPIC'
   | 'ACTION_SELECT_GRAND_FINAL_TOPIC'
   | 'ACTION_RESET_TO_SETUP'
+  | 'ACTION_UNDO_BOARD'
+  | 'ACTION_RESPIN_ROULETTE'
+  | 'ACTION_SET_ROULETTE_WINNER'
   | 'REQUEST_SYNC'
   | 'JUDGE_PING';
 
@@ -84,6 +90,7 @@ export interface JudgeActionMessage {
     target?: 'challenger' | 'defender';
     secondsDelta?: number;
     categorySlug?: string;
+    playerId?: string;
   };
 }
 

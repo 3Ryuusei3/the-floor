@@ -42,6 +42,28 @@ export interface ActiveRoulette {
   };
 }
 
+// Instantánea de las decisiones del tablero para poder deshacerlas desde el mando del juez
+export interface BoardHistoryEntry {
+  label: string;
+  phase: GamePhase;
+  tiles: BoardTile[];
+  players: Player[];
+  activeChallengerId: string | null;
+  selectedTileIndex: number | null;
+  boardStep: BoardStep;
+  lastDefenderId: string | null;
+  chosenRoulettePlayers: string[];
+  lastDuelParticipants: string[];
+  currentDuel: DuelSession | null;
+  pendingMergedTopicSelection: PendingMergedTopic | null;
+  pendingGrandFinalTopicChoice: PendingGrandFinalTopicChoice | null;
+  activeRoulette: ActiveRoulette | null;
+  stats: GameStats;
+  conqueringTiles: number[];
+}
+
+const MAX_BOARD_HISTORY = 25;
+
 interface GameState {
   phase: GamePhase;
   settings: GameSettings;
@@ -63,6 +85,7 @@ interface GameState {
   isSoundMuted: boolean;
   isJudgeConnected: boolean;
   conqueringTiles: number[];
+  boardHistory: BoardHistoryEntry[];
 
   // Acciones
   setSettings: (settings: Partial<GameSettings>) => void;
@@ -83,6 +106,10 @@ interface GameState {
   setRouletteWinner: (player: Player) => void;
   confirmRouletteWinner: () => void;
   closeRoulette: () => void;
+  rerollRoulette: () => void;
+  overrideRouletteWinner: (playerId: string) => void;
+  pushBoardHistory: (label: string) => void;
+  undoBoardAction: () => void;
   applyMergedTopic: (categorySlug: string) => void;
   recordPlayerChosenInRoulette: (playerId: string) => void;
   startGrandFinalDuel: (chosenCategorySlug: string, defendedTileIndex: number) => Promise<void>;
@@ -121,7 +148,84 @@ const INITIAL_STATS: GameStats = {
   playerStats: {},
 };
 
-export const useGameStore = create<GameState>((set, get) => ({
+export const useGameStore = create<GameState>((set, get) => {
+  // Crea el duelo sin registrar historial (lo usan las acciones que ya lo han registrado)
+  const createDuel = async (
+    challengerId: string,
+    defenderId: string,
+    defendedTileIndex: number,
+    isExplicitGrandFinal = false
+  ) => {
+    const { players, tiles, settings } = get();
+    const challenger = players.find((p) => p.id === challengerId);
+    const defender = players.find((p) => p.id === defenderId);
+    const defendedTile = tiles.find((t) => t.index === defendedTileIndex);
+
+    if (!challenger || !defender || !defendedTile) return;
+
+    const categorySlug = defendedTile.categorySlug;
+    const builtinCategory = BUILTIN_CATEGORIES.find((c) => c.slug === categorySlug);
+
+    const categoryMeta =
+      builtinCategory || {
+        slug: categorySlug,
+        name: categorySlug.replace(/_/g, ' ').toUpperCase(),
+        totalItems: 30,
+      };
+
+    const rawItems = await loadCategoryItems(categorySlug);
+    const items = shuffleItems(rawItems);
+
+    const activeSurvivors = players.filter((p) => !p.isEliminated && p.territoryCount > 0);
+    const hasUnclaimed = tiles.some((t) => t.playerId === null);
+    const uniqueTopicsOnBoard = new Set(tiles.map((t) => t.categorySlug).filter(Boolean));
+    const isGrandFinalDuel =
+      isExplicitGrandFinal ||
+      (!hasUnclaimed && activeSurvivors.length === 2) ||
+      uniqueTopicsOnBoard.size <= 2 ||
+      Boolean(get().pendingGrandFinalTopicChoice);
+
+    const duel: DuelSession = {
+      challengerId,
+      defenderId,
+      defendedTileIndex,
+      category: categoryMeta,
+      items,
+      currentIndex: 0,
+      activePlayerId: challengerId,
+      challengerTime: settings.duelTime,
+      defenderTime: settings.duelTime,
+      status: 'intro',
+      isFrozen: false,
+      frozenSecondsRemaining: 0,
+      isPassLocked: false,
+      passPenaltySecondsRemaining: 0,
+      winnerId: null,
+      loserId: null,
+      isGrandFinalDuel,
+      history: [],
+    };
+
+    set({
+      currentDuel: duel,
+      lastDuelSnapshot: null,
+      conqueringTiles: [],
+      phase: 'duel',
+      lastDefenderId: defenderId,
+    });
+  };
+
+  // Jugadores que pueden ser elegidos manualmente por el juez en la ruleta actual
+  const getRouletteEligiblePlayers = (roulette: ActiveRoulette): Player[] => {
+    const { players, activeChallengerId } = get();
+    const alive = players.filter((p) => !p.isEliminated);
+    if (roulette.type === 'challenger') return alive;
+    if (roulette.type === 'defender') return alive.filter((p) => p.id !== activeChallengerId);
+    const chooserId = roulette.grandFinalData?.activeChooserId;
+    return alive.filter((p) => p.id !== chooserId);
+  };
+
+  return {
   phase: 'setup',
   settings: DEFAULT_SETTINGS,
   isDevMode: false,
@@ -142,6 +246,48 @@ export const useGameStore = create<GameState>((set, get) => ({
   isSoundMuted: false,
   isJudgeConnected: false,
   conqueringTiles: [],
+  boardHistory: [],
+
+  pushBoardHistory: (label) => {
+    const s = get();
+    const entry: BoardHistoryEntry = {
+      label,
+      phase: s.phase,
+      tiles: s.tiles,
+      players: s.players,
+      activeChallengerId: s.activeChallengerId,
+      selectedTileIndex: s.selectedTileIndex,
+      boardStep: s.boardStep,
+      lastDefenderId: s.lastDefenderId,
+      chosenRoulettePlayers: s.chosenRoulettePlayers,
+      lastDuelParticipants: s.lastDuelParticipants,
+      currentDuel: s.currentDuel,
+      pendingMergedTopicSelection: s.pendingMergedTopicSelection,
+      pendingGrandFinalTopicChoice: s.pendingGrandFinalTopicChoice,
+      activeRoulette: s.activeRoulette,
+      stats: s.stats,
+      conqueringTiles: s.conqueringTiles,
+    };
+    set({ boardHistory: [...s.boardHistory, entry].slice(-MAX_BOARD_HISTORY) });
+  },
+
+  undoBoardAction: () => {
+    const { boardHistory, currentDuel } = get();
+    if (boardHistory.length === 0) return;
+    // No se puede deshacer una decisión de tablero con un duelo ya en marcha
+    if (currentDuel && currentDuel.status !== 'intro' && currentDuel.status !== 'finished') return;
+
+    const entry = boardHistory[boardHistory.length - 1];
+    const { label: _label, ...restored } = entry;
+    soundEngine.playRouletteBlip(700);
+    set({
+      ...restored,
+      // La animación de conquista es puntual: no se repite al deshacer
+      conqueringTiles: [],
+      lastDuelSnapshot: null,
+      boardHistory: boardHistory.slice(0, -1),
+    });
+  },
 
   setSettings: (newSettings) =>
     set((state) => ({ settings: { ...state.settings, ...newSettings } })),
@@ -238,6 +384,8 @@ export const useGameStore = create<GameState>((set, get) => ({
         playerStats: initialPlayerStats,
       },
       conqueringTiles: [],
+      boardHistory: [],
+      activeRoulette: null,
     });
   },
 
@@ -256,6 +404,7 @@ export const useGameStore = create<GameState>((set, get) => ({
   },
 
   claimStartingTile: (playerId, tileIndex) => {
+    get().pushBoardHistory('Casilla inicial elegida');
     const { tiles, players } = get();
     const updatedTiles = tiles.map((t) =>
       t.index === tileIndex ? { ...t, playerId } : t
@@ -283,6 +432,7 @@ export const useGameStore = create<GameState>((set, get) => ({
     const unchosen = pool.filter((p) => !chosenRoulettePlayers.includes(p.id));
     const candidates = unchosen.length > 0 ? unchosen : pool;
 
+    get().pushBoardHistory('Ruleta de retador');
     set({
       activeRoulette: {
         isOpen: true,
@@ -307,6 +457,7 @@ export const useGameStore = create<GameState>((set, get) => ({
     const unchosen = pool.filter((p) => !chosenRoulettePlayers.includes(p.id));
     const candidates = unchosen.length > 0 ? unchosen : pool;
 
+    get().pushBoardHistory('Elección de tema neutral');
     set({
       activeRoulette: {
         isOpen: true,
@@ -333,11 +484,11 @@ export const useGameStore = create<GameState>((set, get) => ({
       recordPlayerChosenInRoulette,
       setActiveChallenger,
       setBoardStep,
-      startDuel,
       activeChallengerId,
     } = get();
 
     if (!activeRoulette || !activeRoulette.winner) return;
+    get().pushBoardHistory('Resultado de la ruleta');
 
     const winner = activeRoulette.winner;
     recordPlayerChosenInRoulette(winner.id);
@@ -356,7 +507,7 @@ export const useGameStore = create<GameState>((set, get) => ({
       typeof activeRoulette.pendingDefenderTileIndex === 'number' &&
       activeChallengerId
     ) {
-      startDuel(activeChallengerId, winner.id, activeRoulette.pendingDefenderTileIndex);
+      createDuel(activeChallengerId, winner.id, activeRoulette.pendingDefenderTileIndex);
     } else if (activeRoulette.type === 'grand_final_opponent') {
       const gfData = activeRoulette.grandFinalData;
       if (gfData) {
@@ -382,9 +533,36 @@ export const useGameStore = create<GameState>((set, get) => ({
 
   closeRoulette: () => set({ activeRoulette: null }),
 
+  rerollRoulette: () => {
+    const { activeRoulette } = get();
+    if (!activeRoulette?.isOpen) return;
+    // Nuevo array de candidatos -> la ruleta del plató vuelve a girar
+    set({
+      activeRoulette: {
+        ...activeRoulette,
+        candidates: [...activeRoulette.candidates],
+        winner: null,
+      },
+    });
+  },
+
+  overrideRouletteWinner: (playerId) => {
+    const { activeRoulette } = get();
+    if (!activeRoulette?.isOpen) return;
+    const eligible = getRouletteEligiblePlayers(activeRoulette);
+    const chosen = eligible.find((p) => p.id === playerId);
+    if (!chosen) return;
+    const candidates = activeRoulette.candidates.some((p) => p.id === chosen.id)
+      ? activeRoulette.candidates
+      : [...activeRoulette.candidates, chosen];
+    soundEngine.playCorrect();
+    set({ activeRoulette: { ...activeRoulette, candidates, winner: chosen } });
+  },
+
   applyMergedTopic: (chosenCategorySlug: string) => {
     const { tiles, players, pendingMergedTopicSelection } = get();
     if (!pendingMergedTopicSelection) return;
+    get().pushBoardHistory('Tema de la fusión');
 
     const { winnerId, componentTileIndices, decisionAfter } = pendingMergedTopicSelection;
 
@@ -512,72 +690,21 @@ export const useGameStore = create<GameState>((set, get) => ({
     if (!pendingGrandFinalTopicChoice) return;
 
     const { activeChooserId, opponentId } = pendingGrandFinalTopicChoice;
+    get().pushBoardHistory('Tema de la Gran Final');
     set({ pendingGrandFinalTopicChoice: null });
 
-    await get().startDuel(activeChooserId, opponentId, defendedTileIndex, true);
+    await createDuel(activeChooserId, opponentId, defendedTileIndex, true);
   },
 
   startDuel: async (challengerId, defenderId, defendedTileIndex, isExplicitGrandFinal = false) => {
-    const { players, tiles, settings } = get();
-    const challenger = players.find((p) => p.id === challengerId);
-    const defender = players.find((p) => p.id === defenderId);
-    const defendedTile = tiles.find((t) => t.index === defendedTileIndex);
-
-    if (!challenger || !defender || !defendedTile) return;
-
-    const categorySlug = defendedTile.categorySlug;
-    const builtinCategory = BUILTIN_CATEGORIES.find((c) => c.slug === categorySlug);
-
-    const categoryMeta =
-      builtinCategory || {
-        slug: categorySlug,
-        name: categorySlug.replace(/_/g, ' ').toUpperCase(),
-        totalItems: 30,
-      };
-
-    const rawItems = await loadCategoryItems(categorySlug);
-    const items = shuffleItems(rawItems);
-
-    const activeSurvivors = players.filter((p) => !p.isEliminated && p.territoryCount > 0);
-    const hasUnclaimed = tiles.some((t) => t.playerId === null);
-    const uniqueTopicsOnBoard = new Set(tiles.map((t) => t.categorySlug).filter(Boolean));
-    const isGrandFinalDuel =
-      isExplicitGrandFinal ||
-      (!hasUnclaimed && activeSurvivors.length === 2) ||
-      uniqueTopicsOnBoard.size <= 2 ||
-      Boolean(get().pendingGrandFinalTopicChoice);
-
-    const duel: DuelSession = {
-      challengerId,
-      defenderId,
-      defendedTileIndex,
-      category: categoryMeta,
-      items,
-      currentIndex: 0,
-      activePlayerId: challengerId,
-      challengerTime: settings.duelTime,
-      defenderTime: settings.duelTime,
-      status: 'intro',
-      isFrozen: false,
-      frozenSecondsRemaining: 0,
-      isPassLocked: false,
-      passPenaltySecondsRemaining: 0,
-      winnerId: null,
-      loserId: null,
-      isGrandFinalDuel,
-      history: [],
-    };
-
-    set({
-      currentDuel: duel,
-      lastDuelSnapshot: null,
-      phase: 'duel',
-      lastDefenderId: defenderId,
-    });
+    get().pushBoardHistory('Elección de tema');
+    await createDuel(challengerId, defenderId, defendedTileIndex, isExplicitGrandFinal);
   },
 
   startDuelCountdown: () => {
     const { isDevMode } = get();
+    // Una vez arranca el duelo ya no se pueden deshacer las decisiones previas del tablero
+    set({ boardHistory: [] });
     if (isDevMode) {
       get().startDuelRunning();
       return;
@@ -938,6 +1065,9 @@ export const useGameStore = create<GameState>((set, get) => ({
   },
 
   resolveDuelEnd: (winnerId, loserId, defendedTileIndex, decision) => {
+    if (!get().currentDuel?.isGrandFinalDuel) {
+      get().pushBoardHistory(decision === 'continue' ? 'Decisión: seguir retando' : 'Decisión: volver al tablero');
+    }
     const { tiles, players, settings, currentDuel } = get();
     soundEngine.playConquer();
 
@@ -1326,6 +1456,8 @@ export const useGameStore = create<GameState>((set, get) => ({
       pendingGrandFinalTopicChoice: null,
       activeRoulette: null,
       conqueringTiles: [],
+      boardHistory: [],
     });
   },
-}));
+  };
+});

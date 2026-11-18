@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { usePeerJudge } from '../../hooks/usePeerConnection';
 import {
   CheckCircle2,
@@ -14,6 +14,9 @@ import {
   Layers,
   Image as ImageIcon,
   Trophy,
+  Undo2,
+  Dices,
+  UserCog,
 } from 'lucide-react';
 import { cn } from '../../utils/cn';
 import { BUILTIN_CATEGORIES } from '../../data/categoriesRegistry';
@@ -40,6 +43,21 @@ export const JudgeView: React.FC<JudgeViewProps> = ({ roomId }) => {
   const activeRoulette = syncState?.activeRoulette;
   const pendingMergedTopicSelection = syncState?.pendingMergedTopicSelection;
   const pendingGrandFinalTopicChoice = syncState?.pendingGrandFinalTopicChoice;
+  const canUndoBoard = syncState?.canUndoBoard || false;
+  const undoBoardLabel = syncState?.undoBoardLabel || null;
+
+  const [isRoulettePickerOpen, setIsRoulettePickerOpen] = useState(false);
+
+  // Concursantes que el juez puede imponer manualmente en la ruleta abierta
+  const rouletteEligiblePlayers = activeRoulette?.isOpen
+    ? players.filter((p) => {
+        if (p.isEliminated) return false;
+        if (activeRoulette.type === 'defender') return p.id !== activeChallengerId;
+        if (activeRoulette.type === 'grand_final_opponent')
+          return p.id !== activeRoulette.grandFinalData?.activeChooserId;
+        return true;
+      })
+    : [];
 
   const boardChallenger = players.find((p) => p.id === activeChallengerId) || null;
   const attackableTiles = tiles.filter((t) => attackableIndices.includes(t.index));
@@ -124,6 +142,23 @@ export const JudgeView: React.FC<JudgeViewProps> = ({ roomId }) => {
             Reconectar
           </button>
         </div>
+      )}
+
+      {/* Deshacer la última decisión del tablero (tema, ruleta, fusión, decisión post-duelo...) */}
+      {canUndoBoard && (
+        <button
+          type="button"
+          onClick={() => {
+            setIsRoulettePickerOpen(false);
+            sendAction({ type: 'ACTION_UNDO_BOARD' });
+          }}
+          className="mt-1.5 w-full py-2 px-3 rounded-xl bg-floor-card border border-floor-amber/60 text-floor-amber text-[11px] font-bold flex items-center justify-center gap-1.5 active:scale-95 transition-all cursor-pointer flex-shrink-0 touch-manipulation"
+        >
+          <Undo2 className="w-3.5 h-3.5 flex-shrink-0" />
+          <span className="truncate">
+            DESHACER{undoBoardLabel ? `: ${undoBoardLabel}` : ' ÚLTIMA DECISIÓN'}
+          </span>
+        </button>
       )}
 
       {/* Contenido Principal */}
@@ -218,6 +253,34 @@ export const JudgeView: React.FC<JudgeViewProps> = ({ roomId }) => {
                                 : `¡INICIAR DUELO CON ${activeRoulette.winner.name.toUpperCase()}!`}
                             </span>
                           </button>
+
+                          {/* Modificar la decisión de la ruleta */}
+                          <div className="grid grid-cols-2 gap-2">
+                            <button
+                              type="button"
+                              onClick={() => {
+                                setIsRoulettePickerOpen(false);
+                                sendAction({ type: 'ACTION_RESPIN_ROULETTE' });
+                              }}
+                              className="py-2.5 rounded-xl bg-floor-card border border-floor-border text-[11px] font-bold text-slate-200 flex items-center justify-center gap-1.5 active:scale-95 cursor-pointer"
+                            >
+                              <Dices className="w-3.5 h-3.5 text-floor-cyan" />
+                              Volver a girar
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => setIsRoulettePickerOpen((v) => !v)}
+                              className={cn(
+                                'py-2.5 rounded-xl border text-[11px] font-bold flex items-center justify-center gap-1.5 active:scale-95 cursor-pointer',
+                                isRoulettePickerOpen
+                                  ? 'bg-floor-cyan/15 border-floor-cyan text-floor-cyan'
+                                  : 'bg-floor-card border-floor-border text-slate-200'
+                              )}
+                            >
+                              <UserCog className="w-3.5 h-3.5 text-floor-cyan" />
+                              Elegir otro
+                            </button>
+                          </div>
                         </div>
                       ) : (
                         /* Animación de Sorteo */
@@ -226,6 +289,59 @@ export const JudgeView: React.FC<JudgeViewProps> = ({ roomId }) => {
                           <span className="text-xs font-bold text-floor-cyan block animate-pulse">
                             Sorteando concursante en el plató...
                           </span>
+                          <button
+                            type="button"
+                            onClick={() => setIsRoulettePickerOpen((v) => !v)}
+                            className="mx-auto px-3 py-2 rounded-xl bg-floor-card border border-floor-border text-[11px] font-bold text-slate-200 flex items-center justify-center gap-1.5 active:scale-95 cursor-pointer"
+                          >
+                            <UserCog className="w-3.5 h-3.5 text-floor-cyan" />
+                            Elegir concursante a mano
+                          </button>
+                        </div>
+                      )}
+
+                      {/* Selector manual de concursante para la ruleta */}
+                      {isRoulettePickerOpen && (
+                        <div className="space-y-1.5 text-left">
+                          <span className="text-[10px] uppercase font-bold text-slate-400 block">
+                            Selecciona el concursante correcto:
+                          </span>
+                          <div className="grid grid-cols-2 gap-2 max-h-48 overflow-y-auto pr-1">
+                            {rouletteEligiblePlayers.map((p) => {
+                              const isCurrent = activeRoulette.winner?.id === p.id;
+                              return (
+                                <button
+                                  key={p.id}
+                                  type="button"
+                                  onClick={() => {
+                                    setIsRoulettePickerOpen(false);
+                                    sendAction({
+                                      type: 'ACTION_SET_ROULETTE_WINNER',
+                                      payload: { playerId: p.id },
+                                    });
+                                  }}
+                                  className={cn(
+                                    'p-2 rounded-xl border-2 bg-floor-card flex items-center gap-2 active:scale-95 cursor-pointer',
+                                    isCurrent && 'opacity-50'
+                                  )}
+                                  style={{ borderColor: p.color || '#334155' }}
+                                >
+                                  <div
+                                    className="w-7 h-7 rounded-full flex items-center justify-center font-bold text-black text-xs flex-shrink-0"
+                                    style={{ backgroundColor: p.color || '#00f0ff' }}
+                                  >
+                                    {p.name.charAt(0).toUpperCase()}
+                                  </div>
+                                  <div className="truncate">
+                                    <span className="font-bold text-xs text-white block truncate">{p.name}</span>
+                                    <span className="text-[9px] text-slate-400">
+                                      {p.territoryCount > 0 ? `${p.territoryCount} casillas` : 'Aspirante'}
+                                    </span>
+                                  </div>
+                                </button>
+                              );
+                            })}
+                          </div>
                         </div>
                       )}
                     </div>

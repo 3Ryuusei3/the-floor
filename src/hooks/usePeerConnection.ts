@@ -54,6 +54,15 @@ export function usePeerHost(roomId: string) {
   const resetToSetup = useGameStore((state) => state.resetToSetup);
   const confirmRouletteWinner = useGameStore((state) => state.confirmRouletteWinner);
   const openChallengerRoulette = useGameStore((state) => state.openChallengerRoulette);
+  const boardHistory = useGameStore((state) => state.boardHistory);
+  const undoBoardAction = useGameStore((state) => state.undoBoardAction);
+  const rerollRoulette = useGameStore((state) => state.rerollRoulette);
+  const overrideRouletteWinner = useGameStore((state) => state.overrideRouletteWinner);
+
+  const canUndoBoard =
+    boardHistory.length > 0 &&
+    (!currentDuel || currentDuel.status === 'intro' || currentDuel.status === 'finished');
+  const undoBoardLabel = boardHistory.length > 0 ? boardHistory[boardHistory.length - 1].label : null;
 
   const challenger = players.find((p) => p.id === currentDuel?.challengerId) || null;
   const defender = players.find((p) => p.id === currentDuel?.defenderId) || null;
@@ -85,6 +94,8 @@ export function usePeerHost(roomId: string) {
     activeRoulette,
     pendingMergedTopicSelection,
     pendingGrandFinalTopicChoice,
+    canUndoBoard,
+    undoBoardLabel,
   });
 
   stateRef.current = {
@@ -105,6 +116,8 @@ export function usePeerHost(roomId: string) {
     activeRoulette,
     pendingMergedTopicSelection,
     pendingGrandFinalTopicChoice,
+    canUndoBoard,
+    undoBoardLabel,
   };
 
   // Mantener referencia a las funciones de acción del store
@@ -123,6 +136,9 @@ export function usePeerHost(roomId: string) {
     resetToSetup,
     confirmRouletteWinner,
     openChallengerRoulette,
+    undoBoardAction,
+    rerollRoulette,
+    overrideRouletteWinner,
   });
   actionsRef.current = {
     handleCorrectAnswer,
@@ -139,6 +155,9 @@ export function usePeerHost(roomId: string) {
     resetToSetup,
     confirmRouletteWinner,
     openChallengerRoulette,
+    undoBoardAction,
+    rerollRoulette,
+    overrideRouletteWinner,
   };
 
   // Enviar estado actual al juez (por BroadcastChannel, Local Relay y WebRTC)
@@ -267,6 +286,17 @@ export function usePeerHost(roomId: string) {
         break;
       case 'ACTION_RESET_TO_SETUP':
         actionsRef.current.resetToSetup();
+        break;
+      case 'ACTION_UNDO_BOARD':
+        actionsRef.current.undoBoardAction();
+        break;
+      case 'ACTION_RESPIN_ROULETTE':
+        actionsRef.current.rerollRoulette();
+        break;
+      case 'ACTION_SET_ROULETTE_WINNER':
+        if (data.payload?.playerId) {
+          actionsRef.current.overrideRouletteWinner(data.payload.playerId);
+        }
         break;
     }
   }, []);
@@ -475,6 +505,7 @@ export function usePeerHost(roomId: string) {
     activeRoulette,
     pendingMergedTopicSelection,
     pendingGrandFinalTopicChoice,
+    boardHistory,
     currentDuel?.status,
     currentDuel?.currentIndex,
     currentDuel?.activePlayerId,
