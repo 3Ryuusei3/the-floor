@@ -84,6 +84,8 @@ interface GameState {
   stats: GameStats;
   isSoundMuted: boolean;
   isJudgeConnected: boolean;
+  // Una vez se ha conectado un mando, la respuesta no vuelve a mostrarse en la TV aunque haya microcortes
+  hasJudgeConnectedOnce: boolean;
   conqueringTiles: number[];
   boardHistory: BoardHistoryEntry[];
 
@@ -245,6 +247,7 @@ export const useGameStore = create<GameState>((set, get) => {
   stats: INITIAL_STATS,
   isSoundMuted: false,
   isJudgeConnected: false,
+  hasJudgeConnectedOnce: false,
   conqueringTiles: [],
   boardHistory: [],
 
@@ -1431,7 +1434,11 @@ export const useGameStore = create<GameState>((set, get) => {
     );
   },
 
-  setIsJudgeConnected: (connected) => set({ isJudgeConnected: connected }),
+  setIsJudgeConnected: (connected) =>
+    set((state) => ({
+      isJudgeConnected: connected,
+      hasJudgeConnectedOnce: state.hasJudgeConnectedOnce || connected,
+    })),
 
   toggleSound: () => {
     set((state) => {

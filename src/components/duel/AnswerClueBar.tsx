@@ -10,15 +10,34 @@ interface AnswerClueBarProps {
 export const AnswerClueBar: React.FC<AnswerClueBarProps> = ({ item }) => {
   const [isVisible, setIsVisible] = useState(true);
   const isJudgeConnected = useGameStore((state) => state.isJudgeConnected);
+  const hasJudgeConnectedOnce = useGameStore((state) => state.hasJudgeConnectedOnce);
+  const [forceReveal, setForceReveal] = useState(false);
 
   if (!item) return null;
 
-  // Si el juez está conectado, ocultar la respuesta en la pantalla de TV para el plató
-  if (isJudgeConnected) {
+  // Si hay (o ha habido) un mando del juez, la respuesta queda oculta en la TV.
+  // Un microcorte del mando no debe destapar la respuesta delante de los concursantes.
+  if (isJudgeConnected || (hasJudgeConnectedOnce && !forceReveal)) {
     return (
       <div className="w-full bg-floor-surface/80 border border-floor-border rounded-xl p-3 flex items-center justify-center gap-2 text-xs text-slate-400 backdrop-blur-sm">
-        <ShieldCheck className="w-4 h-4 text-floor-green" />
-        <span>Respuestas protegidas y controladas exclusivamente desde el mando del juez.</span>
+        {isJudgeConnected ? (
+          <>
+            <ShieldCheck className="w-4 h-4 text-floor-green" />
+            <span>Respuestas protegidas y controladas exclusivamente desde el mando del juez.</span>
+          </>
+        ) : (
+          <>
+            <ShieldCheck className="w-4 h-4 text-floor-amber animate-pulse" />
+            <span>Reconectando con el mando del juez… (respuesta oculta)</span>
+            <button
+              type="button"
+              onClick={() => setForceReveal(true)}
+              className="ml-2 px-2 py-0.5 rounded-md bg-floor-card border border-floor-border text-[10px] text-slate-300 hover:text-white cursor-pointer"
+            >
+              Mostrar aquí
+            </button>
+          </>
+        )}
       </div>
     );
   }

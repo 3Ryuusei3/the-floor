@@ -26,7 +26,8 @@ interface JudgeViewProps {
 }
 
 export const JudgeView: React.FC<JudgeViewProps> = ({ roomId }) => {
-  const { isConnected, connectionType, syncState, syncReceivedAt, sendAction } = usePeerJudge(roomId);
+  const { isConnected, connectionType, syncState, syncReceivedAt, sendAction, pendingCount } =
+    usePeerJudge(roomId);
 
   const currentDuel = syncState?.currentDuel;
   const challenger = syncState?.challenger;
@@ -87,7 +88,7 @@ export const JudgeView: React.FC<JudgeViewProps> = ({ roomId }) => {
   const isFrozen = currentDuel?.isFrozen;
 
   const currentItem = currentDuel?.currentItem || null;
-  const nextItemImage = currentDuel?.nextItem?.image;
+  const nextItemImage = currentDuel?.nextItem?.thumb || currentDuel?.nextItem?.image;
 
   // Precargar la imagen del siguiente ítem para que aparezca al instante
   useEffect(() => {
@@ -145,6 +146,10 @@ export const JudgeView: React.FC<JudgeViewProps> = ({ roomId }) => {
               : 'CONECTANDO...'}
           </span>
         </div>
+
+        {pendingCount > 0 && (
+          <span className="text-[10px] font-bold text-floor-amber animate-pulse">ENVIANDO…</span>
+        )}
 
         <div className="flex items-center gap-1 text-[11px] text-slate-400 font-mono">
           {isConnected ? <Wifi className="w-3 h-3 text-floor-cyan" /> : <WifiOff className="w-3 h-3 text-floor-red" />}
@@ -943,7 +948,15 @@ export const JudgeView: React.FC<JudgeViewProps> = ({ roomId }) => {
               {currentItem?.image ? (
                 <div className="relative w-full h-24 sm:h-28 rounded-xl bg-black/90 border border-slate-700 overflow-hidden flex items-center justify-center p-1 my-1 flex-shrink-0 shadow-inner">
                   <img
-                    src={currentItem.image}
+                    key={currentItem.image}
+                    src={currentItem.thumb || currentItem.image}
+                    onError={(e) => {
+                      // Si no existe la miniatura, usar la imagen original
+                      const img = e.currentTarget;
+                      if (currentItem.image && !img.src.endsWith(currentItem.image)) {
+                        img.src = currentItem.image;
+                      }
+                    }}
                     alt="Foto en plató"
                     className="max-h-full max-w-full object-contain rounded-md"
                   />

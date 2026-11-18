@@ -1,7 +1,16 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import Peer, { DataConnection } from 'peerjs';
 import { useGameStore } from './useGameStore';
-import { HostMessage, JudgeActionMessage, HostSyncPayload, JudgeDuelSync } from '../types/peer';
+import {
+  HostMessage,
+  HostAckMessage,
+  HostPatchPayload,
+  JudgeActionMessage,
+  HostSyncPayload,
+  JudgeDuelSync,
+  JudgeItem,
+} from '../types/peer';
+import { CategoryItem } from '../types/category';
 import { DuelSession } from '../types/game';
 import { getAdjacentAttackableTileIndices } from '../utils/boardLogic';
 import { getIceServers } from '../utils/iceServers';
@@ -14,10 +23,34 @@ const USE_DEV_RELAY = import.meta.env.DEV;
 // Mientras el reloj corre, el mando interpola localmente: basta con re-sincronizar cada segundo
 const CLOCK_RESYNC_MS = 1000;
 
+// Margen antes de dar al juez por desconectado tras un corte (en datos móviles hay microcortes)
+const HOST_DISCONNECT_GRACE_MS = 8000;
+// Reintentos de acciones del mando hasta recibir confirmación
+const ACTION_RETRY_MS = 600;
+const ACTION_EXPIRE_MS = 4000;
+// Si la conexión WebRTC parece abierta pero no llega nada en este tiempo, está muerta
+const JUDGE_DEAD_CONNECTION_MS = 7000;
+const JUDGE_CONNECT_TIMEOUT_MS = 10000;
+
 async function getPeerOptions() {
   const iceServers = await getIceServers();
   return { config: { iceServers } };
 }
+
+// /categories/<cat>/<foto>.jpg -> /categories/<cat>/thumbs/<foto>.jpg (scripts/generate_thumbs.sh)
+function toThumbUrl(image?: string): string | undefined {
+  if (!image) return undefined;
+  const match = image.match(/^(\/categories\/[^/]+)\/([^/]+)\.[a-z0-9]+$/i);
+  return match ? `${match[1]}/thumbs/${match[2]}.jpg` : undefined;
+}
+
+function toJudgeItem(item: CategoryItem | undefined): JudgeItem | null {
+  if (!item) return null;
+  return { ...item, thumb: toThumbUrl(item.image) };
+}
+
+// Redondear el reloj evita enviar cambios irrelevantes
+const roundTime = (t: number) => Math.round(t * 100) / 100;
 
 // Quitar del duelo lo que el mando no necesita (lista de ítems e historial)
 function toJudgeDuel(duel: DuelSession | null): JudgeDuelSync | null {
@@ -25,10 +58,62 @@ function toJudgeDuel(duel: DuelSession | null): JudgeDuelSync | null {
   const { items, history: _history, ...rest } = duel;
   return {
     ...rest,
+    challengerTime: roundTime(duel.challengerTime),
+    defenderTime: roundTime(duel.defenderTime),
+    passPenaltySecondsRemaining: 0,
+    frozenSecondsRemaining: 0,
     itemsCount: items.length,
-    currentItem: items[duel.currentIndex] || null,
-    nextItem: items[duel.currentIndex + 1] || null,
+    currentItem: toJudgeItem(items[duel.currentIndex]),
+    nextItem: toJudgeItem(items[duel.currentIndex + 1]),
   };
+}
+
+const isSameDuel = (a: JudgeDuelSync, b: JudgeDuelSync) =>
+  a.challengerId === b.challengerId &&
+  a.defenderId === b.defenderId &&
+  a.defendedTileIndex === b.defendedTileIndex &&
+  a.category.slug === b.category.slug;
+
+// Calcular solo lo que ha cambiado respecto al último estado enviado
+function diffPayload(prev: HostSyncPayload, next: HostSyncPayload): HostPatchPayload {
+  const patch: HostPatchPayload = {};
+  const keys = new Set([...Object.keys(prev), ...Object.keys(next)]) as Set<keyof HostSyncPayload>;
+  keys.forEach((key) => {
+    const a = prev[key];
+    const b = next[key];
+    if (a === b) return;
+    if (key === 'currentDuel' && a && b && isSameDuel(a as JudgeDuelSync, b as JudgeDuelSync)) {
+      const duelA = a as JudgeDuelSync;
+      const duelB = b as JudgeDuelSync;
+      const duelPatch: Record<string, unknown> = {};
+      (Object.keys(duelB) as (keyof JudgeDuelSync)[]).forEach((dk) => {
+        if (duelA[dk] !== duelB[dk] && JSON.stringify(duelA[dk]) !== JSON.stringify(duelB[dk])) {
+          duelPatch[dk] = duelB[dk];
+        }
+      });
+      if (Object.keys(duelPatch).length > 0) {
+        // Los tiempos viajan siempre con cualquier cambio del duelo: el mando reancla su reloj
+        duelPatch.challengerTime = duelB.challengerTime;
+        duelPatch.defenderTime = duelB.defenderTime;
+        patch.currentDuelPatch = duelPatch as Partial<JudgeDuelSync>;
+      }
+      return;
+    }
+    if (JSON.stringify(a) !== JSON.stringify(b)) {
+      (patch as Record<string, unknown>)[key] = b;
+    }
+  });
+  return patch;
+}
+
+// Aplicar un parche recibido sobre el estado que ya tiene el mando
+function applyPatch(prev: HostSyncPayload, patch: HostPatchPayload): HostSyncPayload {
+  const { currentDuelPatch, ...rest } = patch;
+  const next: HostSyncPayload = { ...prev, ...rest };
+  if (currentDuelPatch && next.currentDuel) {
+    next.currentDuel = { ...next.currentDuel, ...currentDuelPatch };
+  }
+  return next;
 }
 
 export function usePeerHost(roomId: string) {
@@ -176,16 +261,12 @@ export function usePeerHost(roomId: string) {
     overrideRouletteWinner,
   };
 
-  // Enviar estado actual al juez (por BroadcastChannel, Local Relay y WebRTC)
-  const sendSync = useCallback((conn?: DataConnection | null) => {
-    const targetConn = conn || connRef.current;
-    const payload: HostSyncPayload = {
-      ...stateRef.current,
-      isJudgeConnected: true,
-    };
+  // Último estado difundido: los envíos siguientes solo llevan las diferencias
+  const lastBroadcastRef = useRef<HostSyncPayload | null>(null);
 
-    const msg: HostMessage = { type: 'STATE_SYNC', payload };
+  const buildPayload = (): HostSyncPayload => ({ ...stateRef.current, isJudgeConnected: true });
 
+  const postToChannels = (msg: HostMessage, targetConn: DataConnection | null) => {
     // 1. WebRTC
     if (targetConn && targetConn.open) {
       try {
@@ -194,7 +275,6 @@ export function usePeerHost(roomId: string) {
         console.warn('Error enviando sync por WebRTC:', e);
       }
     }
-
     // 2. BroadcastChannel
     if (broadcastRef.current) {
       try {
@@ -203,8 +283,34 @@ export function usePeerHost(roomId: string) {
         console.warn('Error enviando sync por BroadcastChannel:', e);
       }
     }
+  };
 
-    // 3. Local / LAN Relay (Vite, solo en desarrollo)
+  // Estado completo solo para una conexión concreta (al conectar o si lo pide el mando)
+  const sendFullTo = useCallback((conn: DataConnection) => {
+    if (!conn.open) return;
+    try {
+      conn.send({ type: 'STATE_SYNC', payload: buildPayload() } satisfies HostMessage);
+    } catch (e) {
+      console.warn('Error enviando sync completo por WebRTC:', e);
+    }
+  }, []);
+
+  // Difundir el estado: parche con lo que ha cambiado (o completo si se pide)
+  const sendSync = useCallback((full = false) => {
+    const payload = buildPayload();
+    const prev = lastBroadcastRef.current;
+
+    if (full || !prev) {
+      postToChannels({ type: 'STATE_SYNC', payload }, connRef.current);
+    } else {
+      const patch = diffPayload(prev, payload);
+      if (Object.keys(patch).length > 0) {
+        postToChannels({ type: 'STATE_PATCH', payload: patch }, connRef.current);
+      }
+    }
+    lastBroadcastRef.current = payload;
+
+    // 3. Local / LAN Relay (Vite, solo en desarrollo): siempre estado completo
     if (USE_DEV_RELAY) try {
       fetch('/api/judge-state', {
         method: 'POST',
@@ -226,7 +332,7 @@ export function usePeerHost(roomId: string) {
     const now = Date.now();
     if (actionKey) {
       const lastExecuted = processedActionIdsRef.current.get(actionKey);
-      if (lastExecuted && now - lastExecuted < 3000) {
+      if (lastExecuted && now - lastExecuted < 60000) {
         // Acción ya procesada por otro canal (WebRTC / LAN / BroadcastChannel)
         return;
       }
@@ -235,7 +341,7 @@ export function usePeerHost(roomId: string) {
       // Limpieza de claves antiguas periódica
       if (processedActionIdsRef.current.size > 200) {
         for (const [k, time] of processedActionIdsRef.current.entries()) {
-          if (now - time > 10000) {
+          if (now - time > 60000) {
             processedActionIdsRef.current.delete(k);
           }
         }
@@ -342,6 +448,7 @@ export function usePeerHost(roomId: string) {
     let isSubscribed = true;
     let peerInstance: Peer | null = null;
     let reconnectTimeout: NodeJS.Timeout | null = null;
+    let disconnectGraceTimer: NodeJS.Timeout | null = null;
 
     // 1. BroadcastChannel para conexión inmediata entre pestañas locales del mismo origen
     try {
@@ -352,12 +459,23 @@ export function usePeerHost(roomId: string) {
         const msg = event.data as JudgeActionMessage;
         if (!msg || !msg.type) return;
 
-        if (msg.type === 'REQUEST_SYNC' || msg.type === 'JUDGE_PING') {
+        if (msg.type === 'REQUEST_SYNC') {
           refreshLocalPresence();
-          sendSync(); // Responder inmediatamente al juez con el estado
+          sendSync(true); // Estado completo para el mando que lo pide
+        } else if (msg.type === 'JUDGE_PING') {
+          refreshLocalPresence();
+          try {
+            bc.postMessage({ type: 'HOST_PONG' } satisfies HostMessage);
+          } catch {}
         } else if (msg.type.startsWith('ACTION_')) {
           refreshLocalPresence();
           handleJudgeMessage(msg);
+          if (msg.actionId) {
+            const ack: HostAckMessage = { type: 'ACTION_ACK', actionId: msg.actionId };
+            try {
+              bc.postMessage(ack);
+            } catch {}
+          }
         }
       };
     } catch (err) {
@@ -399,44 +517,77 @@ export function usePeerHost(roomId: string) {
 
         peer.on('connection', (conn) => {
           if (!isSubscribed) return;
-          connRef.current = conn;
+
+          const markConnected = () => {
+            if (disconnectGraceTimer) {
+              clearTimeout(disconnectGraceTimer);
+              disconnectGraceTimer = null;
+            }
+            setIsConnected(true);
+            setIsJudgeConnected(true);
+          };
 
           conn.on('open', () => {
             if (!isSubscribed) return;
-            setIsConnected(true);
-            setIsJudgeConnected(true);
-            sendSync(conn);
+            // La conexión más reciente sustituye a la anterior (el mando se ha reconectado)
+            const previous = connRef.current;
+            connRef.current = conn;
+            if (previous && previous !== conn) {
+              try {
+                previous.close();
+              } catch {}
+            }
+            markConnected();
+            sendFullTo(conn);
           });
 
           conn.on('data', (data) => {
             if (!isSubscribed) return;
             const action = data as JudgeActionMessage;
-            if (action.type === 'REQUEST_SYNC' || action.type === 'JUDGE_PING') {
-              setIsConnected(true);
-              setIsJudgeConnected(true);
-              sendSync(conn);
+            if (!action || !action.type) return;
+            if (connRef.current !== conn && conn.open) {
+              connRef.current = conn;
+            }
+            if (action.type === 'REQUEST_SYNC') {
+              markConnected();
+              sendFullTo(conn);
+            } else if (action.type === 'JUDGE_PING') {
+              // Respuesta mínima: el estado ya llega por parches cuando cambia
+              markConnected();
+              try {
+                conn.send({ type: 'HOST_PONG' } satisfies HostMessage);
+              } catch {}
             } else if (action.type.startsWith('ACTION_')) {
+              markConnected();
               handleJudgeMessage(action);
+              if (action.actionId) {
+                const ack: HostAckMessage = { type: 'ACTION_ACK', actionId: action.actionId };
+                try {
+                  conn.send(ack);
+                } catch {}
+              }
             }
           });
 
-          conn.on('close', () => {
+          const handleConnLost = () => {
             if (!isSubscribed) return;
+            // Ignorar cierres de conexiones antiguas ya sustituidas
+            if (connRef.current !== conn) return;
             connRef.current = null;
-            if (!isLocalPresentRef.current) {
-              setIsConnected(false);
-              setIsJudgeConnected(false);
-            }
-          });
+            if (disconnectGraceTimer) clearTimeout(disconnectGraceTimer);
+            // No marcar desconectado al instante: dar margen para que el mando se reconecte
+            disconnectGraceTimer = setTimeout(() => {
+              disconnectGraceTimer = null;
+              const hasOpenConn = !!(connRef.current && connRef.current.open);
+              if (!hasOpenConn && !isLocalPresentRef.current) {
+                setIsConnected(false);
+                setIsJudgeConnected(false);
+              }
+            }, HOST_DISCONNECT_GRACE_MS);
+          };
 
-          conn.on('error', () => {
-            if (!isSubscribed) return;
-            connRef.current = null;
-            if (!isLocalPresentRef.current) {
-              setIsConnected(false);
-              setIsJudgeConnected(false);
-            }
-          });
+          conn.on('close', handleConnLost);
+          conn.on('error', handleConnLost);
         });
 
         peer.on('error', (err) => {
@@ -475,7 +626,7 @@ export function usePeerHost(roomId: string) {
           } else if (data.type === 'JUDGE_PRESENCE') {
             if (data.connected) {
               refreshLocalPresence();
-              sendSync();
+              sendSync(true);
             } else if (!connRef.current || !connRef.current.open) {
               setIsConnected(false);
               setIsJudgeConnected(false);
@@ -493,6 +644,9 @@ export function usePeerHost(roomId: string) {
       if (reconnectTimeout) {
         clearTimeout(reconnectTimeout);
       }
+      if (disconnectGraceTimer) {
+        clearTimeout(disconnectGraceTimer);
+      }
       if (localPresenceTimerRef.current) {
         clearTimeout(localPresenceTimerRef.current);
       }
@@ -508,7 +662,7 @@ export function usePeerHost(roomId: string) {
         peerRef.current = null;
       }
     };
-  }, [roomId, handleJudgeMessage, sendSync, refreshLocalPresence, setIsJudgeConnected]);
+  }, [roomId, handleJudgeMessage, sendSync, sendFullTo, refreshLocalPresence, setIsJudgeConnected]);
 
   // Sincronizar al instante ante cualquier evento; los ticks del reloj solo cada segundo
   // (el mando interpola el reloj localmente entre sincronizaciones)
@@ -585,7 +739,9 @@ export function usePeerJudge(roomId: string) {
   const [syncState, setSyncStateRaw] = useState<HostSyncPayload | null>(null);
   // Momento local (performance.now) en que llegó el último estado, para interpolar el reloj
   const [syncReceivedAt, setSyncReceivedAt] = useState(0);
+  const syncStateRef = useRef<HostSyncPayload | null>(null);
   const setSyncState = useCallback((payload: HostSyncPayload) => {
+    syncStateRef.current = payload;
     setSyncStateRaw(payload);
     setSyncReceivedAt(performance.now());
   }, []);
@@ -594,14 +750,23 @@ export function usePeerJudge(roomId: string) {
   const peerRef = useRef<Peer | null>(null);
   const lastMsgTimeRef = useRef<number>(Date.now());
 
-  const sendAction = useCallback((action: JudgeActionMessage) => {
-    // Generar ID único para la acción y timestamp para evitar doble ejecución si se recibe por múltiples canales
-    const actionWithId: JudgeActionMessage = {
-      ...action,
-      actionId: action.actionId || `${action.type}_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`,
-      timestamp: action.timestamp || Date.now(),
-    };
+  // Acciones pendientes de confirmación (se reintentan hasta recibir ACTION_ACK)
+  const pendingActionsRef = useRef<
+    Map<string, { action: JudgeActionMessage; firstSentAt: number; lastSentAt: number }>
+  >(new Map());
+  const [pendingCount, setPendingCount] = useState(0);
+  const refreshPendingCount = useCallback(() => {
+    setPendingCount(pendingActionsRef.current.size);
+  }, []);
 
+  const handleAck = useCallback((actionId: string) => {
+    if (pendingActionsRef.current.delete(actionId)) {
+      refreshPendingCount();
+    }
+  }, [refreshPendingCount]);
+
+  // Enviar por todos los canales disponibles (sin registrar como pendiente)
+  const transmitAction = useCallback((actionWithId: JudgeActionMessage) => {
     // 1. WebRTC
     if (connRef.current && connRef.current.open) {
       try {
@@ -631,6 +796,69 @@ export function usePeerJudge(roomId: string) {
     } catch {}
   }, [roomId]);
 
+  const sendAction = useCallback((action: JudgeActionMessage) => {
+    // ID único: la pantalla descarta duplicados, así que reintentar es seguro
+    const actionWithId: JudgeActionMessage = {
+      ...action,
+      actionId: action.actionId || `${action.type}_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`,
+      timestamp: action.timestamp || Date.now(),
+    };
+    const now = Date.now();
+    pendingActionsRef.current.set(actionWithId.actionId!, {
+      action: actionWithId,
+      firstSentAt: now,
+      lastSentAt: now,
+    });
+    refreshPendingCount();
+    transmitAction(actionWithId);
+  }, [transmitAction, refreshPendingCount]);
+
+  // Reenviar las acciones sin confirmar; descartarlas si ya son demasiado antiguas
+  const flushPendingActions = useCallback((force = false) => {
+    const now = Date.now();
+    let changed = false;
+    pendingActionsRef.current.forEach((entry, id) => {
+      if (now - entry.firstSentAt > ACTION_EXPIRE_MS) {
+        pendingActionsRef.current.delete(id);
+        changed = true;
+        return;
+      }
+      if (force || now - entry.lastSentAt >= ACTION_RETRY_MS) {
+        entry.lastSentAt = now;
+        transmitAction(entry.action);
+      }
+    });
+    if (changed) refreshPendingCount();
+  }, [transmitAction, refreshPendingCount]);
+
+  useEffect(() => {
+    const interval = setInterval(() => flushPendingActions(), 250);
+    return () => clearInterval(interval);
+  }, [flushPendingActions]);
+
+  // Procesar un mensaje de la pantalla. Devuelve false si hace falta pedir el estado completo.
+  const handleHostMessage = useCallback((msg: HostMessage): boolean => {
+    if (!msg || !msg.type) return true;
+    if (msg.type === 'ACTION_ACK') {
+      handleAck(msg.actionId);
+    } else if (msg.type === 'STATE_SYNC') {
+      setSyncState(msg.payload);
+    } else if (msg.type === 'STATE_PATCH') {
+      const prev = syncStateRef.current;
+      if (!prev) return false; // Parche sin base: pedir estado completo
+      // Cualquier cambio del duelo trae los tiempos actuales -> reanclar el reloj
+      const hasClockChange = !!msg.payload.currentDuelPatch;
+      const next = applyPatch(prev, msg.payload);
+      syncStateRef.current = next;
+      setSyncStateRaw(next);
+      // Solo reiniciar la interpolación del reloj cuando llega un tiempo nuevo
+      if (hasClockChange || msg.payload.currentDuel !== undefined) {
+        setSyncReceivedAt(performance.now());
+      }
+    }
+    return true;
+  }, [handleAck, setSyncState]);
+
   useEffect(() => {
     if (!roomId) return;
 
@@ -647,11 +875,14 @@ export function usePeerJudge(roomId: string) {
       bc.onmessage = (event) => {
         if (!isSubscribed) return;
         const msg = event.data as HostMessage;
-        if (msg && msg.type === 'STATE_SYNC') {
-          setSyncState(msg.payload);
-          setIsConnected(true);
-          setConnectionType('local');
-          lastMsgTimeRef.current = Date.now();
+        if (!msg || !msg.type) return;
+        // Ignorar los mensajes del propio mando (el canal es compartido)
+        if (!['STATE_SYNC', 'STATE_PATCH', 'HOST_PONG', 'ACTION_ACK'].includes(msg.type)) return;
+        lastMsgTimeRef.current = Date.now();
+        setIsConnected(true);
+        setConnectionType((prev) => (prev === 'webrtc' ? prev : 'local'));
+        if (!handleHostMessage(msg)) {
+          bc.postMessage({ type: 'REQUEST_SYNC' });
         }
       };
 
@@ -690,67 +921,111 @@ export function usePeerJudge(roomId: string) {
     // 3. Conectar por PeerJS (para móviles o diferentes dominios)
     const hostPeerId = `${PEER_PREFIX}${roomId}`;
 
+    let isConnecting = false;
+    let connectTimeout: NodeJS.Timeout | null = null;
+
+    const scheduleReconnect = (delay: number) => {
+      if (!isSubscribed) return;
+      if (webrtcReconnectTimeout) clearTimeout(webrtcReconnectTimeout);
+      webrtcReconnectTimeout = setTimeout(() => {
+        webrtcReconnectTimeout = null;
+        connectPeer();
+      }, delay);
+    };
+
     const connectPeer = async () => {
-      if (!isSubscribed) return;
+      if (!isSubscribed || isConnecting) return;
+      isConnecting = true;
       const peerOptions = await getPeerOptions();
-      if (!isSubscribed) return;
+      if (!isSubscribed) {
+        isConnecting = false;
+        return;
+      }
       try {
         if (peerInstance && !peerInstance.destroyed) {
           peerInstance.destroy();
         }
+        connRef.current = null;
 
         const peer = new Peer(peerOptions);
         peerInstance = peer;
         peerRef.current = peer;
+        const isCurrentPeer = () => isSubscribed && peerInstance === peer;
+
+        // Si la conexión no llega a abrirse, reintentar
+        if (connectTimeout) clearTimeout(connectTimeout);
+        connectTimeout = setTimeout(() => {
+          if (!isCurrentPeer()) return;
+          if (!connRef.current || !connRef.current.open) {
+            isConnecting = false;
+            connectPeer();
+          }
+        }, JUDGE_CONNECT_TIMEOUT_MS);
 
         peer.on('open', () => {
-          if (!isSubscribed) return;
+          if (!isCurrentPeer()) return;
           const conn = peer.connect(hostPeerId, { reliable: true });
-          connRef.current = conn;
 
           conn.on('open', () => {
-            if (!isSubscribed) return;
+            if (!isCurrentPeer()) return;
+            isConnecting = false;
+            if (connectTimeout) clearTimeout(connectTimeout);
+            connRef.current = conn;
             setIsConnected(true);
             setConnectionType((prev) => prev || 'webrtc');
             lastMsgTimeRef.current = Date.now();
             conn.send({ type: 'REQUEST_SYNC' });
+            // Reenviar al instante lo que se pulsó durante el corte
+            flushPendingActions(true);
           });
 
           conn.on('data', (data) => {
-            if (!isSubscribed) return;
+            if (!isCurrentPeer()) return;
             const msg = data as HostMessage;
-            if (msg && msg.type === 'STATE_SYNC') {
-              setSyncState(msg.payload);
-              setIsConnected(true);
-              setConnectionType('webrtc');
-              lastMsgTimeRef.current = Date.now();
+            lastMsgTimeRef.current = Date.now();
+            setIsConnected(true);
+            setConnectionType('webrtc');
+            if (!handleHostMessage(msg)) {
+              try {
+                conn.send({ type: 'REQUEST_SYNC' });
+              } catch {}
             }
           });
 
-          conn.on('close', () => {
-            if (!isSubscribed) return;
+          const handleConnLost = () => {
+            // Ignorar eventos de conexiones/peers antiguos ya sustituidos
+            if (!isCurrentPeer()) return;
+            if (connRef.current && connRef.current !== conn) return;
             connRef.current = null;
-            if (webrtcReconnectTimeout) clearTimeout(webrtcReconnectTimeout);
-            webrtcReconnectTimeout = setTimeout(connectPeer, 3000);
-          });
+            isConnecting = false;
+            scheduleReconnect(1000);
+          };
+          conn.on('close', handleConnLost);
+          conn.on('error', handleConnLost);
+        });
 
-          conn.on('error', () => {
-            if (!isSubscribed) return;
-            connRef.current = null;
-            if (webrtcReconnectTimeout) clearTimeout(webrtcReconnectTimeout);
-            webrtcReconnectTimeout = setTimeout(connectPeer, 3000);
-          });
+        peer.on('disconnected', () => {
+          // Perder el servidor de emparejamiento no corta un canal ya abierto
+          if (!isCurrentPeer()) return;
+          if (!connRef.current || !connRef.current.open) {
+            try {
+              peer.reconnect();
+            } catch {}
+          }
         });
 
         peer.on('error', (err) => {
+          if (!isCurrentPeer()) return;
           console.warn('PeerJS Juez aviso:', err.type, err.message);
-          if (isSubscribed) {
-            if (webrtcReconnectTimeout) clearTimeout(webrtcReconnectTimeout);
-            webrtcReconnectTimeout = setTimeout(connectPeer, 4000);
+          if (!connRef.current || !connRef.current.open) {
+            isConnecting = false;
+            scheduleReconnect(2000);
           }
         });
       } catch (e) {
+        isConnecting = false;
         console.warn('Error inicializando Peer Juez:', e);
+        scheduleReconnect(3000);
       }
     };
 
@@ -763,7 +1038,7 @@ export function usePeerJudge(roomId: string) {
         try {
           connRef.current.send({ type: 'REQUEST_SYNC' });
         } catch {}
-      } else {
+      } else if (!isConnecting) {
         if (webrtcReconnectTimeout) clearTimeout(webrtcReconnectTimeout);
         connectPeer();
       }
@@ -798,6 +1073,15 @@ export function usePeerJudge(roomId: string) {
       const isWebRTCOpen = !!(connRef.current && connRef.current.open);
       const isEventSourceOpen = eventSourceInstance?.readyState === EventSource.OPEN;
 
+      // Canal WebRTC "abierto" pero mudo (cambio de antena, red móvil...): forzar reconexión
+      if (isWebRTCOpen && timeSinceLastMsg > JUDGE_DEAD_CONNECTION_MS && !isConnecting) {
+        try {
+          connRef.current?.close();
+        } catch {}
+        connRef.current = null;
+        connectPeer();
+      }
+
       if (timeSinceLastMsg > 10000 && !isWebRTCOpen && !isEventSourceOpen) {
         setIsConnected(false);
         // Solicitar re-sincronización activa
@@ -810,6 +1094,7 @@ export function usePeerJudge(roomId: string) {
     return () => {
       isSubscribed = false;
       document.removeEventListener('visibilitychange', handleVisibility);
+      if (connectTimeout) clearTimeout(connectTimeout);
       if (webrtcReconnectTimeout) {
         clearTimeout(webrtcReconnectTimeout);
       }
@@ -835,6 +1120,7 @@ export function usePeerJudge(roomId: string) {
     syncState,
     syncReceivedAt,
     sendAction,
+    pendingCount,
   };
 }
 

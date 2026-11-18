@@ -1,11 +1,14 @@
 import { GamePhase, DuelSession, Player, BoardTile, BoardStep } from './game';
 import { CategoryItem } from './category';
 
+// Ítem para el mando: incluye una miniatura ligera además de la imagen original
+export type JudgeItem = CategoryItem & { thumb?: string };
+
 // Duelo aligerado para el mando: sin la lista completa de ítems ni el historial
 export type JudgeDuelSync = Omit<DuelSession, 'items' | 'history'> & {
   itemsCount: number;
-  currentItem: CategoryItem | null;
-  nextItem: CategoryItem | null;
+  currentItem: JudgeItem | null;
+  nextItem: JudgeItem | null;
 };
 
 export interface ActiveRouletteSync {
@@ -102,8 +105,21 @@ export interface JudgeActionMessage {
   };
 }
 
-export interface HostMessage {
-  type: 'STATE_SYNC' | 'HOST_PONG';
-  payload: HostSyncPayload;
+// Cambios respecto al último estado enviado. `currentDuelPatch` trae solo los campos
+// del duelo que han cambiado (p. ej. solo el reloj).
+export type HostPatchPayload = Partial<HostSyncPayload> & {
+  currentDuelPatch?: Partial<JudgeDuelSync>;
+};
+
+// Confirmación de que la pantalla ha recibido una acción del mando
+export interface HostAckMessage {
+  type: 'ACTION_ACK';
+  actionId: string;
 }
+
+export type HostMessage =
+  | { type: 'STATE_SYNC'; payload: HostSyncPayload }
+  | { type: 'STATE_PATCH'; payload: HostPatchPayload }
+  | { type: 'HOST_PONG' }
+  | HostAckMessage;
 
